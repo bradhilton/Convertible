@@ -11,7 +11,7 @@ pod 'Convertible'
 ```
 Be sure to import the module at the top of your .swift files:
 ```swift
-import `Convertible`
+import Convertible
 ```
 Alternatively, clone this repo or download it as a zip and include the classes in your project.
 
