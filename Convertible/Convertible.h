@@ -6,7 +6,7 @@
 //  Copyright © 2015 Skyvive. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Convertible.
 FOUNDATION_EXPORT double ConvertibleVersionNumber;

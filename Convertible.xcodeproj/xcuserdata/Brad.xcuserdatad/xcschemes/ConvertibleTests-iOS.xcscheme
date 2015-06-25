@@ -12,6 +12,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A25AF3D51B3B1BDB009ABDE9"
+               BuildableName = "ConvertibleTests.xctest"
+               BlueprintName = "ConvertibleTests-iOS"
+               ReferencedContainer = "container:Convertible.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>

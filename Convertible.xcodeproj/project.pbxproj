@@ -7,43 +7,244 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A25AF3161B3B17A0009ABDE9 /* Convertible.h in Headers */ = {isa = PBXBuildFile; fileRef = A25AF3151B3B17A0009ABDE9 /* Convertible.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A25AF31D1B3B17A0009ABDE9 /* Convertible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AF3121B3B17A0009ABDE9 /* Convertible.framework */; };
-		A25AF3221B3B17A0009ABDE9 /* ConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3211B3B17A0009ABDE9 /* ConvertibleTests.swift */; };
+		A20BEF631B3C680000703C9C /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = A20BEF621B3C680000703C9C /* Person.json */; };
+		A20BEF641B3C680000703C9C /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = A20BEF621B3C680000703C9C /* Person.json */; };
+		A20BEF661B3C70B100703C9C /* _ConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */; };
+		A20BEF671B3C70B100703C9C /* _ConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */; };
+		A23259DD1B3C5173006833EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259DC1B3C5173006833EB /* Models.swift */; };
+		A23259DE1B3C5173006833EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259DC1B3C5173006833EB /* Models.swift */; };
+		A23259E31B3C527C006833EB /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259E21B3C527C006833EB /* Convertible.swift */; };
+		A23259E41B3C527C006833EB /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259E21B3C527C006833EB /* Convertible.swift */; };
+		A25AF3DB1B3B1BDC009ABDE9 /* Convertible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */; };
+		A25AF3F21B3B1D2D009ABDE9 /* Convertible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */; };
+		A25AF4021B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */; };
+		A25AF4031B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */; };
+		A25AF4041B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FB1B3B1E4B009ABDE9 /* NSDate+Covertible.swift */; };
+		A25AF4051B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FB1B3B1E4B009ABDE9 /* NSDate+Covertible.swift */; };
+		A25AF4061B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FC1B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift */; };
+		A25AF4071B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FC1B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift */; };
+		A25AF4081B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FD1B3B1E4B009ABDE9 /* NSNull+Convertible.swift */; };
+		A25AF4091B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FD1B3B1E4B009ABDE9 /* NSNull+Convertible.swift */; };
+		A25AF40A1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FE1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift */; };
+		A25AF40B1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FE1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift */; };
+		A25AF40C1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FF1B3B1E4B009ABDE9 /* NSSet+Convertible.swift */; };
+		A25AF40D1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FF1B3B1E4B009ABDE9 /* NSSet+Convertible.swift */; };
+		A25AF40E1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4001B3B1E4B009ABDE9 /* NSString+Convertible.swift */; };
+		A25AF40F1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4001B3B1E4B009ABDE9 /* NSString+Convertible.swift */; };
+		A25AF4101B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */; };
+		A25AF4111B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */; };
+		A25AF4151B3B1E93009ABDE9 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */; };
+		A25AF4161B3B1E93009ABDE9 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */; };
+		A25AF4171B3B1E93009ABDE9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4141B3B1E93009ABDE9 /* DataTypeConvertible.swift */; };
+		A25AF4181B3B1E93009ABDE9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4141B3B1E93009ABDE9 /* DataTypeConvertible.swift */; };
+		A25AF41F1B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */; };
+		A25AF4201B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */; };
+		A25AF4241B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4221B3B1F67009ABDE9 /* ConvertibleOption.swift */; };
+		A25AF4251B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4221B3B1F67009ABDE9 /* ConvertibleOption.swift */; };
+		A25AF4261B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4231B3B1F67009ABDE9 /* ConvertibleOptions.swift */; };
+		A25AF4271B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4231B3B1F67009ABDE9 /* ConvertibleOptions.swift */; };
+		A25AF42F1B3B2007009ABDE9 /* JsonConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF42D1B3B2007009ABDE9 /* JsonConvertible.swift */; };
+		A25AF4301B3B2007009ABDE9 /* JsonConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF42D1B3B2007009ABDE9 /* JsonConvertible.swift */; };
+		A25AF4311B3B2007009ABDE9 /* JsonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF42E1B3B2007009ABDE9 /* JsonValue.swift */; };
+		A25AF4321B3B2007009ABDE9 /* JsonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF42E1B3B2007009ABDE9 /* JsonValue.swift */; };
+		A25AF43D1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4341B3B205B009ABDE9 /* Array+Convertible.swift */; };
+		A25AF43E1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4341B3B205B009ABDE9 /* Array+Convertible.swift */; };
+		A25AF43F1B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4351B3B205B009ABDE9 /* Bool+Convertible.swift */; };
+		A25AF4401B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4351B3B205B009ABDE9 /* Bool+Convertible.swift */; };
+		A25AF4411B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4361B3B205B009ABDE9 /* Dictionary+Convertible.swift */; };
+		A25AF4421B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4361B3B205B009ABDE9 /* Dictionary+Convertible.swift */; };
+		A25AF4431B3B205B009ABDE9 /* Double+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4371B3B205B009ABDE9 /* Double+Convertible.swift */; };
+		A25AF4441B3B205B009ABDE9 /* Double+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4371B3B205B009ABDE9 /* Double+Convertible.swift */; };
+		A25AF4451B3B205B009ABDE9 /* Float+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4381B3B205B009ABDE9 /* Float+Convertible.swift */; };
+		A25AF4461B3B205B009ABDE9 /* Float+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4381B3B205B009ABDE9 /* Float+Convertible.swift */; };
+		A25AF4471B3B205B009ABDE9 /* Int+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4391B3B205B009ABDE9 /* Int+Convertible.swift */; };
+		A25AF4481B3B205B009ABDE9 /* Int+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4391B3B205B009ABDE9 /* Int+Convertible.swift */; };
+		A25AF4491B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43A1B3B205B009ABDE9 /* Optional+Convertible.swift */; };
+		A25AF44A1B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43A1B3B205B009ABDE9 /* Optional+Convertible.swift */; };
+		A25AF44B1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43B1B3B205B009ABDE9 /* Set+Convertible.swift */; };
+		A25AF44C1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43B1B3B205B009ABDE9 /* Set+Convertible.swift */; };
+		A25AF44D1B3B205B009ABDE9 /* String+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */; };
+		A25AF44E1B3B205B009ABDE9 /* String+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */; };
+		A25AF4521B3B20A5009ABDE9 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4501B3B20A5009ABDE9 /* Keys.swift */; };
+		A25AF4531B3B20A5009ABDE9 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4501B3B20A5009ABDE9 /* Keys.swift */; };
+		A25AF4541B3B20A5009ABDE9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */; };
+		A25AF4551B3B20A5009ABDE9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */; };
+		A25AF4591B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4571B3B20D0009ABDE9 /* _ConvertibleType.swift */; };
+		A25AF45A1B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4571B3B20D0009ABDE9 /* _ConvertibleType.swift */; };
+		A25AF45B1B3B20D0009ABDE9 /* Convertibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4581B3B20D0009ABDE9 /* Convertibles.swift */; };
+		A25AF45C1B3B20D0009ABDE9 /* Convertibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4581B3B20D0009ABDE9 /* Convertibles.swift */; };
+		A25AF46D1B3B23BA009ABDE9 /* Convertible.h in Headers */ = {isa = PBXBuildFile; fileRef = A25AF46C1B3B23BA009ABDE9 /* Convertible.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A25AF4811B3B23D1009ABDE9 /* Convertible.h in Headers */ = {isa = PBXBuildFile; fileRef = A25AF46C1B3B23BA009ABDE9 /* Convertible.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A25AF48B1B3B2550009ABDE9 /* UIImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF48A1B3B2550009ABDE9 /* UIImage+Convertible.swift */; };
+		A25AF4D91B3B5786009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4A71B3B5786009ABDE9 /* Array+Convertible.swift */; };
+		A25AF4F61B3B58C0009ABDE9 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4F51B3B58C0009ABDE9 /* Keys.swift */; };
+		A25AF4F71B3B58C0009ABDE9 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4F51B3B58C0009ABDE9 /* Keys.swift */; };
+		A25AF4F81B3B5BDF009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4A71B3B5786009ABDE9 /* Array+Convertible.swift */; };
+		A25AF4FA1B3B5D4A009ABDE9 /* Bool+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4F91B3B5D4A009ABDE9 /* Bool+Convertible.swift */; };
+		A25AF4FB1B3B5D4A009ABDE9 /* Bool+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4F91B3B5D4A009ABDE9 /* Bool+Convertible.swift */; };
+		A25AF4FD1B3B5E53009ABDE9 /* Dictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4FC1B3B5E53009ABDE9 /* Dictionary+Convertible.swift */; };
+		A25AF4FE1B3B5E53009ABDE9 /* Dictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4FC1B3B5E53009ABDE9 /* Dictionary+Convertible.swift */; };
+		A25AF5001B3B5EF2009ABDE9 /* Double+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4FF1B3B5EF2009ABDE9 /* Double+Convertible.swift */; };
+		A25AF5011B3B5EF2009ABDE9 /* Double+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4FF1B3B5EF2009ABDE9 /* Double+Convertible.swift */; };
+		A25AF5031B3B5F5C009ABDE9 /* Float+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5021B3B5F5C009ABDE9 /* Float+Convertible.swift */; };
+		A25AF5041B3B5F5C009ABDE9 /* Float+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5021B3B5F5C009ABDE9 /* Float+Convertible.swift */; };
+		A25AF5061B3B5F9C009ABDE9 /* Int+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5051B3B5F9C009ABDE9 /* Int+Convertible.swift */; };
+		A25AF5071B3B5F9C009ABDE9 /* Int+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5051B3B5F9C009ABDE9 /* Int+Convertible.swift */; };
+		A25AF5091B3B6012009ABDE9 /* Optional+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5081B3B6012009ABDE9 /* Optional+Convertible.swift */; };
+		A25AF50A1B3B6012009ABDE9 /* Optional+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5081B3B6012009ABDE9 /* Optional+Convertible.swift */; };
+		A25AF50C1B3B61B6009ABDE9 /* Set+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF50B1B3B61B6009ABDE9 /* Set+Convertible.swift */; };
+		A25AF50D1B3B61B6009ABDE9 /* Set+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF50B1B3B61B6009ABDE9 /* Set+Convertible.swift */; };
+		A25AF50F1B3B628B009ABDE9 /* String+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF50E1B3B628B009ABDE9 /* String+Convertible.swift */; };
+		A25AF5101B3B628B009ABDE9 /* String+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF50E1B3B628B009ABDE9 /* String+Convertible.swift */; };
+		A25AF5121B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5111B3B6304009ABDE9 /* NSArray+Convertible.swift */; };
+		A25AF5131B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5111B3B6304009ABDE9 /* NSArray+Convertible.swift */; };
+		A25AF5151B3B63DD009ABDE9 /* Array.json in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5141B3B63DD009ABDE9 /* Array.json */; };
+		A25AF5161B3B63DD009ABDE9 /* Array.json in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5141B3B63DD009ABDE9 /* Array.json */; };
+		A25AF5181B3B6445009ABDE9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5171B3B6445009ABDE9 /* Data.swift */; };
+		A25AF5191B3B6445009ABDE9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5171B3B6445009ABDE9 /* Data.swift */; };
+		A25AF51B1B3B6753009ABDE9 /* Dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = A25AF51A1B3B6753009ABDE9 /* Dictionary.json */; };
+		A25AF51C1B3B6753009ABDE9 /* Dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = A25AF51A1B3B6753009ABDE9 /* Dictionary.json */; };
+		A25AF51E1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF51D1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift */; };
+		A25AF51F1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF51D1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift */; };
+		A25AF5211B3B6951009ABDE9 /* NSDate+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5201B3B6951009ABDE9 /* NSDate+Convertible.swift */; };
+		A25AF5221B3B6951009ABDE9 /* NSDate+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5201B3B6951009ABDE9 /* NSDate+Convertible.swift */; };
+		A25AF5241B3B698B009ABDE9 /* NSNull+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5231B3B698B009ABDE9 /* NSNull+Convertible.swift */; };
+		A25AF5251B3B698B009ABDE9 /* NSNull+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5231B3B698B009ABDE9 /* NSNull+Convertible.swift */; };
+		A25AF5271B3B69EE009ABDE9 /* NSNumber+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5261B3B69EE009ABDE9 /* NSNumber+Convertible.swift */; };
+		A25AF5281B3B69EE009ABDE9 /* NSNumber+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5261B3B69EE009ABDE9 /* NSNumber+Convertible.swift */; };
+		A25AF52A1B3B6A1E009ABDE9 /* NSSet+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5291B3B6A1E009ABDE9 /* NSSet+Convertible.swift */; };
+		A25AF52B1B3B6A1E009ABDE9 /* NSSet+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5291B3B6A1E009ABDE9 /* NSSet+Convertible.swift */; };
+		A25AF52D1B3B6A79009ABDE9 /* NSString+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF52C1B3B6A79009ABDE9 /* NSString+Convertible.swift */; };
+		A25AF52E1B3B6A79009ABDE9 /* NSString+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF52C1B3B6A79009ABDE9 /* NSString+Convertible.swift */; };
+		A25AF5301B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */; };
+		A25AF5311B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */; };
+		A25AF5331B3B6BC7009ABDE9 /* UIImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5321B3B6BC7009ABDE9 /* UIImage+Convertible.swift */; };
+		A25AF5351B3B6C3E009ABDE9 /* JPEG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */; };
+		A25AF5361B3B6C3E009ABDE9 /* JPEG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */; };
+		A25AF5381B3B6C8E009ABDE9 /* PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5371B3B6C8E009ABDE9 /* PNG.png */; };
+		A25AF5391B3B6C8E009ABDE9 /* PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5371B3B6C8E009ABDE9 /* PNG.png */; };
+		A25AF53B1B3B70E5009ABDE9 /* NSImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */; };
+		A2877E8E1B3B7543006E70B9 /* NSImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */; };
+		A2877E931B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
+		A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A25AF31E1B3B17A0009ABDE9 /* PBXContainerItemProxy */ = {
+		A25AF3DC1B3B1BDC009ABDE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A25AF3091B3B17A0009ABDE9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A25AF3111B3B17A0009ABDE9;
-			remoteInfo = Convertible;
+			remoteGlobalIDString = A25AF3841B3B1A3F009ABDE9;
+			remoteInfo = "Convertible-iOS";
+		};
+		A25AF3F31B3B1D2D009ABDE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A25AF3091B3B17A0009ABDE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A25AF3A01B3B1AAA009ABDE9;
+			remoteInfo = "Convertible-OSX";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A25AF3121B3B17A0009ABDE9 /* Convertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Convertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A25AF3151B3B17A0009ABDE9 /* Convertible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Convertible.h; sourceTree = "<group>"; };
-		A25AF3171B3B17A0009ABDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A25AF31C1B3B17A0009ABDE9 /* ConvertibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A25AF3211B3B17A0009ABDE9 /* ConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertibleTests.swift; sourceTree = "<group>"; };
-		A25AF3231B3B17A0009ABDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20BEF621B3C680000703C9C /* Person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Person.json; sourceTree = "<group>"; };
+		A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _ConvertibleType.swift; sourceTree = "<group>"; };
+		A20BEF681B3CAD5C00703C9C /* Convertible.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Convertible.podspec; sourceTree = "<group>"; };
+		A23259DC1B3C5173006833EB /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A23259E21B3C527C006833EB /* Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
+		A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Convertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Convertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25AF3D61B3B1BDB009ABDE9 /* ConvertibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25AF3ED1B3B1D2D009ABDE9 /* ConvertibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF3FB1B3B1E4B009ABDE9 /* NSDate+Covertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Covertible.swift"; sourceTree = "<group>"; };
+		A25AF3FC1B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF3FD1B3B1E4B009ABDE9 /* NSNull+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNull+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF3FE1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF3FF1B3B1E4B009ABDE9 /* NSSet+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSSet+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4001B3B1E4B009ABDE9 /* NSString+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConvertible.swift; sourceTree = "<group>"; };
+		A25AF4141B3B1E93009ABDE9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
+		A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertibleError.swift; sourceTree = "<group>"; };
+		A25AF4221B3B1F67009ABDE9 /* ConvertibleOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertibleOption.swift; sourceTree = "<group>"; };
+		A25AF4231B3B1F67009ABDE9 /* ConvertibleOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertibleOptions.swift; sourceTree = "<group>"; };
+		A25AF4291B3B1FAB009ABDE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A25AF42D1B3B2007009ABDE9 /* JsonConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonConvertible.swift; sourceTree = "<group>"; };
+		A25AF42E1B3B2007009ABDE9 /* JsonValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonValue.swift; sourceTree = "<group>"; };
+		A25AF4341B3B205B009ABDE9 /* Array+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4351B3B205B009ABDE9 /* Bool+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4361B3B205B009ABDE9 /* Dictionary+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4371B3B205B009ABDE9 /* Double+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4381B3B205B009ABDE9 /* Float+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4391B3B205B009ABDE9 /* Int+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF43A1B3B205B009ABDE9 /* Optional+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF43B1B3B205B009ABDE9 /* Set+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4501B3B20A5009ABDE9 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
+		A25AF4571B3B20D0009ABDE9 /* _ConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _ConvertibleType.swift; sourceTree = "<group>"; };
+		A25AF4581B3B20D0009ABDE9 /* Convertibles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertibles.swift; sourceTree = "<group>"; };
+		A25AF46C1B3B23BA009ABDE9 /* Convertible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Convertible.h; sourceTree = "<group>"; };
+		A25AF48A1B3B2550009ABDE9 /* UIImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4A71B3B5786009ABDE9 /* Array+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4EF1B3B57E4009ABDE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A25AF4F51B3B58C0009ABDE9 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		A25AF4F91B3B5D4A009ABDE9 /* Bool+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4FC1B3B5E53009ABDE9 /* Dictionary+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF4FF1B3B5EF2009ABDE9 /* Double+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5021B3B5F5C009ABDE9 /* Float+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5051B3B5F9C009ABDE9 /* Int+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5081B3B6012009ABDE9 /* Optional+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF50B1B3B61B6009ABDE9 /* Set+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF50E1B3B628B009ABDE9 /* String+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5111B3B6304009ABDE9 /* NSArray+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5141B3B63DD009ABDE9 /* Array.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Array.json; sourceTree = "<group>"; };
+		A25AF5171B3B6445009ABDE9 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A25AF51A1B3B6753009ABDE9 /* Dictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dictionary.json; sourceTree = "<group>"; };
+		A25AF51D1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5201B3B6951009ABDE9 /* NSDate+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5231B3B698B009ABDE9 /* NSNull+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNull+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5261B3B69EE009ABDE9 /* NSNumber+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5291B3B6A1E009ABDE9 /* NSSet+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSSet+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF52C1B3B6A79009ABDE9 /* NSString+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5321B3B6BC7009ABDE9 /* UIImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Convertible.swift"; sourceTree = "<group>"; };
+		A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JPEG.jpg; sourceTree = "<group>"; };
+		A25AF5371B3B6C8E009ABDE9 /* PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PNG.png; sourceTree = "<group>"; };
+		A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
+		A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
+		A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A25AF30E1B3B17A0009ABDE9 /* Frameworks */ = {
+		A25AF3811B3B1A3F009ABDE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A25AF3191B3B17A0009ABDE9 /* Frameworks */ = {
+		A25AF39D1B3B1AAA009ABDE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25AF31D1B3B17A0009ABDE9 /* Convertible.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25AF3D31B3B1BDB009ABDE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25AF3DB1B3B1BDC009ABDE9 /* Convertible.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25AF3EA1B3B1D2D009ABDE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25AF3F21B3B1D2D009ABDE9 /* Convertible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +254,9 @@
 		A25AF3081B3B17A0009ABDE9 = {
 			isa = PBXGroup;
 			children = (
-				A25AF3141B3B17A0009ABDE9 /* Convertible */,
-				A25AF3201B3B17A0009ABDE9 /* ConvertibleTests */,
+				A20BEF681B3CAD5C00703C9C /* Convertible.podspec */,
+				A25AF3B81B3B1B04009ABDE9 /* Convertible */,
+				A25AF3E11B3B1C1D009ABDE9 /* ConvertibleTests */,
 				A25AF3131B3B17A0009ABDE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,78 +264,327 @@
 		A25AF3131B3B17A0009ABDE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A25AF3121B3B17A0009ABDE9 /* Convertible.framework */,
-				A25AF31C1B3B17A0009ABDE9 /* ConvertibleTests.xctest */,
+				A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */,
+				A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */,
+				A25AF3D61B3B1BDB009ABDE9 /* ConvertibleTests.xctest */,
+				A25AF3ED1B3B1D2D009ABDE9 /* ConvertibleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A25AF3141B3B17A0009ABDE9 /* Convertible */ = {
+		A25AF3B81B3B1B04009ABDE9 /* Convertible */ = {
 			isa = PBXGroup;
 			children = (
-				A25AF3151B3B17A0009ABDE9 /* Convertible.h */,
-				A25AF3171B3B17A0009ABDE9 /* Info.plist */,
+				A25AF46C1B3B23BA009ABDE9 /* Convertible.h */,
+				A25AF3F91B3B1E4B009ABDE9 /* Cocoa Extensions */,
+				A25AF4561B3B20D0009ABDE9 /* Convertible */,
+				A25AF4121B3B1E93009ABDE9 /* DataConvertible */,
+				A25AF41D1B3B1F32009ABDE9 /* Errors */,
+				A25AF42C1B3B2007009ABDE9 /* JsonConvertible */,
+				A25AF4211B3B1F67009ABDE9 /* Options */,
+				A25AF4281B3B1FAB009ABDE9 /* Supporting Files */,
+				A25AF4331B3B205B009ABDE9 /* Swift Extensions */,
+				A25AF44F1B3B20A5009ABDE9 /* Utilities */,
 			);
 			path = Convertible;
 			sourceTree = "<group>";
 		};
-		A25AF3201B3B17A0009ABDE9 /* ConvertibleTests */ = {
+		A25AF3E11B3B1C1D009ABDE9 /* ConvertibleTests */ = {
 			isa = PBXGroup;
 			children = (
-				A25AF3211B3B17A0009ABDE9 /* ConvertibleTests.swift */,
-				A25AF3231B3B17A0009ABDE9 /* Info.plist */,
+				A25AF48C1B3B5786009ABDE9 /* Cocoa Extensions */,
+				A25AF4961B3B5786009ABDE9 /* Convertible */,
+				A25AF4991B3B5786009ABDE9 /* DataConvertible */,
+				A25AF49C1B3B5786009ABDE9 /* Errors */,
+				A25AF49E1B3B5786009ABDE9 /* JsonConvertible */,
+				A25AF4A11B3B5786009ABDE9 /* Options */,
+				A25AF4A41B3B5786009ABDE9 /* Supporting Files */,
+				A25AF4A61B3B5786009ABDE9 /* Swift Extensions */,
+				A25AF4B01B3B5786009ABDE9 /* Utilities */,
 			);
 			path = ConvertibleTests;
+			sourceTree = "<group>";
+		};
+		A25AF3F91B3B1E4B009ABDE9 /* Cocoa Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */,
+				A25AF3FB1B3B1E4B009ABDE9 /* NSDate+Covertible.swift */,
+				A25AF3FC1B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift */,
+				A25AF3FD1B3B1E4B009ABDE9 /* NSNull+Convertible.swift */,
+				A25AF3FE1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift */,
+				A25AF3FF1B3B1E4B009ABDE9 /* NSSet+Convertible.swift */,
+				A25AF4001B3B1E4B009ABDE9 /* NSString+Convertible.swift */,
+				A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */,
+				A25AF48A1B3B2550009ABDE9 /* UIImage+Convertible.swift */,
+				A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */,
+			);
+			path = "Cocoa Extensions";
+			sourceTree = "<group>";
+		};
+		A25AF4121B3B1E93009ABDE9 /* DataConvertible */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */,
+				A25AF4141B3B1E93009ABDE9 /* DataTypeConvertible.swift */,
+			);
+			path = DataConvertible;
+			sourceTree = "<group>";
+		};
+		A25AF41D1B3B1F32009ABDE9 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A25AF4211B3B1F67009ABDE9 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF4221B3B1F67009ABDE9 /* ConvertibleOption.swift */,
+				A25AF4231B3B1F67009ABDE9 /* ConvertibleOptions.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		A25AF4281B3B1FAB009ABDE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF4291B3B1FAB009ABDE9 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A25AF42C1B3B2007009ABDE9 /* JsonConvertible */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF42D1B3B2007009ABDE9 /* JsonConvertible.swift */,
+				A25AF42E1B3B2007009ABDE9 /* JsonValue.swift */,
+			);
+			path = JsonConvertible;
+			sourceTree = "<group>";
+		};
+		A25AF4331B3B205B009ABDE9 /* Swift Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF4341B3B205B009ABDE9 /* Array+Convertible.swift */,
+				A25AF4351B3B205B009ABDE9 /* Bool+Convertible.swift */,
+				A25AF4361B3B205B009ABDE9 /* Dictionary+Convertible.swift */,
+				A25AF4371B3B205B009ABDE9 /* Double+Convertible.swift */,
+				A25AF4381B3B205B009ABDE9 /* Float+Convertible.swift */,
+				A25AF4391B3B205B009ABDE9 /* Int+Convertible.swift */,
+				A25AF43A1B3B205B009ABDE9 /* Optional+Convertible.swift */,
+				A25AF43B1B3B205B009ABDE9 /* Set+Convertible.swift */,
+				A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */,
+			);
+			path = "Swift Extensions";
+			sourceTree = "<group>";
+		};
+		A25AF44F1B3B20A5009ABDE9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF4501B3B20A5009ABDE9 /* Keys.swift */,
+				A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A25AF4561B3B20D0009ABDE9 /* Convertible */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF4571B3B20D0009ABDE9 /* _ConvertibleType.swift */,
+				A25AF4581B3B20D0009ABDE9 /* Convertibles.swift */,
+			);
+			path = Convertible;
+			sourceTree = "<group>";
+		};
+		A25AF48C1B3B5786009ABDE9 /* Cocoa Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF5111B3B6304009ABDE9 /* NSArray+Convertible.swift */,
+				A25AF5201B3B6951009ABDE9 /* NSDate+Convertible.swift */,
+				A25AF51D1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift */,
+				A25AF5231B3B698B009ABDE9 /* NSNull+Convertible.swift */,
+				A25AF5261B3B69EE009ABDE9 /* NSNumber+Convertible.swift */,
+				A25AF5291B3B6A1E009ABDE9 /* NSSet+Convertible.swift */,
+				A25AF52C1B3B6A79009ABDE9 /* NSString+Convertible.swift */,
+				A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */,
+				A25AF5321B3B6BC7009ABDE9 /* UIImage+Convertible.swift */,
+				A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */,
+			);
+			path = "Cocoa Extensions";
+			sourceTree = "<group>";
+		};
+		A25AF4961B3B5786009ABDE9 /* Convertible */ = {
+			isa = PBXGroup;
+			children = (
+				A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */,
+				A23259E21B3C527C006833EB /* Convertible.swift */,
+			);
+			path = Convertible;
+			sourceTree = "<group>";
+		};
+		A25AF4991B3B5786009ABDE9 /* DataConvertible */ = {
+			isa = PBXGroup;
+			children = (
+				A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */,
+			);
+			path = DataConvertible;
+			sourceTree = "<group>";
+		};
+		A25AF49C1B3B5786009ABDE9 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A25AF49E1B3B5786009ABDE9 /* JsonConvertible */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JsonConvertible;
+			sourceTree = "<group>";
+		};
+		A25AF4A11B3B5786009ABDE9 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		A25AF4A41B3B5786009ABDE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF5141B3B63DD009ABDE9 /* Array.json */,
+				A25AF5171B3B6445009ABDE9 /* Data.swift */,
+				A25AF51A1B3B6753009ABDE9 /* Dictionary.json */,
+				A25AF4EF1B3B57E4009ABDE9 /* Info.plist */,
+				A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */,
+				A20BEF621B3C680000703C9C /* Person.json */,
+				A25AF5371B3B6C8E009ABDE9 /* PNG.png */,
+				A23259DC1B3C5173006833EB /* Models.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A25AF4A61B3B5786009ABDE9 /* Swift Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF4A71B3B5786009ABDE9 /* Array+Convertible.swift */,
+				A25AF4F91B3B5D4A009ABDE9 /* Bool+Convertible.swift */,
+				A25AF4FC1B3B5E53009ABDE9 /* Dictionary+Convertible.swift */,
+				A25AF4FF1B3B5EF2009ABDE9 /* Double+Convertible.swift */,
+				A25AF5021B3B5F5C009ABDE9 /* Float+Convertible.swift */,
+				A25AF5051B3B5F9C009ABDE9 /* Int+Convertible.swift */,
+				A25AF5081B3B6012009ABDE9 /* Optional+Convertible.swift */,
+				A25AF50B1B3B61B6009ABDE9 /* Set+Convertible.swift */,
+				A25AF50E1B3B628B009ABDE9 /* String+Convertible.swift */,
+			);
+			path = "Swift Extensions";
+			sourceTree = "<group>";
+		};
+		A25AF4B01B3B5786009ABDE9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A25AF4F51B3B58C0009ABDE9 /* Keys.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A25AF30F1B3B17A0009ABDE9 /* Headers */ = {
+		A25AF3821B3B1A3F009ABDE9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25AF3161B3B17A0009ABDE9 /* Convertible.h in Headers */,
+				A25AF46D1B3B23BA009ABDE9 /* Convertible.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25AF39E1B3B1AAA009ABDE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25AF4811B3B23D1009ABDE9 /* Convertible.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A25AF3111B3B17A0009ABDE9 /* Convertible */ = {
+		A25AF3841B3B1A3F009ABDE9 /* Convertible-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A25AF3261B3B17A0009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible" */;
+			buildConfigurationList = A25AF3961B3B1A3F009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-iOS" */;
 			buildPhases = (
-				A25AF30D1B3B17A0009ABDE9 /* Sources */,
-				A25AF30E1B3B17A0009ABDE9 /* Frameworks */,
-				A25AF30F1B3B17A0009ABDE9 /* Headers */,
-				A25AF3101B3B17A0009ABDE9 /* Resources */,
+				A25AF3801B3B1A3F009ABDE9 /* Sources */,
+				A25AF3811B3B1A3F009ABDE9 /* Frameworks */,
+				A25AF3821B3B1A3F009ABDE9 /* Headers */,
+				A25AF3831B3B1A3F009ABDE9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Convertible;
+			name = "Convertible-iOS";
 			productName = Convertible;
-			productReference = A25AF3121B3B17A0009ABDE9 /* Convertible.framework */;
+			productReference = A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A25AF31B1B3B17A0009ABDE9 /* ConvertibleTests */ = {
+		A25AF3A01B3B1AAA009ABDE9 /* Convertible-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A25AF3291B3B17A0009ABDE9 /* Build configuration list for PBXNativeTarget "ConvertibleTests" */;
+			buildConfigurationList = A25AF3B21B3B1AAA009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-OSX" */;
 			buildPhases = (
-				A25AF3181B3B17A0009ABDE9 /* Sources */,
-				A25AF3191B3B17A0009ABDE9 /* Frameworks */,
-				A25AF31A1B3B17A0009ABDE9 /* Resources */,
+				A25AF39C1B3B1AAA009ABDE9 /* Sources */,
+				A25AF39D1B3B1AAA009ABDE9 /* Frameworks */,
+				A25AF39E1B3B1AAA009ABDE9 /* Headers */,
+				A25AF39F1B3B1AAA009ABDE9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A25AF31F1B3B17A0009ABDE9 /* PBXTargetDependency */,
 			);
-			name = ConvertibleTests;
+			name = "Convertible-OSX";
+			productName = "Convertible-OSX";
+			productReference = A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A25AF3D51B3B1BDB009ABDE9 /* ConvertibleTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A25AF3DE1B3B1BDC009ABDE9 /* Build configuration list for PBXNativeTarget "ConvertibleTests-iOS" */;
+			buildPhases = (
+				A25AF3D21B3B1BDB009ABDE9 /* Sources */,
+				A25AF3D31B3B1BDB009ABDE9 /* Frameworks */,
+				A25AF3D41B3B1BDB009ABDE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A25AF3DD1B3B1BDC009ABDE9 /* PBXTargetDependency */,
+			);
+			name = "ConvertibleTests-iOS";
 			productName = ConvertibleTests;
-			productReference = A25AF31C1B3B17A0009ABDE9 /* ConvertibleTests.xctest */;
+			productReference = A25AF3D61B3B1BDB009ABDE9 /* ConvertibleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A25AF3EC1B3B1D2D009ABDE9 /* ConvertibleTests-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A25AF3F51B3B1D2D009ABDE9 /* Build configuration list for PBXNativeTarget "ConvertibleTests-OSX" */;
+			buildPhases = (
+				A25AF3E91B3B1D2D009ABDE9 /* Sources */,
+				A25AF3EA1B3B1D2D009ABDE9 /* Frameworks */,
+				A25AF3EB1B3B1D2D009ABDE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A25AF3F41B3B1D2D009ABDE9 /* PBXTargetDependency */,
+			);
+			name = "ConvertibleTests-OSX";
+			productName = "ConvertibleTests-OSX";
+			productReference = A25AF3ED1B3B1D2D009ABDE9 /* ConvertibleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -142,13 +593,20 @@
 		A25AF3091B3B17A0009ABDE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Skyvive;
 				TargetAttributes = {
-					A25AF3111B3B17A0009ABDE9 = {
+					A25AF3841B3B1A3F009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
 					};
-					A25AF31B1B3B17A0009ABDE9 = {
+					A25AF3A01B3B1AAA009ABDE9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					A25AF3D51B3B1BDB009ABDE9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					A25AF3EC1B3B1D2D009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
@@ -165,52 +623,202 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A25AF3111B3B17A0009ABDE9 /* Convertible */,
-				A25AF31B1B3B17A0009ABDE9 /* ConvertibleTests */,
+				A25AF3841B3B1A3F009ABDE9 /* Convertible-iOS */,
+				A25AF3A01B3B1AAA009ABDE9 /* Convertible-OSX */,
+				A25AF3D51B3B1BDB009ABDE9 /* ConvertibleTests-iOS */,
+				A25AF3EC1B3B1D2D009ABDE9 /* ConvertibleTests-OSX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A25AF3101B3B17A0009ABDE9 /* Resources */ = {
+		A25AF3831B3B1A3F009ABDE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A25AF31A1B3B17A0009ABDE9 /* Resources */ = {
+		A25AF39F1B3B1AAA009ABDE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25AF3D41B3B1BDB009ABDE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25AF5151B3B63DD009ABDE9 /* Array.json in Resources */,
+				A25AF51B1B3B6753009ABDE9 /* Dictionary.json in Resources */,
+				A25AF5351B3B6C3E009ABDE9 /* JPEG.jpg in Resources */,
+				A20BEF631B3C680000703C9C /* Person.json in Resources */,
+				A25AF5381B3B6C8E009ABDE9 /* PNG.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25AF3EB1B3B1D2D009ABDE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25AF5161B3B63DD009ABDE9 /* Array.json in Resources */,
+				A25AF51C1B3B6753009ABDE9 /* Dictionary.json in Resources */,
+				A25AF5361B3B6C3E009ABDE9 /* JPEG.jpg in Resources */,
+				A20BEF641B3C680000703C9C /* Person.json in Resources */,
+				A25AF5391B3B6C8E009ABDE9 /* PNG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A25AF30D1B3B17A0009ABDE9 /* Sources */ = {
+		A25AF3801B3B1A3F009ABDE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25AF4451B3B205B009ABDE9 /* Float+Convertible.swift in Sources */,
+				A25AF4491B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */,
+				A25AF4021B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */,
+				A25AF44B1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */,
+				A25AF4171B3B1E93009ABDE9 /* DataTypeConvertible.swift in Sources */,
+				A25AF40C1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */,
+				A25AF4311B3B2007009ABDE9 /* JsonValue.swift in Sources */,
+				A25AF4261B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */,
+				A25AF4431B3B205B009ABDE9 /* Double+Convertible.swift in Sources */,
+				A25AF4151B3B1E93009ABDE9 /* DataConvertible.swift in Sources */,
+				A25AF4041B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */,
+				A25AF4471B3B205B009ABDE9 /* Int+Convertible.swift in Sources */,
+				A25AF4061B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
+				A25AF4541B3B20A5009ABDE9 /* String+Utilities.swift in Sources */,
+				A25AF41F1B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */,
+				A25AF43D1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */,
+				A25AF40A1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */,
+				A25AF45B1B3B20D0009ABDE9 /* Convertibles.swift in Sources */,
+				A25AF4241B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */,
+				A25AF4081B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */,
+				A25AF44D1B3B205B009ABDE9 /* String+Convertible.swift in Sources */,
+				A25AF42F1B3B2007009ABDE9 /* JsonConvertible.swift in Sources */,
+				A25AF48B1B3B2550009ABDE9 /* UIImage+Convertible.swift in Sources */,
+				A25AF43F1B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */,
+				A25AF4411B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
+				A25AF4101B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
+				A25AF4591B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */,
+				A25AF40E1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
+				A25AF4521B3B20A5009ABDE9 /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A25AF3181B3B17A0009ABDE9 /* Sources */ = {
+		A25AF39C1B3B1AAA009ABDE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25AF3221B3B17A0009ABDE9 /* ConvertibleTests.swift in Sources */,
+				A25AF4461B3B205B009ABDE9 /* Float+Convertible.swift in Sources */,
+				A25AF44A1B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */,
+				A25AF4031B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */,
+				A25AF44C1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */,
+				A25AF4181B3B1E93009ABDE9 /* DataTypeConvertible.swift in Sources */,
+				A25AF40D1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */,
+				A25AF4321B3B2007009ABDE9 /* JsonValue.swift in Sources */,
+				A25AF4271B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */,
+				A25AF4441B3B205B009ABDE9 /* Double+Convertible.swift in Sources */,
+				A25AF4161B3B1E93009ABDE9 /* DataConvertible.swift in Sources */,
+				A25AF4051B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */,
+				A25AF4481B3B205B009ABDE9 /* Int+Convertible.swift in Sources */,
+				A25AF4071B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
+				A25AF4551B3B20A5009ABDE9 /* String+Utilities.swift in Sources */,
+				A25AF4201B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */,
+				A25AF43E1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */,
+				A25AF40B1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */,
+				A25AF45C1B3B20D0009ABDE9 /* Convertibles.swift in Sources */,
+				A25AF4251B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */,
+				A25AF4091B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */,
+				A25AF44E1B3B205B009ABDE9 /* String+Convertible.swift in Sources */,
+				A25AF4301B3B2007009ABDE9 /* JsonConvertible.swift in Sources */,
+				A25AF4401B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */,
+				A25AF4421B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
+				A25AF4111B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
+				A25AF45A1B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */,
+				A25AF40F1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
+				A25AF4531B3B20A5009ABDE9 /* Keys.swift in Sources */,
+				A25AF53B1B3B70E5009ABDE9 /* NSImage+Convertible.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25AF3D21B3B1BDB009ABDE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25AF4F61B3B58C0009ABDE9 /* Keys.swift in Sources */,
+				A25AF5001B3B5EF2009ABDE9 /* Double+Convertible.swift in Sources */,
+				A25AF5061B3B5F9C009ABDE9 /* Int+Convertible.swift in Sources */,
+				A25AF50C1B3B61B6009ABDE9 /* Set+Convertible.swift in Sources */,
+				A25AF52A1B3B6A1E009ABDE9 /* NSSet+Convertible.swift in Sources */,
+				A25AF5241B3B698B009ABDE9 /* NSNull+Convertible.swift in Sources */,
+				A25AF5091B3B6012009ABDE9 /* Optional+Convertible.swift in Sources */,
+				A25AF5031B3B5F5C009ABDE9 /* Float+Convertible.swift in Sources */,
+				A25AF5271B3B69EE009ABDE9 /* NSNumber+Convertible.swift in Sources */,
+				A25AF5331B3B6BC7009ABDE9 /* UIImage+Convertible.swift in Sources */,
+				A25AF4FD1B3B5E53009ABDE9 /* Dictionary+Convertible.swift in Sources */,
+				A23259DD1B3C5173006833EB /* Models.swift in Sources */,
+				A25AF5181B3B6445009ABDE9 /* Data.swift in Sources */,
+				A25AF4FA1B3B5D4A009ABDE9 /* Bool+Convertible.swift in Sources */,
+				A25AF51E1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
+				A20BEF661B3C70B100703C9C /* _ConvertibleType.swift in Sources */,
+				A25AF52D1B3B6A79009ABDE9 /* NSString+Convertible.swift in Sources */,
+				A25AF5211B3B6951009ABDE9 /* NSDate+Convertible.swift in Sources */,
+				A2877E931B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */,
+				A25AF50F1B3B628B009ABDE9 /* String+Convertible.swift in Sources */,
+				A23259E31B3C527C006833EB /* Convertible.swift in Sources */,
+				A25AF5121B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */,
+				A25AF5301B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */,
+				A25AF4D91B3B5786009ABDE9 /* Array+Convertible.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25AF3E91B3B1D2D009ABDE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25AF4F71B3B58C0009ABDE9 /* Keys.swift in Sources */,
+				A25AF5011B3B5EF2009ABDE9 /* Double+Convertible.swift in Sources */,
+				A25AF5071B3B5F9C009ABDE9 /* Int+Convertible.swift in Sources */,
+				A25AF50D1B3B61B6009ABDE9 /* Set+Convertible.swift in Sources */,
+				A2877E8E1B3B7543006E70B9 /* NSImage+Convertible.swift in Sources */,
+				A25AF52B1B3B6A1E009ABDE9 /* NSSet+Convertible.swift in Sources */,
+				A25AF5251B3B698B009ABDE9 /* NSNull+Convertible.swift in Sources */,
+				A25AF50A1B3B6012009ABDE9 /* Optional+Convertible.swift in Sources */,
+				A25AF5041B3B5F5C009ABDE9 /* Float+Convertible.swift in Sources */,
+				A25AF5281B3B69EE009ABDE9 /* NSNumber+Convertible.swift in Sources */,
+				A25AF4FE1B3B5E53009ABDE9 /* Dictionary+Convertible.swift in Sources */,
+				A23259DE1B3C5173006833EB /* Models.swift in Sources */,
+				A25AF5191B3B6445009ABDE9 /* Data.swift in Sources */,
+				A25AF4FB1B3B5D4A009ABDE9 /* Bool+Convertible.swift in Sources */,
+				A25AF51F1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
+				A20BEF671B3C70B100703C9C /* _ConvertibleType.swift in Sources */,
+				A25AF52E1B3B6A79009ABDE9 /* NSString+Convertible.swift in Sources */,
+				A25AF5221B3B6951009ABDE9 /* NSDate+Convertible.swift in Sources */,
+				A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */,
+				A25AF5101B3B628B009ABDE9 /* String+Convertible.swift in Sources */,
+				A23259E41B3C527C006833EB /* Convertible.swift in Sources */,
+				A25AF5131B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */,
+				A25AF5311B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */,
+				A25AF4F81B3B5BDF009ABDE9 /* Array+Convertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A25AF31F1B3B17A0009ABDE9 /* PBXTargetDependency */ = {
+		A25AF3DD1B3B1BDC009ABDE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A25AF3111B3B17A0009ABDE9 /* Convertible */;
-			targetProxy = A25AF31E1B3B17A0009ABDE9 /* PBXContainerItemProxy */;
+			target = A25AF3841B3B1A3F009ABDE9 /* Convertible-iOS */;
+			targetProxy = A25AF3DC1B3B1BDC009ABDE9 /* PBXContainerItemProxy */;
+		};
+		A25AF3F41B3B1D2D009ABDE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A25AF3A01B3B1AAA009ABDE9 /* Convertible-OSX */;
+			targetProxy = A25AF3F31B3B1D2D009ABDE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -304,55 +912,143 @@
 			};
 			name = Release;
 		};
-		A25AF3271B3B17A0009ABDE9 /* Debug */ = {
+		A25AF3971B3B1A3F009ABDE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Convertible/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Convertible/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.Convertible;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.Convertible-iOS";
+				PRODUCT_MODULE_NAME = Convertible;
+				PRODUCT_NAME = Convertible;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		A25AF3281B3B17A0009ABDE9 /* Release */ = {
+		A25AF3981B3B1A3F009ABDE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Convertible/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Convertible/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.Convertible;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.Convertible-iOS";
+				PRODUCT_MODULE_NAME = Convertible;
+				PRODUCT_NAME = Convertible;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		A25AF32A1B3B17A0009ABDE9 /* Debug */ = {
+		A25AF3B31B3B1AAA009ABDE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ConvertibleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.ConvertibleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Convertible/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.Convertible-OSX";
+				PRODUCT_MODULE_NAME = Convertible;
+				PRODUCT_NAME = Convertible;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		A25AF32B1B3B17A0009ABDE9 /* Release */ = {
+		A25AF3B41B3B1AAA009ABDE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ConvertibleTests/Info.plist;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Convertible/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.Convertible-OSX";
+				PRODUCT_MODULE_NAME = Convertible;
+				PRODUCT_NAME = Convertible;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A25AF3DF1B3B1BDC009ABDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "ConvertibleTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.ConvertibleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = ConvertibleTests;
+				PRODUCT_NAME = ConvertibleTests;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A25AF3E01B3B1BDC009ABDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "ConvertibleTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.ConvertibleTests;
+				PRODUCT_MODULE_NAME = ConvertibleTests;
+				PRODUCT_NAME = ConvertibleTests;
+			};
+			name = Release;
+		};
+		A25AF3F61B3B1D2D009ABDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ConvertibleTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.ConvertibleTests;
+				PRODUCT_MODULE_NAME = ConvertibleTests;
+				PRODUCT_NAME = ConvertibleTests;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A25AF3F71B3B1D2D009ABDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ConvertibleTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.ConvertibleTests;
+				PRODUCT_MODULE_NAME = ConvertibleTests;
+				PRODUCT_NAME = ConvertibleTests;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -368,21 +1064,41 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A25AF3261B3B17A0009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible" */ = {
+		A25AF3961B3B1A3F009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A25AF3271B3B17A0009ABDE9 /* Debug */,
-				A25AF3281B3B17A0009ABDE9 /* Release */,
+				A25AF3971B3B1A3F009ABDE9 /* Debug */,
+				A25AF3981B3B1A3F009ABDE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		A25AF3291B3B17A0009ABDE9 /* Build configuration list for PBXNativeTarget "ConvertibleTests" */ = {
+		A25AF3B21B3B1AAA009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A25AF32A1B3B17A0009ABDE9 /* Debug */,
-				A25AF32B1B3B17A0009ABDE9 /* Release */,
+				A25AF3B31B3B1AAA009ABDE9 /* Debug */,
+				A25AF3B41B3B1AAA009ABDE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A25AF3DE1B3B1BDC009ABDE9 /* Build configuration list for PBXNativeTarget "ConvertibleTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A25AF3DF1B3B1BDC009ABDE9 /* Debug */,
+				A25AF3E01B3B1BDC009ABDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A25AF3F51B3B1D2D009ABDE9 /* Build configuration list for PBXNativeTarget "ConvertibleTests-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A25AF3F61B3B1D2D009ABDE9 /* Debug */,
+				A25AF3F71B3B1D2D009ABDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
