@@ -149,9 +149,6 @@
 /* Begin PBXFileReference section */
 		A20BEF621B3C680000703C9C /* Person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Person.json; sourceTree = "<group>"; };
 		A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _ConvertibleType.swift; sourceTree = "<group>"; };
-		A20BEF681B3CAD5C00703C9C /* Convertible.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Convertible.podspec; sourceTree = "<group>"; };
-		A20BEF691B3CAFDC00703C9C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		A20BEF6A1B3CAFE400703C9C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A23259DC1B3C5173006833EB /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A23259E21B3C527C006833EB /* Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
 		A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Convertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,9 +253,6 @@
 		A25AF3081B3B17A0009ABDE9 = {
 			isa = PBXGroup;
 			children = (
-				A20BEF681B3CAD5C00703C9C /* Convertible.podspec */,
-				A20BEF691B3CAFDC00703C9C /* LICENSE */,
-				A20BEF6A1B3CAFE400703C9C /* README.md */,
 				A25AF3B81B3B1B04009ABDE9 /* Convertible */,
 				A25AF3E11B3B1C1D009ABDE9 /* ConvertibleTests */,
 				A25AF3131B3B17A0009ABDE9 /* Products */,
