@@ -9,7 +9,7 @@ Converting your basic types and models to-and-from JSON, binary data, etc. is a 
 use_frameworks!
 pod 'Convertible'
 ```
-To use `Convertible`, import it at the top of your .swift file:
+Be sure to import the module at the top of your .swift files:
 ```swift
 import `Convertible`
 ```
