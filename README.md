@@ -1,5 +1,4 @@
 # Convertible
-Magical Swift JSON Modeling Framework
 
 Converting your basic types and models to and from JSON, Data, etc. is a common task in application development.  Convertible defines a collection of Swift protocols and implementations that makes the conversion process easy, so you don't have to write boilerplate code.
 
