@@ -35,7 +35,6 @@ In iOS/OSX development, working with `NSData` is a given. `Convertible` makes it
 
 The `Convertible` framework defines a universal protocol `DataConvertible` for conversions to-and-from NSData:
 ```swift
-
 protocol DataConvertible : DataInitializable, DataSerializable {
     
     static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self
@@ -43,15 +42,14 @@ protocol DataConvertible : DataInitializable, DataSerializable {
     func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData
     
 }
-
 ```
-`DataConvertible` defines a standard way to create any type that implements `DataConvertible` from an `NSData` object, and a way to convert it back again to `NSData`:
+`DataConvertible` makes it easy to create any conforming type from an `NSData` object (and easy to serialize back to `NSData`):
 ```swift
 let data = // Some arbitrary NSData...
 let string = try String.initializeWithData(data, options: [])
 let newData = try string.serializeToDataWithOptions([])
 ```
-The `Convertible` framework provides default implementations for the following types:
+Default implementations are included for the following types:
 ```swift
 NSString
 NSArray
