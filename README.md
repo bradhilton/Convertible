@@ -29,11 +29,11 @@ Alternatively, clone this repo or download it as a zip and include the classes i
 
 ## Data
 
-In iOS/OSX development, working with `NSData` is a given. `Convertible` makes it easy to convert your Swift and Cocoa types, as well as your own custom models, to-and-from NSData. 
+In iOS/OSX development, working with `NSData` is a given. `Convertible` makes it easy to convert your Swift and Cocoa types, as well as your own custom models, to-and-from `NSData`. 
 
 ### `DataConvertible`
 
-The `Convertible` framework defines a universal protocol `DataConvertible` for conversions to-and-from NSData:
+The `Convertible` framework defines a universal protocol `DataConvertible` for conversions to-and-from `NSData`:
 ```swift
 protocol DataConvertible : DataInitializable, DataSerializable {
     
