@@ -130,7 +130,7 @@ class User : Convertible, RequiredKeys {
   var requiredKeys = ["id", "name"]
 }
 ```
-You can use the `OptionalKeys` protocol instead if you'd like all but the keys you specify be required by default:
+You can use the `OptionalKeys` protocol instead if you'd like to make all but the keys you specify required by default:
 ```swift
 class User : Convertible, OptionalKeys {
   var id: Int = 0
