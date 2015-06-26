@@ -2,6 +2,10 @@
 
 Converting your basic types and models to-and-from JSON, binary data, etc. is a common task in application development. `Convertible` defines a collection of Swift protocols and implementations that makes the conversion process easy, so you don't have to write boilerplate code.
 
+- [Installation](#installation)
+- [Author](#author)
+- [License](#license)
+
 ## Installation
 
 `Convertible` is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
