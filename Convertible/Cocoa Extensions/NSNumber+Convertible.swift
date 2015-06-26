@@ -8,31 +8,6 @@
 
 import Foundation
 
-//extension NSNumber : DataConvertible {
-//    
-//    public class func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
-//        let string = try String.initializeWithData(data, options: options)
-//        return try numberFromString(string, formatter: ConvertibleOptions.NumberFormatter.Option(options).formatter)
-//    }
-//    
-//    class func numberFromString<T>(string: String, formatter: NSNumberFormatter) throws -> T {
-//        if let number = formatter.numberFromString(string) as? T {
-//            return number
-//        } else {
-//            throw ConvertibleError.UnknownError
-//        }
-//    }
-//    
-//    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
-//        if let string = ConvertibleOptions.NumberFormatter.Option(options).formatter.stringFromNumber(self) {
-//            return try string.serializeToDataWithOptions(options)
-//        } else {
-//            throw ConvertibleError.UnknownError
-//        }
-//    }
-//    
-//}
-
 extension NSNumber : JsonConvertible {
     
     public class func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {

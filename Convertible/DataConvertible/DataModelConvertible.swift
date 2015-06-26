@@ -8,9 +8,9 @@
 
 import Foundation
 
-public protocol DataTypeConvertible : DataConvertible {}
+public protocol DataModelConvertible : DataConvertible {}
 
-extension DataTypeConvertible {
+extension DataModelConvertible {
     
     public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
         let json = try JsonValue.initializeWithData(data, options: options)

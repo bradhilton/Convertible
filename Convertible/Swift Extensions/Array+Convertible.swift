@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array : DataTypeConvertible {}
+extension Array : DataModelConvertible {}
 
 extension Array : JsonConvertible {
     

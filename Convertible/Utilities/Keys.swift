@@ -10,7 +10,7 @@ import Foundation
 
 public protocol UnderscoreToCamelCase {}
 
-public protocol CustomKeys {
+public protocol CustomKeyMapping {
     
     var keyMapping: [String : String] { get }
     
@@ -50,7 +50,7 @@ extension Key {
     
     var mappedKey: String {
         var mappedKey = key
-        if let object = object as? CustomKeys, let customKey = object.keyMapping[key] {
+        if let object = object as? CustomKeyMapping, let customKey = object.keyMapping[key] {
             mappedKey = customKey
         } else if object is UnderscoreToCamelCase {
             mappedKey = underscoreFromCamelCase(key)

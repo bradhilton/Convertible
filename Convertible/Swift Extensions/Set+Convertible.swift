@@ -6,7 +6,7 @@
 //  Copyright © 2015 Skyvive. All rights reserved.
 //
 
-extension Set : DataTypeConvertible {}
+extension Set : DataModelConvertible {}
 
 extension Set : JsonConvertible {
     

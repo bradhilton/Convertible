@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Dictionary : DataTypeConvertible {}
+extension Dictionary : DataModelConvertible {}
 
 extension Dictionary : JsonConvertible {
     

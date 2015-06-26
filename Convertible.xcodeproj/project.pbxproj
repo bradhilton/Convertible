@@ -35,8 +35,8 @@
 		A25AF4111B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */; };
 		A25AF4151B3B1E93009ABDE9 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */; };
 		A25AF4161B3B1E93009ABDE9 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */; };
-		A25AF4171B3B1E93009ABDE9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4141B3B1E93009ABDE9 /* DataTypeConvertible.swift */; };
-		A25AF4181B3B1E93009ABDE9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4141B3B1E93009ABDE9 /* DataTypeConvertible.swift */; };
+		A25AF4171B3B1E93009ABDE9 /* DataModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4141B3B1E93009ABDE9 /* DataModelConvertible.swift */; };
+		A25AF4181B3B1E93009ABDE9 /* DataModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4141B3B1E93009ABDE9 /* DataModelConvertible.swift */; };
 		A25AF41F1B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */; };
 		A25AF4201B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */; };
 		A25AF4241B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4221B3B1F67009ABDE9 /* ConvertibleOption.swift */; };
@@ -164,7 +164,7 @@
 		A25AF4001B3B1E4B009ABDE9 /* NSString+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConvertible.swift; sourceTree = "<group>"; };
-		A25AF4141B3B1E93009ABDE9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
+		A25AF4141B3B1E93009ABDE9 /* DataModelConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelConvertible.swift; sourceTree = "<group>"; };
 		A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertibleError.swift; sourceTree = "<group>"; };
 		A25AF4221B3B1F67009ABDE9 /* ConvertibleOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertibleOption.swift; sourceTree = "<group>"; };
 		A25AF4231B3B1F67009ABDE9 /* ConvertibleOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertibleOptions.swift; sourceTree = "<group>"; };
@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */,
-				A25AF4141B3B1E93009ABDE9 /* DataTypeConvertible.swift */,
+				A25AF4141B3B1E93009ABDE9 /* DataModelConvertible.swift */,
 			);
 			path = DataConvertible;
 			sourceTree = "<group>";
@@ -679,7 +679,7 @@
 				A25AF4491B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */,
 				A25AF4021B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */,
 				A25AF44B1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */,
-				A25AF4171B3B1E93009ABDE9 /* DataTypeConvertible.swift in Sources */,
+				A25AF4171B3B1E93009ABDE9 /* DataModelConvertible.swift in Sources */,
 				A25AF40C1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */,
 				A25AF4311B3B2007009ABDE9 /* JsonValue.swift in Sources */,
 				A25AF4261B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */,
@@ -715,7 +715,7 @@
 				A25AF44A1B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */,
 				A25AF4031B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */,
 				A25AF44C1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */,
-				A25AF4181B3B1E93009ABDE9 /* DataTypeConvertible.swift in Sources */,
+				A25AF4181B3B1E93009ABDE9 /* DataModelConvertible.swift in Sources */,
 				A25AF40D1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */,
 				A25AF4321B3B2007009ABDE9 /* JsonValue.swift in Sources */,
 				A25AF4271B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */,

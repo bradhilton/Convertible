@@ -20,7 +20,7 @@ class Person : Convertible, UnderscoreToCamelCase {
     
 }
 
-class RequiredKeysPerson : NSObject, UnderscoreToCamelCase, CustomKeys, IgnoredKeys, RequiredKeys, OptionalKeys {
+class RequiredKeysPerson : NSObject, UnderscoreToCamelCase, CustomKeyMapping, IgnoredKeys, RequiredKeys, OptionalKeys {
     var firstName: String? = "Brad"
     var lastName: String? = "Hilton"
     var isPublic = false
