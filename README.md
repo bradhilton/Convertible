@@ -29,9 +29,42 @@ Alternatively, clone this repo or download it as a zip and include the classes i
 
 ## Data
 
-In Cocoa development, working with `NSData` is a given. 
+In iOS/OSX development, working with `NSData` is a given. `Convertible` makes it easy to convert your Swift and Cocoa types, as well as your own custom models, to-and-from NSData. 
 
 ### `DataConvertible`
+
+The `Convertible` framework defines a universal protocol `DataConvertible` for conversions to-and-from NSData:
+```swift
+
+protocol DataConvertible : DataInitializable, DataSerializable {
+    
+    static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self
+    
+    func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData
+    
+}
+
+```
+`DataConvertible` defines a standard way to create any type that implements `DataConvertible` from an `NSData` object, and a way to convert it back again to `NSData`:
+```swift
+let data = // Some arbitrary NSData...
+let string = try String.initializeWithData(data, options: [])
+let newData = try string.serializeToDataWithOptions([])
+```
+The `Convertible` framework provides default implementations for the following types:
+```swift
+NSString
+NSArray
+NSDictionary
+NSSet
+NSImage
+UIImage
+Swift.String
+Swift.Array
+Swift.Dictionary
+Swift.Set
+```
+Types from the `Convertible` framework such as `Convertible` or `JsonValue` also implement `DataConvertible`. You can extend your own custom types to implement `DataConvertible` to take advantage of this powerful convention.
 
 ## JSON
 
