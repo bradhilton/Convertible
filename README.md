@@ -145,7 +145,7 @@ class User : Convertible {
   var created: NSDate?
 }
 ```
-`Convertible` implements all conversion protocols. So creating a new `User` from NSData is easy:
+`Convertible` implements all conversion protocols. So creating a new `User` from `NSData` is easy:
 ```swift
 let data = // Some JSON NSData from a HTTP request...
 let user = try User.initializeWithData(data)
