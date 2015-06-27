@@ -66,9 +66,73 @@ Types from the `Convertible` framework such as `Convertible` or `JsonValue` also
 
 ## JSON
 
+Nothing seems to be more ubiquitous these days than JSON. But converting objects to-and-from JSON with the usual methods can be a big pain. `Convertible` makes working with JSON a breeze by defining a standard protocol and value-type abstraction with `JsonConvertible` and `JsonValue`.
+
 ### `JsonConvertible`
 
+`JsonConvertible` defines a simple protocol for conversions to-and-from `JsonValue`s:
+
+```swift
+protocol JsonConvertible {
+
+    static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self
+
+    func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue
+    
+}
+```
+`Convertible` includes default implementations for the most common Cocoa and Swift types:
+```swift
+NSString
+NSArray
+NSDictionary
+NSNumber
+NSNull
+NSSet
+NSURL
+NSImage
+UIImage
+Swift.Array
+Swift.Bool
+Swift.Dictionary
+Swift.Double
+Swift.Float
+Swift.Int
+Swift.Optional
+Swift.Set
+Swift.String
+```
+You can extend any other type by implementing `JsonConvertible` and harness the power of JSON for your own custom types too!
+
 ### `JsonValue`
+
+`JsonValue` is an enum abstraction of all possible values a JSON entity may take on (as returned by NSJSONSerialization):
+```swift
+public enum JsonValue {
+    
+    case String(NSString)
+    case Number(NSNumber)
+    case Array([JsonValue])
+    case Dictionary([NSString : JsonValue])
+    case Null(NSNull)
+    
+    public init(object: AnyObject) throws
+    
+    public var object: AnyObject { get }
+    
+}
+```
+Because `JsonValue` conforms to `DataConvertible` it provides a much easier way consider a JSON responses possible values:
+```swift
+let json = try JsonValue.initializeWithData(data)
+switch json {
+case .String(let string): // It's a string!!
+case .Number(let number): // It's a number!!
+case .Array(let array): // It's an array!!
+case .Dictionary(let dictionary): // It's a dictionary!
+case .Null(_): // This JSON value is null. Nothing to see here.
+}
+```
 
 ## Models
 
