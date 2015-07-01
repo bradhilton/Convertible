@@ -127,6 +127,8 @@
 		A2877E8E1B3B7543006E70B9 /* NSImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */; };
 		A2877E931B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
+		A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
+		A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +216,7 @@
 		A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
 		A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
 		A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
+		A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Convertible.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +319,7 @@
 				A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */,
 				A25AF48A1B3B2550009ABDE9 /* UIImage+Convertible.swift */,
 				A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */,
+				A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */,
 			);
 			path = "Cocoa Extensions";
 			sourceTree = "<group>";
@@ -700,6 +704,7 @@
 				A25AF48B1B3B2550009ABDE9 /* UIImage+Convertible.swift in Sources */,
 				A25AF43F1B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */,
 				A25AF4411B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
+				A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */,
 				A25AF4101B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A25AF4591B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */,
 				A25AF40E1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
@@ -736,6 +741,7 @@
 				A25AF4401B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */,
 				A25AF4421B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
 				A25AF4111B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
+				A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */,
 				A25AF45A1B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */,
 				A25AF40F1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
 				A25AF4531B3B20A5009ABDE9 /* Keys.swift in Sources */,

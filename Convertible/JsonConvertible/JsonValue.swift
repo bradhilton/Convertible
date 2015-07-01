@@ -51,6 +51,18 @@ extension JsonValue : DataConvertible {
     
 }
 
+extension JsonValue : JsonConvertible {
+    
+    public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> JsonValue {
+        return json
+    }
+    
+    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
+        return self
+    }
+    
+}
+
 private func convertNSArray(array: NSArray) throws -> [JsonValue] {
     var result = [JsonValue]()
     for object in array {
