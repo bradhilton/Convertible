@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author       = { "Brad Hilton" => "brad@skyvive.com" }
   s.source       = { :git => "https://github.com/bradhilton/Convertible.git", :tag => "0.9.0" }
 
-  s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
 
   s.source_files  = "Convertible", "Convertible/**/*.{swift,h,m}"
