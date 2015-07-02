@@ -214,6 +214,7 @@
 		A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JPEG.jpg; sourceTree = "<group>"; };
 		A25AF5371B3B6C8E009ABDE9 /* PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PNG.png; sourceTree = "<group>"; };
 		A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
+		A27808081B44B0EB0004D0BF /* Convertible.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Convertible.podspec; sourceTree = "<group>"; };
 		A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
 		A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
 		A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Convertible.swift"; sourceTree = "<group>"; };
@@ -256,6 +257,7 @@
 		A25AF3081B3B17A0009ABDE9 = {
 			isa = PBXGroup;
 			children = (
+				A27808081B44B0EB0004D0BF /* Convertible.podspec */,
 				A25AF3B81B3B1B04009ABDE9 /* Convertible */,
 				A25AF3E11B3B1C1D009ABDE9 /* ConvertibleTests */,
 				A25AF3131B3B17A0009ABDE9 /* Products */,
