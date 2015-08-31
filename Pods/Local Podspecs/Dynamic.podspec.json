@@ -1,0 +1,23 @@
+{
+  "name": "Dynamic",
+  "version": "0.0.1",
+  "summary": "A short description of Dynamic.",
+  "description": "A longer description of Dynamic in Markdown format.\n\n* Think: Why did you write this? What is the focus? What does it do?\n* CocoaPods will be using this to generate tags, and improve search results.\n* Try to keep it short, snappy and to the point.\n* Finally, don't worry about the indent, CocoaPods strips it!",
+  "homepage": "http://EXAMPLE/Dynamic",
+  "license": "MIT (example)",
+  "authors": {
+    "bradhilton": "brad.hilton.nw@gmail.com"
+  },
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.9"
+  },
+  "source": {
+    "git": "http://EXAMPLE/Dynamic.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "Dynamice",
+    "Dynamic/**/*.{h,m,swift}"
+  ]
+}

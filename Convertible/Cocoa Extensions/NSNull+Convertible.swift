@@ -8,6 +8,18 @@
 
 import Foundation
 
+extension NSNull : DataConvertible {
+    
+    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
+        return self.init()
+    }
+    
+    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
+        return NSData()
+    }
+    
+}
+
 extension NSNull : JsonConvertible {
     
     public class func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {

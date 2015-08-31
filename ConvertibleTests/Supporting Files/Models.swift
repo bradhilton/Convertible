@@ -10,21 +10,28 @@ import Convertible
 
 typealias Number = NSNumber
 
-class Person : Convertible, UnderscoreToCamelCase {
-    
+struct PersonValue : StructConvertible, UnderscoreToCamelCase {
     var id: Number?
     var firstName: String?
     var lastName: String?
     var `public`: Number?
     var bestFriend: Person?
-    
 }
 
-class RequiredKeysPerson : NSObject, UnderscoreToCamelCase, CustomKeyMapping, IgnoredKeys, RequiredKeys, OptionalKeys {
+class Person : ClassConvertible, UnderscoreToCamelCase {
+    var id: Number?
+    var firstName: String?
+    var lastName: String?
+    var `public`: Number?
+    var bestFriend: Person?
+}
+
+class RequiredKeysPerson : ClassConvertible, UnderscoreToCamelCase, CustomKeyMapping, IgnoredKeys, RequiredKeys, OptionalKeys {
     var firstName: String? = "Brad"
     var lastName: String? = "Hilton"
     var isPublic = false
     var age = 26
+    var unsettableKey: Int?
     var keyMapping = ["isPublic":"public"]
     var ignoredKeys = ["age"]
     var requiredKeys = ["firstName", "lastName"]

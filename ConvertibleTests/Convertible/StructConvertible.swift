@@ -1,19 +1,19 @@
 //
-//  Convertible.swift
+//  ValueConvertible_.swift
 //  Convertible
 //
-//  Created by Bradley Hilton on 6/25/15.
+//  Created by Bradley Hilton on 7/21/15.
 //  Copyright © 2015 Skyvive. All rights reserved.
 //
 
 import XCTest
 import Convertible
 
-class Convertible_ : XCTestCase {
+class StructConvertible_ : XCTestCase {
     
     func testDataConvertible() {
         do {
-            let result = try Person.initializeWithData(Data.personData)
+            let result = try PersonValue.initializeWithData(Data.personData)
             let data = try result.serializeToData()
             XCTAssert(Data.personData == data)
         } catch {

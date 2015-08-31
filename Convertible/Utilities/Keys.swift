@@ -34,12 +34,16 @@ public protocol OptionalKeys {
     
 }
 
+public protocol AllRequiredKeys {}
+
+public protocol OptionalsAsOptionalKeys {}
+
 let ignoredKeys = ["super", "keyMapping", "ignoredKeys", "requiredKeys", "optionalKeys"]
 
-struct Key {
+public struct Key {
     
     let object: Any
-    let key: String
+    public let key: String
     let value: Any
     let valueType: Any.Type
     let summary: String
@@ -76,6 +80,10 @@ func requiredKeys(object: Any) -> [Key] {
         return allKeys(object).filter { object.requiredKeys.contains($0.key) }
     } else if let object = object as? OptionalKeys {
         return allKeys(object).filter { !object.optionalKeys.contains($0.key) }
+    } else if let object = object as? OptionalsAsOptionalKeys {
+        return allKeys(object).filter { !($0.valueType is OptionalProtocol.Type) }
+    } else if let object = object as? AllRequiredKeys {
+        return allKeys(object)
     } else {
         return [Key]()
     }
@@ -83,13 +91,15 @@ func requiredKeys(object: Any) -> [Key] {
 
 func allKeys(object: Any) -> [Key] {
     var keys = [Key]()
-    for (key, mirror) in properties(object) {
-        if ignoredKeys.contains(key) {
-            continue
-        } else if let object = object as? IgnoredKeys where object.ignoredKeys.contains(key) {
-            continue
-        } else {
-            keys.append(Key(object: object, key: key, value: mirror.value, valueType: mirror.valueType, summary: mirror.summary))
+    for child in Mirror(reflecting: object).children {
+        if let key = child.label {
+            if ignoredKeys.contains(key) {
+                continue
+            } else if let object = object as? IgnoredKeys where object.ignoredKeys.contains(key) {
+                continue
+            } else {
+                keys.append(Key(object: object, key: key, value: child.value, valueType: child.value.dynamicType, summary: String(child.value)))
+            }
         }
     }
     return keys
@@ -109,12 +119,4 @@ func underscoreFromCamelCase(camelCase: String) -> String {
         }
     }
     return underscore
-}
-
-func properties<T>(x: T) -> [(String, MirrorType)] {
-    var properties = [(String, MirrorType)]()
-    for i in 0..<reflect(x).count {
-        properties.append(reflect(x)[i])
-    }
-    return properties
 }

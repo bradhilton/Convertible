@@ -8,9 +8,11 @@
 
 import Foundation
 
-public protocol DataModelConvertible : DataConvertible {}
+public protocol DataModelConvertible : DataConvertible, DataModelInitializable, DataModelSerializable {}
 
-extension DataModelConvertible {
+public protocol DataModelInitializable : DataInitializable {}
+
+extension DataModelInitializable {
     
     public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
         let json = try JsonValue.initializeWithData(data, options: options)
@@ -21,6 +23,12 @@ extension DataModelConvertible {
             throw ConvertibleError.NotJsonInitializable(type: self)
         }
     }
+    
+}
+
+public protocol DataModelSerializable : DataSerializable {}
+
+extension DataModelSerializable {
     
     public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
         if let this = self as? JsonSerializable {

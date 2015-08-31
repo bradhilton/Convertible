@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import SwiftKVC
 
-public class Convertible : NSObject, DataConvertible, JsonConvertible, _ConvertibleType {
+public class ClassConvertible : NSObject, DataConvertible, JsonModelConvertible {
     
     public required override init() {}
     
@@ -22,14 +23,41 @@ public class Convertible : NSObject, DataConvertible, JsonConvertible, _Converti
     
     public class func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {
         let object = self.init()
-        if let convertible = object as? _ConvertibleType {
-            try convertible.loadJson(json, options: options)
-        }
+        var convertible = object as ClassConvertible
+        try convertible.loadJson(json, options: options)
         return object
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
-        return try self.jsonValueWithOptions(options)
+    public func setValue(value: Any?, forKey key: Convertible.Key) throws {
+        guard respondsToSelector(NSSelectorFromString(key.setKey)) else {
+            throw ConvertibleError.UnsettableKey(key: key.key)
+        }
+        if value == nil {
+            setValue(nil, forKey: key.key)
+        } else if let object = value! as? AnyObject {
+            setValue(object, forKey: key.key)
+        } else {
+            throw ConvertibleError.NotObjectType(type: value!.dynamicType)
+        }
     }
     
 }
+
+public protocol StructConvertible : SwiftKVC.Model, DataModelConvertible, JsonModelConvertible {}
+
+extension StructConvertible {
+    
+    public mutating func setValue(value: Any?, forKey key: Convertible.Key) throws {
+        if value == nil {
+            self[key.key] = nil
+        } else if let value = value! as? Property {
+            self[key.key] = value
+        } else {
+            throw ConvertibleError.NotPropertyType(type: value!.dynamicType)
+        }
+    }
+    
+}
+
+public protocol ModelSerializable : DataModelSerializable, JsonModelSerializable {}
+

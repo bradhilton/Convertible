@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E10102740E2B750139516DF /* Pods_Convertible_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA96F49E2865BCF187139BD /* Pods_Convertible_OSX.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A20BEF631B3C680000703C9C /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = A20BEF621B3C680000703C9C /* Person.json */; };
 		A20BEF641B3C680000703C9C /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = A20BEF621B3C680000703C9C /* Person.json */; };
-		A20BEF661B3C70B100703C9C /* _ConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */; };
-		A20BEF671B3C70B100703C9C /* _ConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */; };
+		A21BAF0A1B5EE2D200601090 /* StructConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF091B5EE2D200601090 /* StructConvertible.swift */; };
+		A21BAF0B1B5EE2D200601090 /* StructConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF091B5EE2D200601090 /* StructConvertible.swift */; };
+		A21BAF0D1B5FECB500601090 /* JsonModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF0C1B5FECB500601090 /* JsonModelConvertible.swift */; };
+		A21BAF0E1B5FECB500601090 /* JsonModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF0C1B5FECB500601090 /* JsonModelConvertible.swift */; };
+		A21BAF101B5FF37B00601090 /* JsonModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF0F1B5FF37B00601090 /* JsonModelConvertible.swift */; };
+		A21BAF111B5FF37B00601090 /* JsonModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF0F1B5FF37B00601090 /* JsonModelConvertible.swift */; };
 		A23259DD1B3C5173006833EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259DC1B3C5173006833EB /* Models.swift */; };
 		A23259DE1B3C5173006833EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259DC1B3C5173006833EB /* Models.swift */; };
-		A23259E31B3C527C006833EB /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259E21B3C527C006833EB /* Convertible.swift */; };
-		A23259E41B3C527C006833EB /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259E21B3C527C006833EB /* Convertible.swift */; };
+		A23259E31B3C527C006833EB /* ClassConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259E21B3C527C006833EB /* ClassConvertible.swift */; };
+		A23259E41B3C527C006833EB /* ClassConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259E21B3C527C006833EB /* ClassConvertible.swift */; };
 		A25AF3DB1B3B1BDC009ABDE9 /* Convertible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */; };
 		A25AF3F21B3B1D2D009ABDE9 /* Convertible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */; };
 		A25AF4021B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */; };
@@ -69,8 +74,6 @@
 		A25AF4531B3B20A5009ABDE9 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4501B3B20A5009ABDE9 /* Keys.swift */; };
 		A25AF4541B3B20A5009ABDE9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */; };
 		A25AF4551B3B20A5009ABDE9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */; };
-		A25AF4591B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4571B3B20D0009ABDE9 /* _ConvertibleType.swift */; };
-		A25AF45A1B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4571B3B20D0009ABDE9 /* _ConvertibleType.swift */; };
 		A25AF45B1B3B20D0009ABDE9 /* Convertibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4581B3B20D0009ABDE9 /* Convertibles.swift */; };
 		A25AF45C1B3B20D0009ABDE9 /* Convertibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4581B3B20D0009ABDE9 /* Convertibles.swift */; };
 		A25AF46D1B3B23BA009ABDE9 /* Convertible.h in Headers */ = {isa = PBXBuildFile; fileRef = A25AF46C1B3B23BA009ABDE9 /* Convertible.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -127,8 +130,12 @@
 		A2877E8E1B3B7543006E70B9 /* NSImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */; };
 		A2877E931B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
+		A2B785E21B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
+		A2B785E31B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
 		A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 		A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
+		BC5D1BDAD797C502A5F9E42A /* Pods_Convertible_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C4CFE21770C7148439480B /* Pods_Convertible_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EB9B8AC1768B9296A38ED22F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B4312CA19F0949F065B771 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,10 +156,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11C4CFE21770C7148439480B /* Pods_Convertible_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convertible_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B4312CA19F0949F065B771 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F127E021141EA8C670D24D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5B0C010711EE26805B389403 /* Pods-Convertible-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertible-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Convertible-iOS/Pods-Convertible-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		7EA96F49E2865BCF187139BD /* Pods_Convertible_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convertible_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D9D19E366C1A325EDAF3522 /* Pods-Convertible-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertible-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Convertible-iOS/Pods-Convertible-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8DBB518D280F100F0A322EFC /* Pods-Convertible-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertible-OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-Convertible-OSX/Pods-Convertible-OSX.release.xcconfig"; sourceTree = "<group>"; };
+		9C03B127C62876BF163CE679 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A20BEF621B3C680000703C9C /* Person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Person.json; sourceTree = "<group>"; };
-		A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _ConvertibleType.swift; sourceTree = "<group>"; };
+		A21BAF091B5EE2D200601090 /* StructConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructConvertible.swift; sourceTree = "<group>"; };
+		A21BAF0C1B5FECB500601090 /* JsonModelConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonModelConvertible.swift; sourceTree = "<group>"; };
+		A21BAF0F1B5FF37B00601090 /* JsonModelConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonModelConvertible.swift; sourceTree = "<group>"; };
 		A23259DC1B3C5173006833EB /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		A23259E21B3C527C006833EB /* Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
+		A23259E21B3C527C006833EB /* ClassConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassConvertible.swift; sourceTree = "<group>"; };
 		A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Convertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Convertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25AF3D61B3B1BDB009ABDE9 /* ConvertibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +201,6 @@
 		A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF4501B3B20A5009ABDE9 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
-		A25AF4571B3B20D0009ABDE9 /* _ConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _ConvertibleType.swift; sourceTree = "<group>"; };
 		A25AF4581B3B20D0009ABDE9 /* Convertibles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertibles.swift; sourceTree = "<group>"; };
 		A25AF46C1B3B23BA009ABDE9 /* Convertible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Convertible.h; sourceTree = "<group>"; };
 		A25AF48A1B3B2550009ABDE9 /* UIImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Convertible.swift"; sourceTree = "<group>"; };
@@ -217,7 +233,9 @@
 		A27808081B44B0EB0004D0BF /* Convertible.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Convertible.podspec; sourceTree = "<group>"; };
 		A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
 		A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
+		A2B785E11B684C5300090309 /* NSData+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Convertible.swift"; sourceTree = "<group>"; };
 		A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Convertible.swift"; sourceTree = "<group>"; };
+		BB8F907527E92D6298666047 /* Pods-Convertible-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertible-OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Convertible-OSX/Pods-Convertible-OSX.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +243,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5D1BDAD797C502A5F9E42A /* Pods_Convertible_iOS.framework in Frameworks */,
+				EB9B8AC1768B9296A38ED22F /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E10102740E2B750139516DF /* Pods_Convertible_OSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +275,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0841D154DDA80F7B41120660 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB8F907527E92D6298666047 /* Pods-Convertible-OSX.debug.xcconfig */,
+				8DBB518D280F100F0A322EFC /* Pods-Convertible-OSX.release.xcconfig */,
+				8D9D19E366C1A325EDAF3522 /* Pods-Convertible-iOS.debug.xcconfig */,
+				5B0C010711EE26805B389403 /* Pods-Convertible-iOS.release.xcconfig */,
+				19F127E021141EA8C670D24D /* Pods.debug.xcconfig */,
+				9C03B127C62876BF163CE679 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		91904A479FC248F7321E7003 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EA96F49E2865BCF187139BD /* Pods_Convertible_OSX.framework */,
+				11C4CFE21770C7148439480B /* Pods_Convertible_iOS.framework */,
+				14B4312CA19F0949F065B771 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A25AF3081B3B17A0009ABDE9 = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +305,8 @@
 				A25AF3B81B3B1B04009ABDE9 /* Convertible */,
 				A25AF3E11B3B1C1D009ABDE9 /* ConvertibleTests */,
 				A25AF3131B3B17A0009ABDE9 /* Products */,
+				0841D154DDA80F7B41120660 /* Pods */,
+				91904A479FC248F7321E7003 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */,
+				A2B785E11B684C5300090309 /* NSData+Convertible.swift */,
 				A25AF3FB1B3B1E4B009ABDE9 /* NSDate+Covertible.swift */,
 				A25AF3FC1B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift */,
 				A25AF3FD1B3B1E4B009ABDE9 /* NSNull+Convertible.swift */,
@@ -365,6 +412,7 @@
 			children = (
 				A25AF42D1B3B2007009ABDE9 /* JsonConvertible.swift */,
 				A25AF42E1B3B2007009ABDE9 /* JsonValue.swift */,
+				A21BAF0C1B5FECB500601090 /* JsonModelConvertible.swift */,
 			);
 			path = JsonConvertible;
 			sourceTree = "<group>";
@@ -397,7 +445,6 @@
 		A25AF4561B3B20D0009ABDE9 /* Convertible */ = {
 			isa = PBXGroup;
 			children = (
-				A25AF4571B3B20D0009ABDE9 /* _ConvertibleType.swift */,
 				A25AF4581B3B20D0009ABDE9 /* Convertibles.swift */,
 			);
 			path = Convertible;
@@ -423,8 +470,8 @@
 		A25AF4961B3B5786009ABDE9 /* Convertible */ = {
 			isa = PBXGroup;
 			children = (
-				A20BEF651B3C70B100703C9C /* _ConvertibleType.swift */,
-				A23259E21B3C527C006833EB /* Convertible.swift */,
+				A23259E21B3C527C006833EB /* ClassConvertible.swift */,
+				A21BAF091B5EE2D200601090 /* StructConvertible.swift */,
 			);
 			path = Convertible;
 			sourceTree = "<group>";
@@ -447,6 +494,7 @@
 		A25AF49E1B3B5786009ABDE9 /* JsonConvertible */ = {
 			isa = PBXGroup;
 			children = (
+				A21BAF0F1B5FF37B00601090 /* JsonModelConvertible.swift */,
 			);
 			path = JsonConvertible;
 			sourceTree = "<group>";
@@ -523,10 +571,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25AF3961B3B1A3F009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-iOS" */;
 			buildPhases = (
+				654D650F2B7743FC7EABBCD3 /* Check Pods Manifest.lock */,
 				A25AF3801B3B1A3F009ABDE9 /* Sources */,
 				A25AF3811B3B1A3F009ABDE9 /* Frameworks */,
 				A25AF3821B3B1A3F009ABDE9 /* Headers */,
 				A25AF3831B3B1A3F009ABDE9 /* Resources */,
+				F97DB03F9F3632FE193B2EC0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -541,10 +591,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25AF3B21B3B1AAA009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-OSX" */;
 			buildPhases = (
+				5033BA88B800CE758FB6C482 /* Check Pods Manifest.lock */,
 				A25AF39C1B3B1AAA009ABDE9 /* Sources */,
 				A25AF39D1B3B1AAA009ABDE9 /* Frameworks */,
 				A25AF39E1B3B1AAA009ABDE9 /* Headers */,
 				A25AF39F1B3B1AAA009ABDE9 /* Resources */,
+				16B1A07895E6B5F961581748 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -676,6 +728,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16B1A07895E6B5F961581748 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Convertible-OSX/Pods-Convertible-OSX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5033BA88B800CE758FB6C482 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		654D650F2B7743FC7EABBCD3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F97DB03F9F3632FE193B2EC0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A25AF3801B3B1A3F009ABDE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -692,6 +807,7 @@
 				A25AF4431B3B205B009ABDE9 /* Double+Convertible.swift in Sources */,
 				A25AF4151B3B1E93009ABDE9 /* DataConvertible.swift in Sources */,
 				A25AF4041B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */,
+				A2B785E21B684C5300090309 /* NSData+Convertible.swift in Sources */,
 				A25AF4471B3B205B009ABDE9 /* Int+Convertible.swift in Sources */,
 				A25AF4061B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
 				A25AF4541B3B20A5009ABDE9 /* String+Utilities.swift in Sources */,
@@ -708,7 +824,7 @@
 				A25AF4411B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
 				A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */,
 				A25AF4101B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
-				A25AF4591B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */,
+				A21BAF0D1B5FECB500601090 /* JsonModelConvertible.swift in Sources */,
 				A25AF40E1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
 				A25AF4521B3B20A5009ABDE9 /* Keys.swift in Sources */,
 			);
@@ -729,6 +845,7 @@
 				A25AF4441B3B205B009ABDE9 /* Double+Convertible.swift in Sources */,
 				A25AF4161B3B1E93009ABDE9 /* DataConvertible.swift in Sources */,
 				A25AF4051B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */,
+				A2B785E31B684C5300090309 /* NSData+Convertible.swift in Sources */,
 				A25AF4481B3B205B009ABDE9 /* Int+Convertible.swift in Sources */,
 				A25AF4071B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
 				A25AF4551B3B20A5009ABDE9 /* String+Utilities.swift in Sources */,
@@ -744,8 +861,8 @@
 				A25AF4421B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
 				A25AF4111B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */,
-				A25AF45A1B3B20D0009ABDE9 /* _ConvertibleType.swift in Sources */,
 				A25AF40F1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
+				A21BAF0E1B5FECB500601090 /* JsonModelConvertible.swift in Sources */,
 				A25AF4531B3B20A5009ABDE9 /* Keys.swift in Sources */,
 				A25AF53B1B3B70E5009ABDE9 /* NSImage+Convertible.swift in Sources */,
 			);
@@ -758,6 +875,7 @@
 				A25AF4F61B3B58C0009ABDE9 /* Keys.swift in Sources */,
 				A25AF5001B3B5EF2009ABDE9 /* Double+Convertible.swift in Sources */,
 				A25AF5061B3B5F9C009ABDE9 /* Int+Convertible.swift in Sources */,
+				A21BAF101B5FF37B00601090 /* JsonModelConvertible.swift in Sources */,
 				A25AF50C1B3B61B6009ABDE9 /* Set+Convertible.swift in Sources */,
 				A25AF52A1B3B6A1E009ABDE9 /* NSSet+Convertible.swift in Sources */,
 				A25AF5241B3B698B009ABDE9 /* NSNull+Convertible.swift in Sources */,
@@ -770,12 +888,12 @@
 				A25AF5181B3B6445009ABDE9 /* Data.swift in Sources */,
 				A25AF4FA1B3B5D4A009ABDE9 /* Bool+Convertible.swift in Sources */,
 				A25AF51E1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
-				A20BEF661B3C70B100703C9C /* _ConvertibleType.swift in Sources */,
 				A25AF52D1B3B6A79009ABDE9 /* NSString+Convertible.swift in Sources */,
 				A25AF5211B3B6951009ABDE9 /* NSDate+Convertible.swift in Sources */,
 				A2877E931B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */,
 				A25AF50F1B3B628B009ABDE9 /* String+Convertible.swift in Sources */,
-				A23259E31B3C527C006833EB /* Convertible.swift in Sources */,
+				A23259E31B3C527C006833EB /* ClassConvertible.swift in Sources */,
+				A21BAF0A1B5EE2D200601090 /* StructConvertible.swift in Sources */,
 				A25AF5121B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */,
 				A25AF5301B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A25AF4D91B3B5786009ABDE9 /* Array+Convertible.swift in Sources */,
@@ -789,6 +907,7 @@
 				A25AF4F71B3B58C0009ABDE9 /* Keys.swift in Sources */,
 				A25AF5011B3B5EF2009ABDE9 /* Double+Convertible.swift in Sources */,
 				A25AF5071B3B5F9C009ABDE9 /* Int+Convertible.swift in Sources */,
+				A21BAF111B5FF37B00601090 /* JsonModelConvertible.swift in Sources */,
 				A25AF50D1B3B61B6009ABDE9 /* Set+Convertible.swift in Sources */,
 				A2877E8E1B3B7543006E70B9 /* NSImage+Convertible.swift in Sources */,
 				A25AF52B1B3B6A1E009ABDE9 /* NSSet+Convertible.swift in Sources */,
@@ -801,12 +920,12 @@
 				A25AF5191B3B6445009ABDE9 /* Data.swift in Sources */,
 				A25AF4FB1B3B5D4A009ABDE9 /* Bool+Convertible.swift in Sources */,
 				A25AF51F1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
-				A20BEF671B3C70B100703C9C /* _ConvertibleType.swift in Sources */,
 				A25AF52E1B3B6A79009ABDE9 /* NSString+Convertible.swift in Sources */,
 				A25AF5221B3B6951009ABDE9 /* NSDate+Convertible.swift in Sources */,
 				A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */,
 				A25AF5101B3B628B009ABDE9 /* String+Convertible.swift in Sources */,
-				A23259E41B3C527C006833EB /* Convertible.swift in Sources */,
+				A23259E41B3C527C006833EB /* ClassConvertible.swift in Sources */,
+				A21BAF0B1B5EE2D200601090 /* StructConvertible.swift in Sources */,
 				A25AF5131B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */,
 				A25AF5311B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A25AF4F81B3B5BDF009ABDE9 /* Array+Convertible.swift in Sources */,
@@ -920,6 +1039,7 @@
 		};
 		A25AF3971B3B1A3F009ABDE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F127E021141EA8C670D24D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -939,6 +1059,7 @@
 		};
 		A25AF3981B3B1A3F009ABDE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C03B127C62876BF163CE679 /* Pods.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -968,7 +1089,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Convertible/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.Convertible-OSX";
 				PRODUCT_MODULE_NAME = Convertible;
 				PRODUCT_NAME = Convertible;
@@ -990,7 +1111,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Convertible/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.Convertible-OSX";
 				PRODUCT_MODULE_NAME = Convertible;
 				PRODUCT_NAME = Convertible;

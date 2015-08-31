@@ -19,6 +19,8 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
     case CannotCreateType(type: Any.Type, fromJson: JsonValue)
     case ObjectNotJsonValue(object: AnyObject)
     case NotStringType(type: Any.Type)
+    case NotObjectType(type: Any.Type)
+    case NotPropertyType(type: Any.Type)
     case CannotCreateUrlFromString(string: String)
     case CannotCreateDateFromString(string: String)
     case CannotCreateImageFromData()
@@ -38,6 +40,8 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
         case .NotJsonInitializable(type: let type): return "\(type) does not implement JsonInitializable"
         case .NotJsonSerializable(type: let type): return "\(type) does not implement JsonSerializable"
         case .NotStringType(type: let type): return "\(type) is not a String type"
+        case .NotObjectType(type: let type): return "\(type) does not conform to AnyObject"
+        case .NotPropertyType(type: let type): return "\(type) does not conform to SwiftKVC.Property"
         case .CannotCreateType(type: let type, fromJson: let json): return "Cannot create \(type) from \(json)"
         case .ObjectNotJsonValue(object: let object): return "\(object.dynamicType) is not a JSON value"
         case .CannotCreateUrlFromString(string: let string): return "Could not create URL from \(string)"

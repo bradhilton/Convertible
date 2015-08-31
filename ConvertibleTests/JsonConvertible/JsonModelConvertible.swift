@@ -1,19 +1,28 @@
 //
-//  _ConvertibleType.swift
+//  JsonModelConvertible.swift
 //  Convertible
 //
-//  Created by Bradley Hilton on 6/25/15.
+//  Created by Bradley Hilton on 7/22/15.
 //  Copyright © 2015 Skyvive. All rights reserved.
 //
 
 import XCTest
 @testable import Convertible
 
-extension RequiredKeysPerson : _ConvertibleType {}
-
-class _ConvertibleType_ : XCTestCase {
+class JsonModelConvertible_: XCTestCase {
     
     var person = RequiredKeysPerson()
+    
+    func testUnsettableKey() {
+        do {
+            try person.setValue(15, forKey: Key(object: person, key: "unsettableKey", value: 15, valueType: Int.self, summary: "15"))
+            XCTFail()
+        } catch ConvertibleError.UnsettableKey(let key) {
+            XCTAssert(key == "unsettableKey")
+        } catch {
+            XCTFail()
+        }
+    }
     
     func testCheckDictionaryForMissingKeysSuccess() {
         do {
@@ -34,7 +43,7 @@ class _ConvertibleType_ : XCTestCase {
             XCTFail()
         }
     }
-    
+
     func testCheckForNilRequiredKeysSuccess() {
         do {
             try person.checkForNilRequiredKeys()
@@ -42,7 +51,7 @@ class _ConvertibleType_ : XCTestCase {
             XCTFail()
         }
     }
-    
+
     func testCheckForNilRequiredKeysFailure() {
         do {
             person.firstName = nil

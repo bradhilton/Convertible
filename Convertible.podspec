@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.ios.exclude_files = "Convertible/**/NSImage+Convertible.swift"
   s.osx.exclude_files = "Convertible/**/UIImage+Convertible.swift"
   s.requires_arc = true
-
+  s.dependency 'SwiftKVC', '~> 1.0.0'
 end

@@ -11,7 +11,7 @@ extension Set : DataModelConvertible {}
 extension Set : JsonConvertible {
     
     public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Set {
-        return self.init(try Array<T>.initializeWithJson(json, options: options))
+        return self.init(try Array<Element>.initializeWithJson(json, options: options))
     }
     
     public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {

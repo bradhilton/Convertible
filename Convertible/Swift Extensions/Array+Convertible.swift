@@ -20,11 +20,11 @@ extension Array : JsonConvertible {
     }
     
     static func resultFromArray(array: [JsonValue], options: [ConvertibleOption]) throws -> Array {
-        let error = ConvertibleError.NotJsonInitializable(type: T.self)
-        guard let generic = T.self as? JsonInitializable.Type else { throw error }
+        let error = ConvertibleError.NotJsonInitializable(type: Element.self)
+        guard let generic = Element.self as? JsonInitializable.Type else { throw error }
         var result = Array<Element>()
         for json in array {
-            guard let element = try generic.initializeWithJson(json, options: options) as? T else { throw error }
+            guard let element = try generic.initializeWithJson(json, options: options) as? Element else { throw error }
             result.append(element)
         }
         return result
@@ -34,7 +34,7 @@ extension Array : JsonConvertible {
         var array = [JsonValue]()
         for element in self {
             guard let element = element as? JsonSerializable else {
-                throw ConvertibleError.NotJsonSerializable(type: T.self)
+                throw ConvertibleError.NotJsonSerializable(type: Element.self)
             }
             array.append(try element.serializeToJsonWithOptions(options))
         }
