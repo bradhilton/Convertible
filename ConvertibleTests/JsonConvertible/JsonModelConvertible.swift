@@ -13,17 +13,6 @@ class JsonModelConvertible_: XCTestCase {
     
     var person = RequiredKeysPerson()
     
-    func testUnsettableKey() {
-        do {
-            try person.setValue(15, forKey: Key(object: person, key: "unsettableKey", value: 15, valueType: Int.self, summary: "15"))
-            XCTFail()
-        } catch ConvertibleError.UnsettableKey(let key) {
-            XCTAssert(key == "unsettableKey")
-        } catch {
-            XCTFail()
-        }
-    }
-    
     func testCheckDictionaryForMissingKeysSuccess() {
         do {
             let dictionary: [NSString: JsonValue] = ["first_name":JsonValue.String("Brad"), "last_name":JsonValue.String("Hilton")]

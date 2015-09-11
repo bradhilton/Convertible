@@ -10,7 +10,7 @@ import Convertible
 
 typealias Number = NSNumber
 
-struct PersonValue : StructConvertible, UnderscoreToCamelCase {
+struct PersonValue : Convertible, UnderscoreToCamelCase {
     var id: Number?
     var firstName: String?
     var lastName: String?
@@ -18,35 +18,20 @@ struct PersonValue : StructConvertible, UnderscoreToCamelCase {
     var bestFriend: Person?
 }
 
-class Person : ClassConvertible, UnderscoreToCamelCase {
-    var id: Number?
-    var firstName: String?
-    var lastName: String?
-    var `public`: Number?
+final class Person : Convertible, UnderscoreToCamelCase, OptionalsAsOptionalKeys {
+    var id = 0
+    var firstName = ""
+    var lastName = ""
+    var `public` = false
     var bestFriend: Person?
+    required init() {}
 }
 
-class RequiredKeysPerson : ClassConvertible, UnderscoreToCamelCase, CustomKeyMapping, IgnoredKeys, RequiredKeys, OptionalKeys {
+final class RequiredKeysPerson : Convertible, UnderscoreToCamelCase {
     var firstName: String? = "Brad"
     var lastName: String? = "Hilton"
-    var isPublic = false
-    var age = 26
-    var unsettableKey: Int?
-    var keyMapping = ["isPublic":"public"]
-    var ignoredKeys = ["age"]
-    var requiredKeys = ["firstName", "lastName"]
-    var optionalKeys = [String]()
-}
-
-class OptionalKeysPerson : OptionalKeys {
-    var firstName = "Brad"
-    var lastName = "Hilton"
-    var isPublic = false
-    var optionalKeys = ["isPublic"]
-}
-
-class AllKeysPerson {
-    var firstName = "Brad"
-    var lastName = "Hilton"
-    var isPublic = false
+    var isPublic: Bool? = false
+    var age: Int? = 26
+    static var optionalKeys = ["isPublic", "age"]
+    required init() {}
 }

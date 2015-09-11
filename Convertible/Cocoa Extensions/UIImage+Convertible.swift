@@ -48,7 +48,7 @@ extension UIImage : JsonConvertible {
     }
     
     class func imageFromString<T>(string: String, options: [ConvertibleOption]) throws -> T {
-        guard let data = NSData(base64EncodedString: string, options: NSDataBase64DecodingOptions()) else {
+        guard let data = NSData(base64EncodedString: string, options: ConvertibleOptions.Base64DecodingOptions.Option(options).options) else {
             throw ConvertibleError.CannotCreateDataFromBase64String()
         }
         guard let image = try initializeWithData(data, options: options) as? T else {

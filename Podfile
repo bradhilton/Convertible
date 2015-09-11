@@ -3,4 +3,4 @@
 
 use_frameworks!
 
-pod 'SwiftKVC', :git => 'https://github.com/bradhilton/SwiftKVC.git'
+pod 'SwiftKVC', :path => "~/Developer/iOS/Skyvive/SwiftKVC"

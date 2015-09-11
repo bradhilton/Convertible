@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		0404060FA9E2383F25CF2EFF17F14169 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBC851E8DAAE19E37C9D81C668E493C /* Foundation.framework */; };
 		0675CE8DBC13730160B54B17A90378DB /* SwiftKVC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B4D31A18FCE18C798E143B0A0A95FE /* SwiftKVC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1249C1CF72A1083B629A64320347B330 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4AE0B1E0559715B45B76C902235884 /* Extensions.swift */; };
 		1F655AE11577BB81D9A5D449927BBD30 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC910CA0271CD21AC899F9A171B994F6 /* Pods-dummy.m */; };
 		38115FD9EAD9ED0C577EBAEB153BB8E8 /* SwiftKVC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A8B0C324667A6DA8E837D3204CE03 /* SwiftKVC-dummy.m */; };
-		56E72800417CB141338979D41F218428 /* SwiftKVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9C5DA76758B752F40F404F086022F5 /* SwiftKVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D8A41E0D1E892C30FCAB67521084891 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBC851E8DAAE19E37C9D81C668E493C /* Foundation.framework */; };
-		71EC487C8FB024317D6173E9D3B37828 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27590638B7512E06172F3B11D5179AF /* Error.swift */; };
-		7387940A0F68A8318C6236AF8230B964 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E6C386C885C11731F7DAC5BFDF63B /* Extensions.swift */; };
-		B7D6518A343FA5AD1A7A3B2A96F7EEAD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B58889C03839097D38F8418D3C9A0D /* Model.swift */; };
+		660D4B989320A6255E3EED2C949E3ACC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8C375D6816C59E4D484EDC5102D75 /* Error.swift */; };
+		669AC8BC266A3549F0E456349EB74D33 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D66EC3A57390886C11A4433B08A50 /* Model.swift */; };
 		BCDF66543A558FC7DC276DF3022A2A26 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 817D58FF9F77241E2EE41D5DE1F88C5D /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0D901EDD7172AD186871BEA4621FE3F /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DF0D9E4377793C476AFAE2E13560D9 /* Property.swift */; };
+		EFC5C268EB4A74173A5F873E0BFCC8B8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FDB87D1C1467187CDF25B0207E303 /* Property.swift */; };
+		F49101B73052296BA6A0645F286D0E6E /* SwiftKVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6CB69062D287045AFC2B9B54340E42 /* SwiftKVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A3AFE4703E358EBA740A0DE9B5A4526A /* PBXContainerItemProxy */ = {
+		A3B819D70500E1CE7E40A0ACABC3975A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -31,32 +31,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06F5C329C5F942300CCBAF6053A1CD55 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		056FDB87D1C1467187CDF25B0207E303 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		0C7A8B0C324667A6DA8E837D3204CE03 /* SwiftKVC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKVC-dummy.m"; sourceTree = "<group>"; };
 		0D2AD249068221EAC1078D44F02C3EF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15E21B6542920AA9BE7A0DB7D5595BEC /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		17465E07B6E57FD1F394DA2AF4520D8A /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
 		1BBC851E8DAAE19E37C9D81C668E493C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		2C9C5DA76758B752F40F404F086022F5 /* SwiftKVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKVC.h; path = SwiftKVC/SwiftKVC.h; sourceTree = "<group>"; };
-		2F9E6C386C885C11731F7DAC5BFDF63B /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = SwiftKVC/Extensions.swift; sourceTree = "<group>"; };
-		4B056B975AB754F99C8A586BEB0E3EA2 /* SwiftKVC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftKVC.modulemap; sourceTree = "<group>"; };
-		57DF0D9E4377793C476AFAE2E13560D9 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = SwiftKVC/Property.swift; sourceTree = "<group>"; };
+		1F6CB69062D287045AFC2B9B54340E42 /* SwiftKVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwiftKVC.h; sourceTree = "<group>"; };
+		3BC8C375D6816C59E4D484EDC5102D75 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		47B52A5263D31FFB553C7BCB21C9DD1C /* SwiftKVC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftKVC.modulemap; sourceTree = "<group>"; };
+		49119B455D6ADC5F59FF9E81B0D3DA83 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74B4D31A18FCE18C798E143B0A0A95FE /* SwiftKVC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKVC-umbrella.h"; sourceTree = "<group>"; };
 		7C656E838CF3B34B2880937DCFF13297 /* SwiftKVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftKVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		817D58FF9F77241E2EE41D5DE1F88C5D /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
 		8E2D84F8671B879BBD0AAFA415146356 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		A2BE4AB770C17FE90433702399066C9E /* SwiftKVC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKVC.xcconfig; sourceTree = "<group>"; };
-		A839812B64E064FF547E0D572B05EAB1 /* SwiftKVC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKVC-prefix.pch"; sourceTree = "<group>"; };
+		A03D8CFCBE793ECB8EF3462D59BA98F6 /* SwiftKVC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKVC-prefix.pch"; sourceTree = "<group>"; };
 		AD61C49D17010919BD6592F3531C6EBA /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C88113A79685B4EFEE7BAD12896829F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C98D66EC3A57390886C11A4433B08A50 /* Model.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D11F1793B5CD6F02C527AC02497BDF05 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 		D2AAFC96302E11B372F22873BCEA1C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		D3B58889C03839097D38F8418D3C9A0D /* Model.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Model.swift; path = SwiftKVC/Model.swift; sourceTree = "<group>"; };
 		D3FA1F3344F604C89F127C82999F0C9C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2B4E48A861EA25354A1A32D8C5E7AB /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		E27590638B7512E06172F3B11D5179AF /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = SwiftKVC/Error.swift; sourceTree = "<group>"; };
+		E353A29186E4DA80E70565BD47272CA3 /* SwiftKVC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKVC.xcconfig; sourceTree = "<group>"; };
 		EC910CA0271CD21AC899F9A171B994F6 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
 		F0AFD74A625F309A30173D2977C6CC0E /* SwiftKVC-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftKVC-Private.xcconfig"; sourceTree = "<group>"; };
+		FF4AE0B1E0559715B45B76C902235884 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0720760E6FAA87218C034E98CCD3509B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FAF34FA9C023F36549CCA277846E7 /* SwiftKVC */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		33A2DFA941E11F4B5B7E005D2FE0A3E5 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,26 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				C88113A79685B4EFEE7BAD12896829F7 /* Podfile */,
+				0720760E6FAA87218C034E98CCD3509B /* Development Pods */,
 				5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */,
-				FCC6F965540745142F6675EF7C9E0E2D /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		81504B4B700E738F2B84B23EB62ED77A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				06F5C329C5F942300CCBAF6053A1CD55 /* Info.plist */,
-				4B056B975AB754F99C8A586BEB0E3EA2 /* SwiftKVC.modulemap */,
-				A2BE4AB770C17FE90433702399066C9E /* SwiftKVC.xcconfig */,
-				F0AFD74A625F309A30173D2977C6CC0E /* SwiftKVC-Private.xcconfig */,
-				0C7A8B0C324667A6DA8E837D3204CE03 /* SwiftKVC-dummy.m */,
-				A839812B64E064FF547E0D572B05EAB1 /* SwiftKVC-prefix.pch */,
-				74B4D31A18FCE18C798E143B0A0A95FE /* SwiftKVC-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftKVC";
 			sourceTree = "<group>";
 		};
 		848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */ = {
@@ -147,6 +140,43 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		882BB60F8A4AE9E3B84445F7304B6E77 /* SwiftKVC */ = {
+			isa = PBXGroup;
+			children = (
+				3BC8C375D6816C59E4D484EDC5102D75 /* Error.swift */,
+				FF4AE0B1E0559715B45B76C902235884 /* Extensions.swift */,
+				C98D66EC3A57390886C11A4433B08A50 /* Model.swift */,
+				056FDB87D1C1467187CDF25B0207E303 /* Property.swift */,
+				1F6CB69062D287045AFC2B9B54340E42 /* SwiftKVC.h */,
+			);
+			path = SwiftKVC;
+			sourceTree = "<group>";
+		};
+		8F1E3041AA0A2C36CEAFE177B9432696 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				49119B455D6ADC5F59FF9E81B0D3DA83 /* Info.plist */,
+				47B52A5263D31FFB553C7BCB21C9DD1C /* SwiftKVC.modulemap */,
+				E353A29186E4DA80E70565BD47272CA3 /* SwiftKVC.xcconfig */,
+				F0AFD74A625F309A30173D2977C6CC0E /* SwiftKVC-Private.xcconfig */,
+				0C7A8B0C324667A6DA8E837D3204CE03 /* SwiftKVC-dummy.m */,
+				A03D8CFCBE793ECB8EF3462D59BA98F6 /* SwiftKVC-prefix.pch */,
+				74B4D31A18FCE18C798E143B0A0A95FE /* SwiftKVC-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Convertible/Pods/Target Support Files/SwiftKVC";
+			sourceTree = "<group>";
+		};
+		BF1FAF34FA9C023F36549CCA277846E7 /* SwiftKVC */ = {
+			isa = PBXGroup;
+			children = (
+				8F1E3041AA0A2C36CEAFE177B9432696 /* Support Files */,
+				882BB60F8A4AE9E3B84445F7304B6E77 /* SwiftKVC */,
+			);
+			name = SwiftKVC;
+			path = /Users/Brad/Developer/iOS/Skyvive/SwiftKVC;
+			sourceTree = "<absolute>";
+		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,27 +184,6 @@
 				7C656E838CF3B34B2880937DCFF13297 /* SwiftKVC.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D17C27B5CE185B1CD297197E78399A53 /* SwiftKVC */ = {
-			isa = PBXGroup;
-			children = (
-				E27590638B7512E06172F3B11D5179AF /* Error.swift */,
-				2F9E6C386C885C11731F7DAC5BFDF63B /* Extensions.swift */,
-				D3B58889C03839097D38F8418D3C9A0D /* Model.swift */,
-				57DF0D9E4377793C476AFAE2E13560D9 /* Property.swift */,
-				2C9C5DA76758B752F40F404F086022F5 /* SwiftKVC.h */,
-				81504B4B700E738F2B84B23EB62ED77A /* Support Files */,
-			);
-			path = SwiftKVC;
-			sourceTree = "<group>";
-		};
-		FCC6F965540745142F6675EF7C9E0E2D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D17C27B5CE185B1CD297197E78399A53 /* SwiftKVC */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0675CE8DBC13730160B54B17A90378DB /* SwiftKVC-umbrella.h in Headers */,
-				56E72800417CB141338979D41F218428 /* SwiftKVC.h in Headers */,
+				F49101B73052296BA6A0645F286D0E6E /* SwiftKVC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +220,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B47E580A1341C40738878C6EDD4CE9D7 /* PBXTargetDependency */,
+				3DCD7F9E588EE8FAB4A44B619EB67D69 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
@@ -267,10 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71EC487C8FB024317D6173E9D3B37828 /* Error.swift in Sources */,
-				7387940A0F68A8318C6236AF8230B964 /* Extensions.swift in Sources */,
-				B7D6518A343FA5AD1A7A3B2A96F7EEAD /* Model.swift in Sources */,
-				C0D901EDD7172AD186871BEA4621FE3F /* Property.swift in Sources */,
+				660D4B989320A6255E3EED2C949E3ACC /* Error.swift in Sources */,
+				1249C1CF72A1083B629A64320347B330 /* Extensions.swift in Sources */,
+				669AC8BC266A3549F0E456349EB74D33 /* Model.swift in Sources */,
+				EFC5C268EB4A74173A5F873E0BFCC8B8 /* Property.swift in Sources */,
 				38115FD9EAD9ED0C577EBAEB153BB8E8 /* SwiftKVC-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,11 +295,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B47E580A1341C40738878C6EDD4CE9D7 /* PBXTargetDependency */ = {
+		3DCD7F9E588EE8FAB4A44B619EB67D69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftKVC;
 			target = 8F6D589705387C0E1B67285AFCCD2206 /* SwiftKVC */;
-			targetProxy = A3AFE4703E358EBA740A0DE9B5A4526A /* PBXContainerItemProxy */;
+			targetProxy = A3B819D70500E1CE7E40A0ACABC3975A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

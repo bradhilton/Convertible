@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "38DF97A37FC825A267FB05C534AF5DA5692235A6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "38DF97A37FC825A267FB05C534AF5DA5692235A6" : 0,
+    "58F5EEAC38B7B4676A6AB0AAE6F3624EB9C68B2C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8FDE7A9D-970A-4F84-B01B-518AF9E5B977",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "38DF97A37FC825A267FB05C534AF5DA5692235A6" : "Convertible\/",
+    "58F5EEAC38B7B4676A6AB0AAE6F3624EB9C68B2C" : "SwiftKVC\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Convertible",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Convertible.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bradhilton\/Convertible.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "38DF97A37FC825A267FB05C534AF5DA5692235A6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bradhilton\/SwiftKVC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "58F5EEAC38B7B4676A6AB0AAE6F3624EB9C68B2C"
+    }
+  ]
+}

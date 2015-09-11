@@ -2,16 +2,11 @@ PODS:
   - SwiftKVC (1.0.0)
 
 DEPENDENCIES:
-  - SwiftKVC (from `https://github.com/bradhilton/SwiftKVC.git`)
+  - SwiftKVC (from `~/Developer/iOS/Skyvive/SwiftKVC`)
 
 EXTERNAL SOURCES:
   SwiftKVC:
-    :git: https://github.com/bradhilton/SwiftKVC.git
-
-CHECKOUT OPTIONS:
-  SwiftKVC:
-    :commit: 7284344fc98953e2ff3efe48871860ef96db5bce
-    :git: https://github.com/bradhilton/SwiftKVC.git
+    :path: ~/Developer/iOS/Skyvive/SwiftKVC
 
 SPEC CHECKSUMS:
   SwiftKVC: ceeae9bd382506ac2e95d22bc04dcdcf759c9f9a

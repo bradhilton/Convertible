@@ -17,7 +17,7 @@ class StructConvertible_ : XCTestCase {
             let data = try result.serializeToData()
             XCTAssert(Data.personData == data)
         } catch {
-            XCTFail()
+            XCTFail(String(error))
         }
     }
     

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B833ED8442267621AC8F0902"
+               BlueprintIdentifier = "06FE7768F9156DD59AA31C91"
                BuildableName = "SwiftKVC.framework"
                BlueprintName = "SwiftKVC"
                ReferencedContainer = "container:Pods.xcodeproj">
