@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0D5B5BAC62AF0D7054003282'
-               BlueprintName = 'Pods'
+               BlueprintIdentifier = '829FF42EDCC1EEBE71532773'
+               BlueprintName = 'SwiftKVC'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods.framework'>
+               BuildableName = 'SwiftKVC.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

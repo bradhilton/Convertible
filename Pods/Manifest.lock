@@ -2,13 +2,9 @@ PODS:
   - SwiftKVC (1.0.0)
 
 DEPENDENCIES:
-  - SwiftKVC (from `~/Developer/iOS/Skyvive/SwiftKVC`)
-
-EXTERNAL SOURCES:
-  SwiftKVC:
-    :path: ~/Developer/iOS/Skyvive/SwiftKVC
+  - SwiftKVC (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  SwiftKVC: ceeae9bd382506ac2e95d22bc04dcdcf759c9f9a
+  SwiftKVC: a431fcc7a809c7a535a472381fdb8b3e8998796c
 
-COCOAPODS: 0.38.0
+COCOAPODS: 0.39.0

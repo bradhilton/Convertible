@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E10102740E2B750139516DF /* Pods_Convertible_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA96F49E2865BCF187139BD /* Pods_Convertible_OSX.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A20775661BA22A5A0081822A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20775651BA22A5A0081822A /* Keys.swift */; settings = {ASSET_TAGS = (); }; };
-		A20775681BA22CD10081822A /* ConvertibleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20775671BA22CD10081822A /* ConvertibleModels.swift */; settings = {ASSET_TAGS = (); }; };
+		A20775661BA22A5A0081822A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20775651BA22A5A0081822A /* Keys.swift */; };
+		A20775681BA22CD10081822A /* ConvertibleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20775671BA22CD10081822A /* ConvertibleModels.swift */; };
 		A20BEF631B3C680000703C9C /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = A20BEF621B3C680000703C9C /* Person.json */; };
 		A20BEF641B3C680000703C9C /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = A20BEF621B3C680000703C9C /* Person.json */; };
 		A21BAF0A1B5EE2D200601090 /* StructConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF091B5EE2D200601090 /* StructConvertible.swift */; };
@@ -126,10 +126,14 @@
 		A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2B785E21B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
 		A2B785E31B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
+		A2ED1BE21BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
+		A2ED1BE31BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
+		A2ED1BE41BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
+		A2ED1BE51BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
 		A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 		A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 		BC5D1BDAD797C502A5F9E42A /* Pods_Convertible_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C4CFE21770C7148439480B /* Pods_Convertible_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		EB9B8AC1768B9296A38ED22F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B4312CA19F0949F065B771 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EB9B8AC1768B9296A38ED22F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B4312CA19F0949F065B771 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +230,7 @@
 		A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
 		A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
 		A2B785E11B684C5300090309 /* NSData+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Convertible.swift"; sourceTree = "<group>"; };
+		A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawValue.swift; sourceTree = "<group>"; };
 		A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Convertible.swift"; sourceTree = "<group>"; };
 		BB8F907527E92D6298666047 /* Pods-Convertible-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertible-OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Convertible-OSX/Pods-Convertible-OSX.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,6 +328,7 @@
 				A25AF41D1B3B1F32009ABDE9 /* Errors */,
 				A25AF42C1B3B2007009ABDE9 /* JsonConvertible */,
 				A25AF4211B3B1F67009ABDE9 /* Options */,
+				A2ED1BE01BEEB08F006D7D3D /* Raw Value */,
 				A25AF4281B3B1FAB009ABDE9 /* Supporting Files */,
 				A25AF4331B3B205B009ABDE9 /* Swift Extensions */,
 				A25AF44F1B3B20A5009ABDE9 /* Utilities */,
@@ -509,6 +515,14 @@
 				A25AF50E1B3B628B009ABDE9 /* String+Convertible.swift */,
 			);
 			path = "Swift Extensions";
+			sourceTree = "<group>";
+		};
+		A2ED1BE01BEEB08F006D7D3D /* Raw Value */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */,
+			);
+			path = "Raw Value";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -781,6 +795,7 @@
 				A25AF41F1B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */,
 				A25AF43D1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */,
 				A25AF40A1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */,
+				A2ED1BE21BEEB0A9006D7D3D /* RawValue.swift in Sources */,
 				A25AF4241B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */,
 				A20775661BA22A5A0081822A /* Keys.swift in Sources */,
 				A25AF4081B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */,
@@ -824,6 +839,7 @@
 				A25AF4401B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */,
 				A25AF4421B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
 				A25AF4111B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
+				A2ED1BE31BEEB0A9006D7D3D /* RawValue.swift in Sources */,
 				A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */,
 				A25AF40F1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
 				A25AF53B1B3B70E5009ABDE9 /* NSImage+Convertible.swift in Sources */,
@@ -856,6 +872,7 @@
 				A23259E31B3C527C006833EB /* ClassConvertible.swift in Sources */,
 				A21BAF0A1B5EE2D200601090 /* StructConvertible.swift in Sources */,
 				A25AF5121B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */,
+				A2ED1BE41BEEB0A9006D7D3D /* RawValue.swift in Sources */,
 				A25AF5301B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A25AF4D91B3B5786009ABDE9 /* Array+Convertible.swift in Sources */,
 			);
@@ -887,6 +904,7 @@
 				A23259E41B3C527C006833EB /* ClassConvertible.swift in Sources */,
 				A21BAF0B1B5EE2D200601090 /* StructConvertible.swift in Sources */,
 				A25AF5131B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */,
+				A2ED1BE51BEEB0A9006D7D3D /* RawValue.swift in Sources */,
 				A25AF5311B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A25AF4F81B3B5BDF009ABDE9 /* Array+Convertible.swift in Sources */,
 			);
