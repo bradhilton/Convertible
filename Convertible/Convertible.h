@@ -7,4 +7,4 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SwiftKVC/SwiftKVC.h>
+@import SwiftKVC;

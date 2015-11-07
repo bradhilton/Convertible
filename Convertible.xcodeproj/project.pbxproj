@@ -128,8 +128,6 @@
 		A2B785E31B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
 		A2ED1BE21BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
 		A2ED1BE31BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
-		A2ED1BE41BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
-		A2ED1BE51BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
 		A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 		A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 		BC5D1BDAD797C502A5F9E42A /* Pods_Convertible_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C4CFE21770C7148439480B /* Pods_Convertible_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -872,7 +870,6 @@
 				A23259E31B3C527C006833EB /* ClassConvertible.swift in Sources */,
 				A21BAF0A1B5EE2D200601090 /* StructConvertible.swift in Sources */,
 				A25AF5121B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */,
-				A2ED1BE41BEEB0A9006D7D3D /* RawValue.swift in Sources */,
 				A25AF5301B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A25AF4D91B3B5786009ABDE9 /* Array+Convertible.swift in Sources */,
 			);
@@ -904,7 +901,6 @@
 				A23259E41B3C527C006833EB /* ClassConvertible.swift in Sources */,
 				A21BAF0B1B5EE2D200601090 /* StructConvertible.swift in Sources */,
 				A25AF5131B3B6304009ABDE9 /* NSArray+Convertible.swift in Sources */,
-				A2ED1BE51BEEB0A9006D7D3D /* RawValue.swift in Sources */,
 				A25AF5311B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A25AF4F81B3B5BDF009ABDE9 /* Array+Convertible.swift in Sources */,
 			);
