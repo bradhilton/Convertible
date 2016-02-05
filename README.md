@@ -136,7 +136,7 @@ case .Null(_): // This JSON value is null. Nothing to see here.
 
 ## Models
 
-`Convertible` makes defining your models easy. Simply create a class that inherits from `Convertible` and you're all set!
+`Convertible` makes defining your models easy. Simply create a class or struct that conforms to `Convertible` and you're all set!
 ```swift
 class User : Convertible {
   var id: Int
@@ -164,7 +164,7 @@ class User : Convertible, UnderscoreToCamelCase {
 ```
 You can also specify custom key mapping:
 ```swift
-class User : Convertible, UnderscoreToCamelCase, CustomKeyMapping {
+class User : Convertible, UnderscoreToCamelCase {
   var firstName: String
   var lastName: String
   var isPublic: Bool
