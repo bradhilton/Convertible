@@ -1,0 +1,10 @@
+framework module SwiftKVC {
+  umbrella header "Pods-ConvertibleTests-iOS-SwiftKVC-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftKVC.Swift {
+    header "SwiftKVC-Swift.h"
+}

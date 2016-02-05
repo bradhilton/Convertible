@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import Allegro
 
 public protocol JsonConvertible : JsonInitializable, JsonSerializable {}
 
-public protocol JsonInitializable {
+public protocol JsonInitializable : Allegro.Property {
     
     static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self
     
 }
 
-public protocol JsonSerializable {
+public protocol JsonSerializable : Allegro.Property {
     
     func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue
     

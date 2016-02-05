@@ -7,21 +7,19 @@
 //
 
 import Foundation
-import SwiftKVC
+import Allegro
 
-public protocol Initializable : DataInitializable, JsonInitializable, Model, Keys {
+extension Int : Allegro.Property {}
+
+public protocol Initializable : DataInitializable, JsonInitializable, KeyMapping {
     init()
 }
 
-public protocol Serializable : DataSerializable, JsonSerializable, Model, Keys {}
+public protocol Serializable : DataSerializable, JsonSerializable, KeyMapping {}
 
 public protocol Convertible : Initializable, Serializable {}
 
 extension Initializable {
-    
-    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
-        return try initializeWithJson(JsonValue.initializeWithData(data, options: options), options: options)
-    }
     
     public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {
         switch json {
@@ -31,77 +29,36 @@ extension Initializable {
     }
     
     static func initializeWithDictionary(dictionary: [NSString: JsonValue], options: [ConvertibleOption]) throws -> Self {
-        var object = self.init()
-        try object.checkDictionaryForMissingRequiredKeys(dictionary)
-        try object.loadDictionary(dictionary, options: options)
-        try object.checkForNilRequiredKeys()
-        return object
-    }
-    
-    mutating func loadDictionary(dictionary: [NSString: JsonValue], options: [ConvertibleOption]) throws {
-        for key in allKeys {
-            if let jsonValue = dictionary[key.mappedKey] {
-                guard let jsonInitializable = key.type as? JsonInitializable.Type else {
-                    throw ConvertibleError.NotJsonInitializable(type: key.type)
+        var properties = Dictionary<String, Allegro.Property>()
+        var missingKeys = [String]()
+        for field in try fieldsForType(self) {
+            if let value = dictionary[mappedKeyForPropertyKey(field.name)] {
+                guard let jsonInitializable = field.type as? JsonInitializable.Type else {
+                    throw ConvertibleError.NotJsonInitializable(type: field.type)
                 }
-                let value = try jsonInitializable.initializeWithJson(jsonValue, options: options)
-                if let value = value as? OptionalProtocol {
-                    try setAnyValue(value.any, forKey: key.key)
-                } else {
-                    try setAnyValue(value, forKey: key.key)
-                }
+                properties[field.name] = try jsonInitializable.initializeWithJson(value, options: options)
+            } else if let nilLiteralConvertible = field.type as? protocol<Allegro.Property, NilLiteralConvertible>.Type {
+                properties[field.name] = nilLiteralConvertible.init(nilLiteral: ())
+            } else if field.type is NilLiteralConvertible.Type {
+                throw ConvertibleError.NotPropertyType(type: field.type)
+            } else {
+                missingKeys.append(mappedKeyForPropertyKey(field.name))
             }
         }
+        guard missingKeys.count == 0 else {
+            throw ConvertibleError.MissingRequiredJsonKeys(keys: missingKeys)
+        }
+        return try initializeWithPropertyDictionary(properties)
     }
     
-    mutating func setAnyValue(value: Any?, forKey key: String) throws {
-        if value == nil {
-            try setValue(nil, forKey: key)
-        } else if let value = value! as? Property {
-            try setValue(value, forKey: key)
-        } else {
-            throw SwiftKVC.Error.TypeDoesNotConformToProperty(type: value!.dynamicType)
-        }
-    }
-    
-    func checkDictionaryForMissingRequiredKeys(dictionary: [NSString : JsonValue]) throws {
-        var missingRequiredKeys = [String]()
-        for key in requiredKeys {
-            if !dictionary.keys.contains(key.mappedKey) {
-                missingRequiredKeys.append(key.mappedKey)
-            }
-        }
-        guard missingRequiredKeys.count == 0 else {
-            throw ConvertibleError.MissingRequiredJsonKeys(keys: missingRequiredKeys)
+    static func initializeWithPropertyDictionary(dictionary: [String: Allegro.Property]) throws -> Self {
+        return try constructType { field in
+            return dictionary[field.name] ?? 0
         }
     }
     
-    func checkForNilRequiredKeys() throws {
-        var nilRequiredKeys = [String]()
-        for key in requiredKeys {
-            if String(key.value) == "nil" {
-                nilRequiredKeys.append(key.key)
-            }
-        }
-        guard nilRequiredKeys.count == 0 else {
-            throw ConvertibleError.NilRequiredKeys(keys: nilRequiredKeys)
-        }
-    }
-    
-}
-
-protocol OptionalProtocol {
-    var any: Any? { get }
-}
-
-extension Optional : OptionalProtocol {
-    
-    var any: Any? {
-        switch self {
-        case .Some(let any): return any as Any
-        default: break
-        }
-        return nil
+    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
+        return try initializeWithJson(JsonValue.initializeWithData(data, options: options), options: options)
     }
     
 }
@@ -114,11 +71,11 @@ extension Serializable {
     
     public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
         var dictionary = [NSString : JsonValue]()
-        for key in self.allKeys {
-            guard let serializable = key.value as? JsonSerializable else {
-                throw ConvertibleError.NotJsonSerializable(type: key.type)
+        for child in Mirror(reflecting: self).children {
+            guard let serializable = child.value as? JsonSerializable, label = child.label else {
+                throw ConvertibleError.NotJsonSerializable(type: child.value.dynamicType)
             }
-            dictionary[key.mappedKey] = try serializable.serializeToJsonWithOptions(options)
+            dictionary[self.dynamicType.mappedKeyForPropertyKey(label)] = try serializable.serializeToJsonWithOptions(options)
         }
         return JsonValue.Dictionary(dictionary)
     }

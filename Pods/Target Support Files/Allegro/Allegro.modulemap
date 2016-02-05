@@ -1,0 +1,6 @@
+framework module Allegro {
+  umbrella header "Allegro-umbrella.h"
+
+  export *
+  module * { export * }
+}

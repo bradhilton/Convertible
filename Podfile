@@ -1,3 +1,6 @@
 use_frameworks!
 
-pod 'SwiftKVC', '~>1.0.0'
+target 'Convertible-iOS' do
+    podspec
+    target 'ConvertibleTests-iOS'
+end

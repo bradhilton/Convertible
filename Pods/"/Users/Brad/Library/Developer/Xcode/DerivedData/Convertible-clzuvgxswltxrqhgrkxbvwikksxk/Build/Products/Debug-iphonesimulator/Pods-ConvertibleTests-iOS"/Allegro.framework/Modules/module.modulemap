@@ -1,0 +1,10 @@
+framework module Allegro {
+  umbrella header "Pods-ConvertibleTests-iOS-Allegro-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Allegro.Swift {
+    header "Allegro-Swift.h"
+}

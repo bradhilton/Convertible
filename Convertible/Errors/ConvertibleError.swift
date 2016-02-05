@@ -42,7 +42,7 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
         case .NotJsonSerializable(type: let type): return "\(type) does not implement JsonSerializable"
         case .NotStringType(type: let type): return "\(type) is not a String type"
         case .NotObjectType(type: let type): return "\(type) does not conform to AnyObject"
-        case .NotPropertyType(type: let type): return "\(type) does not conform to SwiftKVC.Property"
+        case .NotPropertyType(type: let type): return "\(type) does not conform to Allegro.Property"
         case .CannotCreateType(type: let type, fromJson: let json): return "Cannot create \(type) from \(json)"
         case .CannotCreateTypeFromData(type: let type): return "Cannot create \(type) from binary data"
         case .ObjectNotJsonValue(object: let object): return "\(object.dynamicType) is not a JSON value"

@@ -18,13 +18,13 @@ struct PersonValue : Convertible, UnderscoreToCamelCase {
     var bestFriend: Person?
 }
 
-final class Person : Convertible, UnderscoreToCamelCase, OptionalsAsOptionalKeys {
-    var id = 0
-    var firstName = ""
-    var lastName = ""
-    var `public` = false
+final class Person : Convertible, UnderscoreToCamelCase {
+    var id: Int
+    var firstName: String
+    var lastName: String
+    var `public`: Bool
     var bestFriend: Person?
-    required init() {}
+    init() { fatalError() }
 }
 
 final class RequiredKeysPerson : Convertible, UnderscoreToCamelCase {
@@ -32,6 +32,5 @@ final class RequiredKeysPerson : Convertible, UnderscoreToCamelCase {
     var lastName: String? = "Hilton"
     var isPublic: Bool? = false
     var age: Int? = 26
-    static var optionalKeys = ["isPublic", "age"]
     required init() {}
 }
