@@ -11,9 +11,7 @@ import Allegro
 
 extension Int : Allegro.Property {}
 
-public protocol Initializable : DataInitializable, JsonInitializable, KeyMapping {
-    init()
-}
+public protocol Initializable : DataInitializable, JsonInitializable, KeyMapping {}
 
 public protocol Serializable : DataSerializable, JsonSerializable, KeyMapping {}
 
