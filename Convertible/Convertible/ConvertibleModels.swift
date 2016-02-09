@@ -73,7 +73,11 @@ extension Serializable {
             guard let serializable = child.value as? JsonSerializable, label = child.label else {
                 throw ConvertibleError.NotJsonSerializable(type: child.value.dynamicType)
             }
-            dictionary[self.dynamicType.mappedKeyForPropertyKey(label)] = try serializable.serializeToJsonWithOptions(options)
+            let json = try serializable.serializeToJsonWithOptions(options)
+            switch json {
+            case .Null(_): break
+            default: dictionary[self.dynamicType.mappedKeyForPropertyKey(label)] = json
+            }
         }
         return JsonValue.Dictionary(dictionary)
     }
