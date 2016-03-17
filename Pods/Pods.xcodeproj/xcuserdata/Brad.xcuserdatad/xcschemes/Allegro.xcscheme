@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '17714EEB50FCD946ADECA5C60A6321C8'
+               BlueprintIdentifier = 'C142F6340527EB3C74E7F4C28FB8B350'
                BlueprintName = 'Allegro'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Allegro.framework'>

@@ -1,11 +1,11 @@
 PODS:
-  - Allegro (1.0.0)
+  - Allegro (1.1.0)
 
 DEPENDENCIES:
-  - Allegro (~> 1.0.0)
+  - Allegro (~> 1.1.0)
 
 SPEC CHECKSUMS:
-  Allegro: 8ac11f6d8205600718c1cd97346516e692371264
+  Allegro: 567a663bcff8b85a5992d3b189c3faf7509ede00
 
 PODFILE CHECKSUM: 156bd9324808e874f555d8a6a8ea2a27e2c9557a
 

@@ -9,8 +9,6 @@
 import Foundation
 import Allegro
 
-extension Int : Allegro.Property {}
-
 public protocol Initializable : DataInitializable, JsonInitializable, KeyMapping {}
 
 public protocol Serializable : DataSerializable, JsonSerializable, KeyMapping {}
@@ -27,7 +25,7 @@ extension Initializable {
     }
     
     static func initializeWithDictionary(dictionary: [NSString: JsonValue], options: [ConvertibleOption]) throws -> Self {
-        var properties = Dictionary<String, Allegro.Property>()
+        var properties = Dictionary<String, Any>()
         var missingKeys = [String]()
         for field in try fieldsForType(self) {
             if let value = dictionary[mappedKeyForPropertyKey(field.name)] {
@@ -35,10 +33,8 @@ extension Initializable {
                     throw ConvertibleError.NotJsonInitializable(type: field.type)
                 }
                 properties[field.name] = try jsonInitializable.initializeWithJson(value, options: options)
-            } else if let nilLiteralConvertible = field.type as? protocol<Allegro.Property, NilLiteralConvertible>.Type {
+            } else if let nilLiteralConvertible = field.type as? NilLiteralConvertible.Type {
                 properties[field.name] = nilLiteralConvertible.init(nilLiteral: ())
-            } else if field.type is NilLiteralConvertible.Type {
-                throw ConvertibleError.NotPropertyType(type: field.type)
             } else {
                 missingKeys.append(mappedKeyForPropertyKey(field.name))
             }
@@ -49,7 +45,7 @@ extension Initializable {
         return try initializeWithPropertyDictionary(properties)
     }
     
-    static func initializeWithPropertyDictionary(dictionary: [String: Allegro.Property]) throws -> Self {
+    static func initializeWithPropertyDictionary(dictionary: [String: Any]) throws -> Self {
         return try constructType { field in
             return dictionary[field.name] ?? 0
         }

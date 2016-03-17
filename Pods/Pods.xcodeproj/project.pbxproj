@@ -8,16 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1827E9A96D9F850FD2CB4C8521CE73D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		200ACB7E7559A2B5F5B6A641132EF970 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C68B74A5BC245ADC01C908AA0E8F4FE /* Metadata.swift */; };
+		2F6A8C8389BF7859905218A2D353AB0A /* ValueGetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A2B3F57DBAA4C8F9934C612E45919 /* ValueGetters.swift */; };
 		346E17B3C976B67DACEC90AEF246B6F1 /* Pods-Convertible-iOS-ConvertibleTests-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A1836847229760A3689A78F67F42C /* Pods-Convertible-iOS-ConvertibleTests-iOS-dummy.m */; };
+		3ED51427C1C4622DE30E3B181417A63C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
 		5628214C5D4BB143FFB15F47CA74B16E /* Pods-Convertible-iOS-ConvertibleTests-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B13DF50480018A71F2B1E72AD7511E /* Pods-Convertible-iOS-ConvertibleTests-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58C868E5FB087C0516AF914EDFC7330A /* Allegro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3652B6BDBD5008A0CB5F8D79673DC3A /* Allegro-dummy.m */; };
-		62E00D76F2B419AC34006122F4605E96 /* Allegro-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABAC11458D7551C096E477CCBB496DE7 /* Allegro-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70F7B36A395635EEAF5E09B5F12050DD /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7CBD9C8A81947E6AC3E716DFF4D70 /* Storage.swift */; };
 		80785E3A604F1C6508C034EFC6BB3C9B /* Pods-Convertible-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416CBD60F1DCB50C8304E525B728BF9 /* Pods-Convertible-iOS-dummy.m */; };
 		81C6FC7CD2794637B14E75FEA796022C /* Pods-Convertible-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E33275A6A9CCA518EB7E666C27D3453B /* Pods-Convertible-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		857F3F706B8F52800F4418B82996253F /* Allegro.h in Headers */ = {isa = PBXBuildFile; fileRef = 3055839A7C0EFB6098BA90F672E8725E /* Allegro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		868B02706B72798F4478B32EAE51A76B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		869E21D6A906A525A02E71CD7F6F8936 /* Allegro-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F97847F9929D50CDA367F86C581BDB /* Allegro-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86FB4B5E970FC30402D267A09DAFF9FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
-		F7A853F04A746D95513F8224CB7C21A8 /* Allegro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B8BE87BE65D3DD2F5B0BB4733A331 /* Allegro.swift */; };
+		8B431D40636E34D36A3F2A97253B7BC2 /* ValueSetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F9AC437813E0ED39C77A56BEFFDEB6 /* ValueSetters.swift */; };
+		9734B4C2C22A7D046CD0DB8CFD585DF2 /* Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A3BE2969A9967561743086140F206 /* Buffer.swift */; };
+		9A1AA9A8FE7A24C931B64559B505C448 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264FE745B8D327C001D4F3650AE2C1E5 /* Error.swift */; };
+		B78E5D2CBB11CED16E6C885EF14F195D /* Allegro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26899ABB370B63F380835425D9E8B033 /* Allegro.swift */; };
+		CDDD3A8A5CF48264CD1998ECF1314296 /* TypeConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA4FFB9963F3DFBD8DFB655DC7CF661 /* TypeConstructor.swift */; };
+		E72450C1970B797CD857F061F423CBA6 /* Allegro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1219DD6A23433EA97D33E92325493530 /* Allegro-dummy.m */; };
+		FD42469FA8980813826977748E6CC149 /* Allegro.h in Headers */ = {isa = PBXBuildFile; fileRef = 19C73D97C9289DD94E0AB49F4E800358 /* Allegro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,49 +32,56 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 17714EEB50FCD946ADECA5C60A6321C8;
+			remoteGlobalIDString = C142F6340527EB3C74E7F4C28FB8B350;
 			remoteInfo = Allegro;
 		};
 		E6F497741571BD4ACCEF5479C9EF78FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 17714EEB50FCD946ADECA5C60A6321C8;
+			remoteGlobalIDString = C142F6340527EB3C74E7F4C28FB8B350;
 			remoteInfo = Allegro;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01582B8C31C395C8709C61A4BBE72849 /* Allegro.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Allegro.modulemap; sourceTree = "<group>"; };
+		05D7CBD9C8A81947E6AC3E716DFF4D70 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Storage.swift; sourceTree = "<group>"; };
+		1219DD6A23433EA97D33E92325493530 /* Allegro-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Allegro-dummy.m"; sourceTree = "<group>"; };
+		19C73D97C9289DD94E0AB49F4E800358 /* Allegro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Allegro.h; path = Sources/Allegro.h; sourceTree = "<group>"; };
+		19F9AC437813E0ED39C77A56BEFFDEB6 /* ValueSetters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueSetters.swift; path = Sources/ValueSetters.swift; sourceTree = "<group>"; };
+		264FE745B8D327C001D4F3650AE2C1E5 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
+		26899ABB370B63F380835425D9E8B033 /* Allegro.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Allegro.swift; path = Sources/Allegro.swift; sourceTree = "<group>"; };
 		297DF9275FBB1C025E0C92EEFB3D778B /* Pods-Convertible-iOS-ConvertibleTests-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Convertible-iOS-ConvertibleTests-iOS-resources.sh"; sourceTree = "<group>"; };
-		3055839A7C0EFB6098BA90F672E8725E /* Allegro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Allegro.h; path = Sources/Allegro.h; sourceTree = "<group>"; };
 		3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		428F1605AE0824BD109BD508D39C5DC5 /* Pods-Convertible-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Convertible-iOS.modulemap"; sourceTree = "<group>"; };
-		44D8C2C5548ACA9445F4A16600268A25 /* Allegro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Allegro.xcconfig; sourceTree = "<group>"; };
 		4745C65F7FB3B2067BE318108AE036EF /* Allegro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Allegro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		485B8882C229143AA4E1C0C6E4377FB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E1D20BAE15260BDB2ABCC3766446016 /* Pods-Convertible-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Convertible-iOS-resources.sh"; sourceTree = "<group>"; };
 		5DF3EA0D6F303923D377F3335AAB8A11 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		605C28A2C0EA8F2816C8E4E21296C86B /* Pods-Convertible-iOS-ConvertibleTests-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Convertible-iOS-ConvertibleTests-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		650B8BE87BE65D3DD2F5B0BB4733A331 /* Allegro.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Allegro.swift; path = Sources/Allegro.swift; sourceTree = "<group>"; };
+		6B1225939FF4A2ED5B0121D8577F6C97 /* Allegro-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Allegro-prefix.pch"; sourceTree = "<group>"; };
 		73B13DF50480018A71F2B1E72AD7511E /* Pods-Convertible-iOS-ConvertibleTests-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Convertible-iOS-ConvertibleTests-iOS-umbrella.h"; sourceTree = "<group>"; };
 		759B026353021286FB203F9C8D86AB83 /* Pods-Convertible-iOS-ConvertibleTests-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Convertible-iOS-ConvertibleTests-iOS.modulemap"; sourceTree = "<group>"; };
+		763A3BE2969A9967561743086140F206 /* Buffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Buffer.swift; path = Sources/Buffer.swift; sourceTree = "<group>"; };
+		7C68B74A5BC245ADC01C908AA0E8F4FE /* Metadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = Sources/Metadata.swift; sourceTree = "<group>"; };
 		8416CBD60F1DCB50C8304E525B728BF9 /* Pods-Convertible-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Convertible-iOS-dummy.m"; sourceTree = "<group>"; };
 		86DA5B903C2648178804440DBCCAFB43 /* Pods_Convertible_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convertible_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8742CCF46751B57C29EBB4414A0A8F03 /* Pods_Convertible_iOS_ConvertibleTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convertible_iOS_ConvertibleTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABAC11458D7551C096E477CCBB496DE7 /* Allegro-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Allegro-umbrella.h"; sourceTree = "<group>"; };
+		917A2B3F57DBAA4C8F9934C612E45919 /* ValueGetters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueGetters.swift; path = Sources/ValueGetters.swift; sourceTree = "<group>"; };
 		B566C6487B1DEBE6B01FF36392DEB675 /* Pods-Convertible-iOS-ConvertibleTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Convertible-iOS-ConvertibleTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BA06764A0176F4E8AD6DC00537913A9D /* Pods-Convertible-iOS-ConvertibleTests-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Convertible-iOS-ConvertibleTests-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BBFA2C48F13DD729B55861F33E57B618 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D06A1836847229760A3689A78F67F42C /* Pods-Convertible-iOS-ConvertibleTests-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Convertible-iOS-ConvertibleTests-iOS-dummy.m"; sourceTree = "<group>"; };
 		D7B55CEB64D3C7CECC2A323DE33FB2DF /* Pods-Convertible-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Convertible-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D93AA6F3900695E6F42F6D007AA75879 /* Pods-Convertible-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Convertible-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E04C2D44F589CA6B39856B96C68BFB8C /* Allegro-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Allegro-prefix.pch"; sourceTree = "<group>"; };
+		DCA4FFB9963F3DFBD8DFB655DC7CF661 /* TypeConstructor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeConstructor.swift; path = Sources/TypeConstructor.swift; sourceTree = "<group>"; };
 		E33275A6A9CCA518EB7E666C27D3453B /* Pods-Convertible-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Convertible-iOS-umbrella.h"; sourceTree = "<group>"; };
-		E3652B6BDBD5008A0CB5F8D79673DC3A /* Allegro-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Allegro-dummy.m"; sourceTree = "<group>"; };
+		E3F97847F9929D50CDA367F86C581BDB /* Allegro-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Allegro-umbrella.h"; sourceTree = "<group>"; };
 		EBD00E432EFAD4C5D8E95744256CAB9F /* Pods-Convertible-iOS-ConvertibleTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Convertible-iOS-ConvertibleTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EDA923C34DD38FEF27DDAB26D0FC4BB6 /* Pods-Convertible-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Convertible-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		F0C58AE4667B1471F8FF617762FD2033 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2FB56EF9B51FDFAC322095107A43304 /* Allegro.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Allegro.modulemap; sourceTree = "<group>"; };
+		EF87A37845FFED170997E9AD607AF64A /* Allegro.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Allegro.xcconfig; sourceTree = "<group>"; };
 		F5A80B04F32B980ACFB8E3B1B88F0A25 /* Pods-Convertible-iOS-ConvertibleTests-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Convertible-iOS-ConvertibleTests-iOS-frameworks.sh"; sourceTree = "<group>"; };
 		FAB7783287D23546FDD5B76C582619C6 /* Pods-Convertible-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Convertible-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		FBD009FC20E05B48F6642DCD211BBBD7 /* Pods-Convertible-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Convertible-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,19 +96,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3CFF6FA145952B7AF26B9A533284174E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ED51427C1C4622DE30E3B181417A63C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F7E1A48F26E5385E3FF2EFA2073C3D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1827E9A96D9F850FD2CB4C8521CE73D9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B0950785AAD18A1B9D0F4127B73E7636 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				868B02706B72798F4478B32EAE51A76B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,34 +142,33 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		40C50E96BD96EA3FCEA961FFE8FF3FCC /* Support Files */ = {
+		38903DE1861470F5D4D89CECF42836D1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F2FB56EF9B51FDFAC322095107A43304 /* Allegro.modulemap */,
-				44D8C2C5548ACA9445F4A16600268A25 /* Allegro.xcconfig */,
-				E3652B6BDBD5008A0CB5F8D79673DC3A /* Allegro-dummy.m */,
-				E04C2D44F589CA6B39856B96C68BFB8C /* Allegro-prefix.pch */,
-				ABAC11458D7551C096E477CCBB496DE7 /* Allegro-umbrella.h */,
-				F0C58AE4667B1471F8FF617762FD2033 /* Info.plist */,
+				01582B8C31C395C8709C61A4BBE72849 /* Allegro.modulemap */,
+				EF87A37845FFED170997E9AD607AF64A /* Allegro.xcconfig */,
+				1219DD6A23433EA97D33E92325493530 /* Allegro-dummy.m */,
+				6B1225939FF4A2ED5B0121D8577F6C97 /* Allegro-prefix.pch */,
+				E3F97847F9929D50CDA367F86C581BDB /* Allegro-umbrella.h */,
+				BBFA2C48F13DD729B55861F33E57B618 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Allegro";
 			sourceTree = "<group>";
 		};
-		515097E7510C33E80F4DD966605C9085 /* Pods */ = {
+		556B67A85A6D9176033A81070F373262 /* Allegro */ = {
 			isa = PBXGroup;
 			children = (
-				5732FAB78EC1D25D2E2E13EC0A617CC4 /* Allegro */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5732FAB78EC1D25D2E2E13EC0A617CC4 /* Allegro */ = {
-			isa = PBXGroup;
-			children = (
-				3055839A7C0EFB6098BA90F672E8725E /* Allegro.h */,
-				650B8BE87BE65D3DD2F5B0BB4733A331 /* Allegro.swift */,
-				40C50E96BD96EA3FCEA961FFE8FF3FCC /* Support Files */,
+				19C73D97C9289DD94E0AB49F4E800358 /* Allegro.h */,
+				26899ABB370B63F380835425D9E8B033 /* Allegro.swift */,
+				763A3BE2969A9967561743086140F206 /* Buffer.swift */,
+				264FE745B8D327C001D4F3650AE2C1E5 /* Error.swift */,
+				7C68B74A5BC245ADC01C908AA0E8F4FE /* Metadata.swift */,
+				05D7CBD9C8A81947E6AC3E716DFF4D70 /* Storage.swift */,
+				DCA4FFB9963F3DFBD8DFB655DC7CF661 /* TypeConstructor.swift */,
+				917A2B3F57DBAA4C8F9934C612E45919 /* ValueGetters.swift */,
+				19F9AC437813E0ED39C77A56BEFFDEB6 /* ValueSetters.swift */,
+				38903DE1861470F5D4D89CECF42836D1 /* Support Files */,
 			);
 			path = Allegro;
 			sourceTree = "<group>";
@@ -201,10 +214,18 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				515097E7510C33E80F4DD966605C9085 /* Pods */,
+				B0F7CD8E4E8E9008A5C366C232B05E9C /* Pods */,
 				1CDE94D9ABE65A0C14F2D8B2AB82C54C /* Products */,
 				1D61F7CEC584838D2CB5028605DE83A1 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		B0F7CD8E4E8E9008A5C366C232B05E9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				556B67A85A6D9176033A81070F373262 /* Allegro */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -234,12 +255,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		789D1772CC505DA6A5B345466895FBE5 /* Headers */ = {
+		53BFF9FFB0EE6CD1E93779BADC4B5C7B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62E00D76F2B419AC34006122F4605E96 /* Allegro-umbrella.h in Headers */,
-				857F3F706B8F52800F4418B82996253F /* Allegro.h in Headers */,
+				869E21D6A906A525A02E71CD7F6F8936 /* Allegro-umbrella.h in Headers */,
+				FD42469FA8980813826977748E6CC149 /* Allegro.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,13 +285,13 @@
 			productReference = 8742CCF46751B57C29EBB4414A0A8F03 /* Pods_Convertible_iOS_ConvertibleTests_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		17714EEB50FCD946ADECA5C60A6321C8 /* Allegro */ = {
+		C142F6340527EB3C74E7F4C28FB8B350 /* Allegro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B095FCF14CF5E4AF446A6BA61F9DB35 /* Build configuration list for PBXNativeTarget "Allegro" */;
+			buildConfigurationList = 8C7527367DA5D877ECF1EC9B12E8C53B /* Build configuration list for PBXNativeTarget "Allegro" */;
 			buildPhases = (
-				7D0E4B1A4D17EE584B0C878574A1957F /* Sources */,
-				B0950785AAD18A1B9D0F4127B73E7636 /* Frameworks */,
-				789D1772CC505DA6A5B345466895FBE5 /* Headers */,
+				6DC9F43B5B2094FF99991141B8F3EE6B /* Sources */,
+				3CFF6FA145952B7AF26B9A533284174E /* Frameworks */,
+				53BFF9FFB0EE6CD1E93779BADC4B5C7B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -320,7 +341,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17714EEB50FCD946ADECA5C60A6321C8 /* Allegro */,
+				C142F6340527EB3C74E7F4C28FB8B350 /* Allegro */,
 				C9D922AFCAA961AD40E861389F38B45D /* Pods-Convertible-iOS */,
 				0DC729C0B624DACDA13DB7C3B34878F5 /* Pods-Convertible-iOS-ConvertibleTests-iOS */,
 			);
@@ -328,20 +349,27 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6DC9F43B5B2094FF99991141B8F3EE6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72450C1970B797CD857F061F423CBA6 /* Allegro-dummy.m in Sources */,
+				B78E5D2CBB11CED16E6C885EF14F195D /* Allegro.swift in Sources */,
+				9734B4C2C22A7D046CD0DB8CFD585DF2 /* Buffer.swift in Sources */,
+				9A1AA9A8FE7A24C931B64559B505C448 /* Error.swift in Sources */,
+				200ACB7E7559A2B5F5B6A641132EF970 /* Metadata.swift in Sources */,
+				70F7B36A395635EEAF5E09B5F12050DD /* Storage.swift in Sources */,
+				CDDD3A8A5CF48264CD1998ECF1314296 /* TypeConstructor.swift in Sources */,
+				2F6A8C8389BF7859905218A2D353AB0A /* ValueGetters.swift in Sources */,
+				8B431D40636E34D36A3F2A97253B7BC2 /* ValueSetters.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6FA36FE6D7B75130FBD1DA7BD1ECAE13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				346E17B3C976B67DACEC90AEF246B6F1 /* Pods-Convertible-iOS-ConvertibleTests-iOS-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7D0E4B1A4D17EE584B0C878574A1957F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				58C868E5FB087C0516AF914EDFC7330A /* Allegro-dummy.m in Sources */,
-				F7A853F04A746D95513F8224CB7C21A8 /* Allegro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,21 +387,21 @@
 		82724835AB2C46952BAD3D401543D9D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Allegro;
-			target = 17714EEB50FCD946ADECA5C60A6321C8 /* Allegro */;
+			target = C142F6340527EB3C74E7F4C28FB8B350 /* Allegro */;
 			targetProxy = E6F497741571BD4ACCEF5479C9EF78FB /* PBXContainerItemProxy */;
 		};
 		EFD5F987577BC9958D9B72CB774405E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Allegro;
-			target = 17714EEB50FCD946ADECA5C60A6321C8 /* Allegro */;
+			target = C142F6340527EB3C74E7F4C28FB8B350 /* Allegro */;
 			targetProxy = 85DB10B204CB53F0C1900C82FA5A3F25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4516C4FEDFCF2CD51BB6460EBF74E563 /* Release */ = {
+		1F802DCB8DB59660A09FDEAC27A24F2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44D8C2C5548ACA9445F4A16600268A25 /* Allegro.xcconfig */;
+			baseConfigurationReference = EF87A37845FFED170997E9AD607AF64A /* Allegro.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -612,9 +640,9 @@
 			};
 			name = Debug;
 		};
-		D8477538AD4FFF0AD9CF15D018CC710F /* Debug */ = {
+		D6A34E3E69A4E7F5DAAEA3A6DCDE8572 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44D8C2C5548ACA9445F4A16600268A25 /* Allegro.xcconfig */;
+			baseConfigurationReference = EF87A37845FFED170997E9AD607AF64A /* Allegro.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -654,11 +682,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B095FCF14CF5E4AF446A6BA61F9DB35 /* Build configuration list for PBXNativeTarget "Allegro" */ = {
+		8C7527367DA5D877ECF1EC9B12E8C53B /* Build configuration list for PBXNativeTarget "Allegro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8477538AD4FFF0AD9CF15D018CC710F /* Debug */,
-				4516C4FEDFCF2CD51BB6460EBF74E563 /* Release */,
+				D6A34E3E69A4E7F5DAAEA3A6DCDE8572 /* Debug */,
+				1F802DCB8DB59660A09FDEAC27A24F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

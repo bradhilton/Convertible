@@ -11,13 +11,13 @@ import Allegro
 
 public protocol JsonConvertible : JsonInitializable, JsonSerializable {}
 
-public protocol JsonInitializable : Allegro.Property {
+public protocol JsonInitializable {
     
     static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self
     
 }
 
-public protocol JsonSerializable : Allegro.Property {
+public protocol JsonSerializable {
     
     func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue
     

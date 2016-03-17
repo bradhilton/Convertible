@@ -15,7 +15,6 @@ struct PersonValue : Convertible, UnderscoreToCamelCase {
     var firstName: String?
     var lastName: String?
     var `public`: Number?
-    var bestFriend: Person?
 }
 
 final class Person : Convertible, UnderscoreToCamelCase {
