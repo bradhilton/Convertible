@@ -11,7 +11,7 @@ import Convertible
 typealias Number = NSNumber
 
 struct PersonValue : Convertible, UnderscoreToCamelCase {
-    var id: Number?
+    lazy var id: Number = 0
     var firstName: String?
     var lastName: String?
     var `public`: Number?

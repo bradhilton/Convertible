@@ -12,7 +12,7 @@ import Convertible
 class StructConvertible_ : XCTestCase {
     
     func testDataConvertible() {
-        do {
+        do { 
             let result = try PersonValue.initializeWithData(Data.personData)
             let data = try result.serializeToData()
             XCTAssert(Data.personData == data)

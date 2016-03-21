@@ -9,6 +9,18 @@
 import Foundation
 import Allegro
 
+extension Field {
+    var reducedName: String {
+        return name.componentsSeparatedByString(".")[0]
+    }
+}
+
+extension Property {
+    var reducedKey: String {
+        return key.componentsSeparatedByString(".")[0]
+    }
+}
+
 public protocol Initializable : DataInitializable, JsonInitializable, KeyMapping {}
 
 public protocol Serializable : DataSerializable, JsonSerializable, KeyMapping {}
@@ -28,15 +40,15 @@ extension Initializable {
         var properties = Dictionary<String, Any>()
         var missingKeys = [String]()
         for field in try fieldsForType(self) {
-            if let value = dictionary[mappedKeyForPropertyKey(field.name)] {
+            if let value = dictionary[mappedKeyForPropertyKey(field.reducedName)] {
                 guard let jsonInitializable = field.type as? JsonInitializable.Type else {
                     throw ConvertibleError.NotJsonInitializable(type: field.type)
                 }
-                properties[field.name] = try jsonInitializable.initializeWithJson(value, options: options)
+                properties[field.reducedName] = try jsonInitializable.initializeWithJson(value, options: options)
             } else if let nilLiteralConvertible = field.type as? NilLiteralConvertible.Type {
-                properties[field.name] = nilLiteralConvertible.init(nilLiteral: ())
+                properties[field.reducedName] = nilLiteralConvertible.init(nilLiteral: ())
             } else {
-                missingKeys.append(mappedKeyForPropertyKey(field.name))
+                missingKeys.append(mappedKeyForPropertyKey(field.reducedName))
             }
         }
         guard missingKeys.count == 0 else {
@@ -47,7 +59,7 @@ extension Initializable {
     
     static func initializeWithPropertyDictionary(dictionary: [String: Any]) throws -> Self {
         return try constructType { field in
-            return dictionary[field.name] ?? 0
+            return dictionary[field.reducedName] ?? 0
         }
     }
     
@@ -65,14 +77,14 @@ extension Serializable {
     
     public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
         var dictionary = [NSString : JsonValue]()
-        for child in Mirror(reflecting: self).children {
-            guard let serializable = child.value as? JsonSerializable, label = child.label else {
-                throw ConvertibleError.NotJsonSerializable(type: child.value.dynamicType)
+        for property in try propertiesForInstance(self) {
+            guard let serializable = property.value as? JsonSerializable else {
+                throw ConvertibleError.NotJsonSerializable(type: property.value.dynamicType)
             }
             let json = try serializable.serializeToJsonWithOptions(options)
             switch json {
             case .Null(_): break
-            default: dictionary[self.dynamicType.mappedKeyForPropertyKey(label)] = json
+            default: dictionary[self.dynamicType.mappedKeyForPropertyKey(property.reducedKey)] = json
             }
         }
         return JsonValue.Dictionary(dictionary)
