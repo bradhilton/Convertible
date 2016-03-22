@@ -40,7 +40,8 @@ extension Initializable {
         var properties = Dictionary<String, Any>()
         var missingKeys = [String]()
         for field in try fieldsForType(self) {
-            if let value = dictionary[mappedKeyForPropertyKey(field.reducedName)] {
+            guard let mappedKey = mappedKeyForPropertyKey(field.reducedName) else { continue }
+            if let value = dictionary[mappedKey] {
                 guard let jsonInitializable = field.type as? JsonInitializable.Type else {
                     throw ConvertibleError.NotJsonInitializable(type: field.type)
                 }
@@ -48,7 +49,7 @@ extension Initializable {
             } else if let nilLiteralConvertible = field.type as? NilLiteralConvertible.Type {
                 properties[field.reducedName] = nilLiteralConvertible.init(nilLiteral: ())
             } else {
-                missingKeys.append(mappedKeyForPropertyKey(field.reducedName))
+                missingKeys.append(mappedKey)
             }
         }
         guard missingKeys.count == 0 else {
@@ -78,13 +79,14 @@ extension Serializable {
     public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
         var dictionary = [NSString : JsonValue]()
         for property in try propertiesForInstance(self) {
+            guard let mappedKey = self.dynamicType.mappedKeyForPropertyKey(property.reducedKey) else { continue }
             guard let serializable = property.value as? JsonSerializable else {
                 throw ConvertibleError.NotJsonSerializable(type: property.value.dynamicType)
             }
             let json = try serializable.serializeToJsonWithOptions(options)
             switch json {
             case .Null(_): break
-            default: dictionary[self.dynamicType.mappedKeyForPropertyKey(property.reducedKey)] = json
+            default: dictionary[mappedKey] = json
             }
         }
         return JsonValue.Dictionary(dictionary)

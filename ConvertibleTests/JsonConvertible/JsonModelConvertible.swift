@@ -11,7 +11,7 @@ import XCTest
 
 class JsonModelConvertible_: XCTestCase {
     
-    var person = RequiredKeysPerson()
+//    var person = RequiredKeysPerson()
     
 //    func testCheckDictionaryForMissingKeysSuccess() {
 //        do {

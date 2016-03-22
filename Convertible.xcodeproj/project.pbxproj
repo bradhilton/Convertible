@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F2EDA24C46AF7BA13D401AB /* Pods_ConvertibleTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86624004B56CABBEB1D429C /* Pods_ConvertibleTests_iOS.framework */; };
 		7C96AA21528A9683388E1327 /* Pods_Convertible_iOS_ConvertibleTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A005D323B2FEFDD48EF724D5 /* Pods_Convertible_iOS_ConvertibleTests_iOS.framework */; };
 		8594492DB8267C6B65EDBAEC /* Pods_Convertible_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80B2A9967DB6D3798A5E783 /* Pods_Convertible_iOS.framework */; };
 		A20775661BA22A5A0081822A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20775651BA22A5A0081822A /* Keys.swift */; };
@@ -252,7 +251,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A25AF3DB1B3B1BDC009ABDE9 /* Convertible.framework in Frameworks */,
-				6F2EDA24C46AF7BA13D401AB /* Pods_ConvertibleTests_iOS.framework in Frameworks */,
 				7C96AA21528A9683388E1327 /* Pods_Convertible_iOS_ConvertibleTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

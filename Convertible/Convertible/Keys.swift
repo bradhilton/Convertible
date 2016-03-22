@@ -13,8 +13,9 @@ public typealias MappedKey = String
 
 public protocol KeyMapping {
     
+    static var ignoredKeys: Set<PropertyKey> { get }
     static var keyMapping: [PropertyKey : MappedKey] { get }
-    static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey
+    static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey?
     
 }
 
@@ -22,11 +23,16 @@ public protocol UnderscoreToCamelCase : KeyMapping {}
 
 extension KeyMapping {
     
+    public static var ignoredKeys: Set<PropertyKey> {
+        return []
+    }
+    
     public static var keyMapping: [PropertyKey : MappedKey] {
         return [:]
     }
     
-    public static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey {
+    public static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey? {
+        guard !ignoredKeys.contains(propertyKey) else { return nil }
         if let mappedKey = keyMapping[propertyKey] {
             return mappedKey
         } else {
@@ -38,7 +44,8 @@ extension KeyMapping {
 
 extension UnderscoreToCamelCase {
     
-    public static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey {
+    public static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey? {
+        guard !ignoredKeys.contains(propertyKey) else { return nil }
         if let mappedKey = keyMapping[propertyKey] {
             return mappedKey
         } else {
