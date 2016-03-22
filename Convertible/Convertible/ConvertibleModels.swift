@@ -60,7 +60,13 @@ extension Initializable {
     
     static func initializeWithPropertyDictionary(dictionary: [String: Any]) throws -> Self {
         return try constructType { field in
-            return dictionary[field.reducedName] ?? 0
+            if let value = dictionary[field.reducedName] {
+                return value
+            } else if let type = field.type as? NilLiteralConvertible.Type {
+                return type.init(nilLiteral: ())
+            } else {
+                throw ConvertibleError.UnknownError
+            }
         }
     }
     
