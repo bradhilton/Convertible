@@ -55,7 +55,7 @@ extension UnderscoreToCamelCase {
     
     static func underscoreFromCamelCase(camelCase: PropertyKey) -> MappedKey {
         let options = NSStringEnumerationOptions.ByComposedCharacterSequences
-        let range = Range<String.Index>(start: camelCase.startIndex, end: camelCase.endIndex)
+        let range = camelCase.startIndex..<camelCase.endIndex
         var underscore = ""
         camelCase.enumerateSubstringsInRange(range, options: options) { (substring, substringRange, enclosingRange, shouldContinue) -> () in
             if let substring = substring {
