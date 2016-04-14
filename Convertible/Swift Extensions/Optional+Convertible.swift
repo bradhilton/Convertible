@@ -11,30 +11,16 @@ import Foundation
 extension Optional : DataConvertible {
     
     public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Optional {
-        throw ConvertibleError.NotDataInitializable(type: Wrapped.self)
+        guard let initializable = Wrapped.self as? DataInitializable.Type else { throw ConvertibleError.NotDataInitializable(type: Wrapped.self) }
+        let value = try initializable.initializeWithData(data, options: options)
+        guard let wrapped = value as? Wrapped else { throw ConvertibleError.UnknownError }
+        return Optional(wrapped)
     }
     
     public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
-        throw ConvertibleError.NotDataSerializable(type: Wrapped.self)
-    }
-    
-}
-
-extension Optional where Wrapped : DataInitializable {
-    
-    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Optional {
-        return try Optional(Wrapped.initializeWithData(data, options: options))
-    }
-    
-}
-
-extension Optional where Wrapped : DataSerializable {
-    
-    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
-        guard let value = self else {
-            throw ConvertibleError.CannotCreateDataFromNilOptional()
-        }
-        return try value.serializeToDataWithOptions(options)
+        guard let value = self else { throw ConvertibleError.CannotCreateDataFromNilOptional() }
+        guard let serializable = value as? DataSerializable else { throw ConvertibleError.NotDataSerializable(type: Wrapped.self) }
+        return try serializable.serializeToDataWithOptions(options)
     }
     
 }
