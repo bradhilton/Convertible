@@ -8,6 +8,37 @@
 
 import Foundation
 
+extension Optional : DataConvertible {
+    
+    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Optional {
+        throw ConvertibleError.NotDataInitializable(type: Wrapped.self)
+    }
+    
+    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
+        throw ConvertibleError.NotDataSerializable(type: Wrapped.self)
+    }
+    
+}
+
+extension Optional where Wrapped : DataInitializable {
+    
+    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Optional {
+        return try Optional(Wrapped.initializeWithData(data, options: options))
+    }
+    
+}
+
+extension Optional where Wrapped : DataSerializable {
+    
+    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
+        guard let value = self else {
+            throw ConvertibleError.CannotCreateDataFromNilOptional()
+        }
+        return try value.serializeToDataWithOptions(options)
+    }
+    
+}
+
 extension Optional : JsonConvertible {
     
     public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Optional {

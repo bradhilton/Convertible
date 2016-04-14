@@ -14,6 +14,8 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
     case MissingRequiredJsonKeys(keys: [String])
     case NilRequiredKeys(keys: [String])
     case UnsettableKey(key: String)
+    case NotDataInitializable(type: Any.Type)
+    case NotDataSerializable(type: Any.Type)
     case NotJsonInitializable(type: Any.Type)
     case NotJsonSerializable(type: Any.Type)
     case CannotCreateType(type: Any.Type, fromJson: JsonValue)
@@ -27,6 +29,7 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
     case CannotCreateImageFromData()
     case CannotCreateDataFromImage()
     case CannotCreateDataFromBase64String()
+    case CannotCreateDataFromNilOptional()
     
     public var description: String {
         return "Convertible Error: \(errorDescription)"
@@ -38,6 +41,8 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
         case .MissingRequiredJsonKeys(keys: let keys): return "Missing required json keys: \(keys)"
         case .NilRequiredKeys(keys: let keys): return "Failed to set required keys: \(keys)"
         case .UnsettableKey(key: let key): return "Cannot set key: " + key
+        case .NotDataInitializable(type: let type): return "\(type) does not implement DataInitializable"
+        case .NotDataSerializable(type: let type): return "\(type) does not implement DataSerializable"
         case .NotJsonInitializable(type: let type): return "\(type) does not implement JsonInitializable"
         case .NotJsonSerializable(type: let type): return "\(type) does not implement JsonSerializable"
         case .NotStringType(type: let type): return "\(type) is not a String type"
@@ -51,6 +56,7 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
         case .CannotCreateImageFromData(): return "Could not create image from data"
         case .CannotCreateDataFromImage(): return "Could not create data from image"
         case .CannotCreateDataFromBase64String(): return "Could not create data from Base64 string"
+        case .CannotCreateDataFromNilOptional(): return "Cannot create data from nil optional"
         }
     }
 
