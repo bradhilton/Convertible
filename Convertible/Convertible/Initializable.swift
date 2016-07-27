@@ -1,33 +1,20 @@
 //
-//  Convertible2.swift
+//  Initializable.swift
 //  Convertible
 //
-//  Created by Bradley Hilton on 9/10/15.
-//  Copyright © 2015 Skyvive. All rights reserved.
+//  Created by Bradley Hilton on 7/27/16.
+//  Copyright © 2016 Skyvive. All rights reserved.
 //
 
-import Foundation
 import Allegro
-
-extension Field {
-    var reducedName: String {
-        return name.componentsSeparatedByString(".")[0]
-    }
-}
-
-extension Property {
-    var reducedKey: String {
-        return key.componentsSeparatedByString(".")[0]
-    }
-}
 
 public protocol Initializable : DataInitializable, JsonInitializable, KeyMapping {}
 
-public protocol Serializable : DataSerializable, JsonSerializable, KeyMapping {}
-
-public protocol Convertible : Initializable, Serializable {}
-
 extension Initializable {
+    
+    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
+        return try initializeWithJson(JsonValue.initializeWithData(data, options: options), options: options)
+    }
     
     public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {
         switch json {
@@ -70,36 +57,4 @@ extension Initializable {
         }
     }
     
-    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
-        return try initializeWithJson(JsonValue.initializeWithData(data, options: options), options: options)
-    }
-    
 }
-
-extension Serializable {
-    
-    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
-        return try serializeToJsonWithOptions(options).serializeToDataWithOptions(options)
-    }
-    
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
-        var dictionary = [NSString : JsonValue]()
-        for property in try propertiesForInstance(self) {
-            guard let mappedKey = self.dynamicType.mappedKeyForPropertyKey(property.reducedKey) else { continue }
-            guard let serializable = property.value as? JsonSerializable else {
-                throw ConvertibleError.NotJsonSerializable(type: property.value.dynamicType)
-            }
-            let json = try serializable.serializeToJsonWithOptions(options)
-            switch json {
-            case .Null(_): break
-            default: dictionary[mappedKey] = json
-            }
-        }
-        return JsonValue.Dictionary(dictionary)
-    }
-    
-}
-
-
-
-
