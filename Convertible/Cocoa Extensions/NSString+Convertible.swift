@@ -52,3 +52,19 @@ extension NSString : JsonConvertible {
     }
     
 }
+
+extension NSString : JsonDictionaryKeyConvertible {
+    
+    public class func initializeWithJsonDictionaryKey(key: JsonDictionaryKey, options: [ConvertibleOption]) throws -> Self {
+        func cast<T>(key: JsonDictionaryKey) -> T {
+            return key as! T
+        }
+        return cast(key)
+    }
+    
+    public func serializeToJsonDictionaryKeyWithOptions(options: [ConvertibleOption]) throws -> JsonDictionaryKey {
+        return self
+    }
+    
+}
+

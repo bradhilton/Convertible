@@ -21,7 +21,8 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
     case CannotCreateType(type: Any.Type, fromJson: JsonValue)
     case CannotCreateTypeFromData(type: Any.Type)
     case ObjectNotJsonValue(object: AnyObject)
-    case NotStringType(type: Any.Type)
+    case NotJsonDictionaryKeyInitializable(type: Any.Type)
+    case NotJsonDictionaryKeySerializable(type: Any.Type)
     case NotObjectType(type: Any.Type)
     case NotPropertyType(type: Any.Type)
     case CannotCreateUrlFromString(string: String)
@@ -45,7 +46,8 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
         case .NotDataSerializable(type: let type): return "\(type) does not implement DataSerializable"
         case .NotJsonInitializable(type: let type): return "\(type) does not implement JsonInitializable"
         case .NotJsonSerializable(type: let type): return "\(type) does not implement JsonSerializable"
-        case .NotStringType(type: let type): return "\(type) is not a String type"
+        case .NotJsonDictionaryKeyInitializable(type: let type): return "\(type) does not implement JsonDictionaryKeyInitializable"
+        case .NotJsonDictionaryKeySerializable(type: let type): return "\(type) does not implement JsonDictionaryKeySerializable"
         case .NotObjectType(type: let type): return "\(type) does not conform to AnyObject"
         case .NotPropertyType(type: let type): return "\(type) does not conform to Allegro.Property"
         case .CannotCreateType(type: let type, fromJson: let json): return "Cannot create \(type) from \(json)"

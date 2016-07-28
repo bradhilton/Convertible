@@ -8,17 +8,19 @@
 
 import Foundation
 
+public typealias JsonDictionaryKey = NSString
+
 public enum JsonValue {
     
     case String(NSString)
     case Number(NSNumber)
     case Array([JsonValue])
-    case Dictionary([NSString : JsonValue])
+    case Dictionary([JsonDictionaryKey : JsonValue])
     case Null(NSNull)
     
     public init(object: AnyObject) throws {
         switch object {
-        case let object as NSString: self = JsonValue.String(object)
+        case let object as JsonDictionaryKey: self = JsonValue.String(object)
         case let object as NSNumber: self = JsonValue.Number(object)
         case let object as NSArray: self = JsonValue.Array(try convertNSArray(object))
         case let object as NSDictionary: self = JsonValue.Dictionary(try convertNSDictionary(object))
@@ -79,19 +81,19 @@ private func convertValueArray(array: [JsonValue]) -> NSArray {
     return result
 }
 
-private func convertNSDictionary(dictionary: NSDictionary) throws -> [NSString : JsonValue] {
-    var result = [NSString : JsonValue]()
+private func convertNSDictionary(dictionary: NSDictionary) throws -> [JsonDictionaryKey : JsonValue] {
+    var result = [JsonDictionaryKey : JsonValue]()
     for (key, value) in dictionary {
-        if let key = key as? NSString {
-            result[key] = try JsonValue(object: value)
+        if let key = key as? JsonDictionaryKeySerializable {
+            try result[key.serializeToJsonDictionaryKeyWithOptions([])] = JsonValue(object: value)
         } else {
-            throw ConvertibleError.NotStringType(type: key.dynamicType)
+            throw ConvertibleError.NotJsonDictionaryKeySerializable(type: key.dynamicType)
         }
     }
     return result
 }
 
-private func convertValueDictionary(dictionary: [NSString : JsonValue]) -> NSDictionary {
+private func convertValueDictionary(dictionary: [JsonDictionaryKey : JsonValue]) -> NSDictionary {
     let result = NSMutableDictionary()
     for (key, value) in dictionary {
         result.setObject(value.object, forKey: key)

@@ -133,6 +133,8 @@
 		A2CAF6E71D4973D00076DCC6 /* JsonUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CAF6E51D4973D00076DCC6 /* JsonUpdatable.swift */; };
 		A2ED1BE21BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
 		A2ED1BE31BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
+		A2F01A331D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F01A321D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift */; };
+		A2F01A341D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F01A321D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift */; };
 		A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 		A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 /* End PBXBuildFile section */
@@ -234,6 +236,7 @@
 		A2CAF6E21D49738A0076DCC6 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		A2CAF6E51D4973D00076DCC6 /* JsonUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUpdatable.swift; sourceTree = "<group>"; };
 		A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawValue.swift; sourceTree = "<group>"; };
+		A2F01A321D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonDictionaryKeyConvertible.swift; path = ../JsonDictionaryKeyConvertible.swift; sourceTree = "<group>"; };
 		A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Convertible.swift"; sourceTree = "<group>"; };
 		C86624004B56CABBEB1D429C /* Pods_ConvertibleTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConvertibleTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E557A94EDBFE0B5C43121BFB /* Pods-ConvertibleTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertibleTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConvertibleTests-iOS/Pods-ConvertibleTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -398,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				A25AF42D1B3B2007009ABDE9 /* JsonConvertible.swift */,
+				A2F01A321D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift */,
 				A2CAF6E51D4973D00076DCC6 /* JsonUpdatable.swift */,
 				A25AF42E1B3B2007009ABDE9 /* JsonValue.swift */,
 			);
@@ -805,6 +809,7 @@
 				A2CAF6E61D4973D00076DCC6 /* JsonUpdatable.swift in Sources */,
 				A25AF4021B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */,
 				A25AF44B1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */,
+				A2F01A331D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift in Sources */,
 				A25AF4171B3B1E93009ABDE9 /* DataModelConvertible.swift in Sources */,
 				A25AF40C1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */,
 				A2CAF6E11D4972DC0076DCC6 /* Serializable.swift in Sources */,
@@ -863,6 +868,7 @@
 				A25AF40B1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */,
 				A25AF4251B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */,
 				A25AF4091B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */,
+				A2F01A341D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift in Sources */,
 				A25AF44E1B3B205B009ABDE9 /* String+Convertible.swift in Sources */,
 				A25AF4301B3B2007009ABDE9 /* JsonConvertible.swift in Sources */,
 				A25AF4401B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */,

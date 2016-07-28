@@ -17,7 +17,7 @@ extension Serializable {
     }
     
     public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
-        var dictionary = [NSString : JsonValue]()
+        var dictionary = [JsonDictionaryKey : JsonValue]()
         for property in try propertiesForInstance(self) {
             guard let mappedKey = self.dynamicType.mappedKeyForPropertyKey(property.reducedKey) else { continue }
             guard let serializable = property.value as? JsonSerializable else {

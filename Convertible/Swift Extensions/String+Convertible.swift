@@ -31,3 +31,15 @@ extension String : JsonConvertible {
     }
     
 }
+
+extension String : JsonDictionaryKeyConvertible {
+    
+    public static func initializeWithJsonDictionaryKey(key: JsonDictionaryKey, options: [ConvertibleOption]) throws -> String {
+        return key as String
+    }
+    
+    public func serializeToJsonDictionaryKeyWithOptions(options: [ConvertibleOption]) throws -> JsonDictionaryKey {
+        return self as JsonDictionaryKey
+    }
+    
+}
