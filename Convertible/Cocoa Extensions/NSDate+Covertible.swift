@@ -18,9 +18,10 @@ extension NSDate : JsonConvertible {
     }
     
     class func dateFromString<T>(string: String, options: [ConvertibleOption]) throws -> T {
-        guard let date = ConvertibleOptions.DateFormatter.Option(options).formatter.dateFromString(string) as? T else {
-            throw ConvertibleError.CannotCreateDateFromString(string: string)
-        }
+        let formatter = ConvertibleOptions.DateFormatter.Option(options).formatter
+        var object: AnyObject?
+        try formatter.getObjectValue(&object, forString: string, range: nil)
+        guard let date = object as? T else { throw ConvertibleError.CannotCreateDateFromString(string: string) }
         return date
     }
     
