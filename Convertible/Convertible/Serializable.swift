@@ -6,30 +6,30 @@
 //  Copyright © 2016 Skyvive. All rights reserved.
 //
 
-import Allegro
+import Reflection
 
 public protocol Serializable : DataSerializable, JsonSerializable, KeyMapping {}
 
 extension Serializable {
     
-    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
+    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
         return try serializeToJsonWithOptions(options).serializeToDataWithOptions(options)
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
         var dictionary = [JsonDictionaryKey : JsonValue]()
-        for property in try propertiesForInstance(self) {
-            guard let mappedKey = self.dynamicType.mappedKeyForPropertyKey(property.reducedKey) else { continue }
+        for property in try properties(self) {
+            guard let mappedKey = type(of: self).mappedKeyForPropertyKey(property.reducedKey) else { continue }
             guard let serializable = property.value as? JsonSerializable else {
-                throw ConvertibleError.NotJsonSerializable(type: property.value.dynamicType)
+                throw ConvertibleError.notJsonSerializable(type: type(of: property.value))
             }
             let json = try serializable.serializeToJsonWithOptions(options)
             switch json {
-            case .Null(_): break
-            default: dictionary[mappedKey] = json
+            case .null(_): break
+            default: dictionary[mappedKey as NSString] = json
             }
         }
-        return JsonValue.Dictionary(dictionary)
+        return JsonValue.dictionary(dictionary)
     }
     
 }

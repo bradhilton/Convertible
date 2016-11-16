@@ -116,13 +116,11 @@
 		A25AF52E1B3B6A79009ABDE9 /* NSString+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF52C1B3B6A79009ABDE9 /* NSString+Convertible.swift */; };
 		A25AF5301B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */; };
 		A25AF5311B3B6B1B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */; };
-		A25AF5331B3B6BC7009ABDE9 /* UIImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF5321B3B6BC7009ABDE9 /* UIImage+Convertible.swift */; };
 		A25AF5351B3B6C3E009ABDE9 /* JPEG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */; };
 		A25AF5361B3B6C3E009ABDE9 /* JPEG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */; };
 		A25AF5381B3B6C8E009ABDE9 /* PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5371B3B6C8E009ABDE9 /* PNG.png */; };
 		A25AF5391B3B6C8E009ABDE9 /* PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5371B3B6C8E009ABDE9 /* PNG.png */; };
 		A25AF53B1B3B70E5009ABDE9 /* NSImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */; };
-		A2877E8E1B3B7543006E70B9 /* NSImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */; };
 		A2877E931B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2B785E21B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
@@ -226,12 +224,10 @@
 		A25AF5291B3B6A1E009ABDE9 /* NSSet+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSSet+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF52C1B3B6A79009ABDE9 /* NSString+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Convertible.swift"; sourceTree = "<group>"; };
-		A25AF5321B3B6BC7009ABDE9 /* UIImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JPEG.jpg; sourceTree = "<group>"; };
 		A25AF5371B3B6C8E009ABDE9 /* PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PNG.png; sourceTree = "<group>"; };
 		A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
 		A27808081B44B0EB0004D0BF /* Convertible.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Convertible.podspec; sourceTree = "<group>"; };
-		A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
 		A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
 		A2B785E11B684C5300090309 /* NSData+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Convertible.swift"; sourceTree = "<group>"; };
 		A2CAF6DE1D4972D10076DCC6 /* Initializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
@@ -454,13 +450,11 @@
 				A25AF5111B3B6304009ABDE9 /* NSArray+Convertible.swift */,
 				A25AF5201B3B6951009ABDE9 /* NSDate+Convertible.swift */,
 				A25AF51D1B3B67D0009ABDE9 /* NSDictionary+Convertible.swift */,
-				A2877E8D1B3B7543006E70B9 /* NSImage+Convertible.swift */,
 				A25AF5231B3B698B009ABDE9 /* NSNull+Convertible.swift */,
 				A25AF5261B3B69EE009ABDE9 /* NSNumber+Convertible.swift */,
 				A25AF5291B3B6A1E009ABDE9 /* NSSet+Convertible.swift */,
 				A25AF52C1B3B6A79009ABDE9 /* NSString+Convertible.swift */,
 				A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */,
-				A25AF5321B3B6BC7009ABDE9 /* UIImage+Convertible.swift */,
 			);
 			path = "Cocoa Extensions";
 			sourceTree = "<group>";
@@ -567,12 +561,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25AF3961B3B1A3F009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-iOS" */;
 			buildPhases = (
-				08190287B7765798B3B2DD5E /* Check Pods Manifest.lock */,
+				08190287B7765798B3B2DD5E /* [CP] Check Pods Manifest.lock */,
 				A25AF3801B3B1A3F009ABDE9 /* Sources */,
 				A25AF3811B3B1A3F009ABDE9 /* Frameworks */,
 				A25AF3821B3B1A3F009ABDE9 /* Headers */,
 				A25AF3831B3B1A3F009ABDE9 /* Resources */,
-				5F074E1768C059D6007FB324 /* Copy Pods Resources */,
+				5F074E1768C059D6007FB324 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -605,12 +599,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25AF3DE1B3B1BDC009ABDE9 /* Build configuration list for PBXNativeTarget "ConvertibleTests-iOS" */;
 			buildPhases = (
-				3AB648C8F5FBD491AAA3E214 /* Check Pods Manifest.lock */,
+				3AB648C8F5FBD491AAA3E214 /* [CP] Check Pods Manifest.lock */,
 				A25AF3D21B3B1BDB009ABDE9 /* Sources */,
 				A25AF3D31B3B1BDB009ABDE9 /* Frameworks */,
 				A25AF3D41B3B1BDB009ABDE9 /* Resources */,
-				A7DC1A281A4991EF94C07311 /* Embed Pods Frameworks */,
-				5CAE344FD9614BFDECCFD9EC /* Copy Pods Resources */,
+				A7DC1A281A4991EF94C07311 /* [CP] Embed Pods Frameworks */,
+				5CAE344FD9614BFDECCFD9EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -652,12 +646,14 @@
 				TargetAttributes = {
 					A25AF3841B3B1A3F009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0810;
 					};
 					A25AF3A01B3B1AAA009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 					A25AF3D51B3B1BDB009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0810;
 					};
 					A25AF3EC1B3B1D2D009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
@@ -726,44 +722,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08190287B7765798B3B2DD5E /* Check Pods Manifest.lock */ = {
+		08190287B7765798B3B2DD5E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		3AB648C8F5FBD491AAA3E214 /* Check Pods Manifest.lock */ = {
+		3AB648C8F5FBD491AAA3E214 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5CAE344FD9614BFDECCFD9EC /* Copy Pods Resources */ = {
+		5CAE344FD9614BFDECCFD9EC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -771,14 +767,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Convertible-iOS-ConvertibleTests-iOS/Pods-Convertible-iOS-ConvertibleTests-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F074E1768C059D6007FB324 /* Copy Pods Resources */ = {
+		5F074E1768C059D6007FB324 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,14 +782,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Convertible-iOS/Pods-Convertible-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A7DC1A281A4991EF94C07311 /* Embed Pods Frameworks */ = {
+		A7DC1A281A4991EF94C07311 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -901,7 +897,6 @@
 				A25AF5091B3B6012009ABDE9 /* Optional+Convertible.swift in Sources */,
 				A25AF5031B3B5F5C009ABDE9 /* Float+Convertible.swift in Sources */,
 				A25AF5271B3B69EE009ABDE9 /* NSNumber+Convertible.swift in Sources */,
-				A25AF5331B3B6BC7009ABDE9 /* UIImage+Convertible.swift in Sources */,
 				A25AF4FD1B3B5E53009ABDE9 /* Dictionary+Convertible.swift in Sources */,
 				A23259DD1B3C5173006833EB /* Models.swift in Sources */,
 				A25AF5181B3B6445009ABDE9 /* Data.swift in Sources */,
@@ -926,7 +921,6 @@
 				A25AF5071B3B5F9C009ABDE9 /* Int+Convertible.swift in Sources */,
 				A21BAF111B5FF37B00601090 /* JsonModelConvertible.swift in Sources */,
 				A25AF50D1B3B61B6009ABDE9 /* Set+Convertible.swift in Sources */,
-				A2877E8E1B3B7543006E70B9 /* NSImage+Convertible.swift in Sources */,
 				A25AF52B1B3B6A1E009ABDE9 /* NSSet+Convertible.swift in Sources */,
 				A25AF5251B3B698B009ABDE9 /* NSNull+Convertible.swift in Sources */,
 				A25AF50A1B3B6012009ABDE9 /* Optional+Convertible.swift in Sources */,
@@ -1070,6 +1064,7 @@
 				PRODUCT_NAME = Convertible;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1090,6 +1085,7 @@
 				PRODUCT_NAME = Convertible;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1148,6 +1144,7 @@
 				PRODUCT_MODULE_NAME = ConvertibleTests;
 				PRODUCT_NAME = ConvertibleTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1161,6 +1158,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.ConvertibleTests;
 				PRODUCT_MODULE_NAME = ConvertibleTests;
 				PRODUCT_NAME = ConvertibleTests;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

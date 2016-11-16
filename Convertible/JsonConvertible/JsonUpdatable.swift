@@ -7,12 +7,12 @@
 //
 
 public protocol JsonUpdatable {
-    mutating func updateWithJson(json: JsonValue, options: [ConvertibleOption]) throws
+    mutating func updateWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws
 }
 
 extension JsonUpdatable {
     
-    public mutating func updateWithJson(json: JsonValue) throws {
+    public mutating func updateWithJson(_ json: JsonValue) throws {
         try updateWithJson(json, options: [])
     }
     

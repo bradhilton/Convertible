@@ -8,10 +8,10 @@
 
 import Foundation
 
-let bundle = NSBundle(identifier: "com.skyvive.ConvertibleTests")!
+let bundle = Bundle(identifier: "com.skyvive.ConvertibleTests")!
 
-func dataForResource(resource: String, ofType type: String) -> NSData {
-    return NSData(contentsOfFile: bundle.pathForResource(resource, ofType: type)!)!
+func dataForResource(_ resource: String, ofType type: String) -> Foundation.Data {
+    return (try! Foundation.Data(contentsOf: URL(fileURLWithPath: bundle.path(forResource: resource, ofType: type)!)))
 }
 
 struct Data {

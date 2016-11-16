@@ -20,9 +20,9 @@ public protocol DataRawValueInitializable : DataInitializable, RawRepresentable 
 
 extension DataRawValueInitializable where RawValue : DataInitializable {
 
-    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
+    public static func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> Self {
         guard let value = self.init(rawValue: try RawValue.initializeWithData(data, options: options)) else {
-            throw ConvertibleError.CannotCreateTypeFromData(type: self)
+            throw ConvertibleError.cannotCreateTypeFromData(type: self)
         }
         return value
     }
@@ -33,7 +33,7 @@ public protocol DataRawValueSerializable : DataSerializable, RawRepresentable {}
 
 extension DataRawValueSerializable where RawValue : DataSerializable {
     
-    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
+    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
         return try self.rawValue.serializeToDataWithOptions(options)
     }
     
@@ -45,9 +45,9 @@ public protocol JsonRawValueInitializable : JsonInitializable, RawRepresentable 
 
 extension JsonRawValueInitializable where RawValue : JsonInitializable {
     
-    public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {
+    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Self {
         guard let value = self.init(rawValue: try RawValue.initializeWithJson(json, options: options)) else {
-            throw ConvertibleError.CannotCreateType(type: self, fromJson: json) // Create new error
+            throw ConvertibleError.cannotCreateType(type: self, fromJson: json) // Create new error
         }
         return value
     }
@@ -58,7 +58,7 @@ public protocol JsonRawValueSerializable : JsonSerializable, RawRepresentable {}
 
 extension JsonRawValueSerializable where RawValue : JsonSerializable {
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
         return try self.rawValue.serializeToJsonWithOptions(options)
     }
     

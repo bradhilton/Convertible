@@ -14,13 +14,13 @@ public protocol DataModelInitializable : DataInitializable {}
 
 extension DataModelInitializable {
     
-    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
+    public static func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> Self {
         let json = try JsonValue.initializeWithData(data, options: options)
         if let this = self as? JsonInitializable.Type,
             let new = try this.initializeWithJson(json, options: options) as? Self {
                 return new
         } else {
-            throw ConvertibleError.NotJsonInitializable(type: self)
+            throw ConvertibleError.notJsonInitializable(type: self)
         }
     }
     
@@ -30,11 +30,11 @@ public protocol DataModelSerializable : DataSerializable {}
 
 extension DataModelSerializable {
     
-    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
+    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
         if let this = self as? JsonSerializable {
             return try this.serializeToJsonWithOptions(options).serializeToDataWithOptions(options)
         } else {
-            throw ConvertibleError.NotJsonSerializable(type: self.dynamicType)
+            throw ConvertibleError.notJsonSerializable(type: type(of: self))
         }
     }
     

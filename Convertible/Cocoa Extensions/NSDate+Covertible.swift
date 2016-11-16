@@ -8,25 +8,25 @@
 
 import Foundation
 
-extension NSDate : JsonConvertible {
+extension Date : JsonConvertible {
     
-    public class func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {
+    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Date {
         switch json {
-        case .String(let string): return try dateFromString(string as String, options: options)
-        default: throw ConvertibleError.CannotCreateType(type: self, fromJson: json)
+        case .string(let string): return try dateFromString(string as String, options: options)
+        default: throw ConvertibleError.cannotCreateType(type: self, fromJson: json)
         }
     }
     
-    class func dateFromString<T>(string: String, options: [ConvertibleOption]) throws -> T {
+    static func dateFromString<T>(_ string: String, options: [ConvertibleOption]) throws -> T {
         let formatter = ConvertibleOptions.DateFormatter.Option(options).formatter
         var object: AnyObject?
-        try formatter.getObjectValue(&object, forString: string, range: nil)
-        guard let date = object as? T else { throw ConvertibleError.CannotCreateDateFromString(string: string) }
+        try formatter.getObjectValue(&object, for: string, range: nil)
+        guard let date = object as? T else { throw ConvertibleError.cannotCreateDateFromString(string: string) }
         return date
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
-        return JsonValue.String(ConvertibleOptions.DateFormatter.Option(options).formatter.stringFromDate(self))
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
+        return JsonValue.string(ConvertibleOptions.DateFormatter.Option(options).formatter.string(from: self) as NSString)
     }
     
 }

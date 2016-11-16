@@ -8,29 +8,29 @@
 
 import Foundation
 
-public enum ConvertibleError : ErrorType, CustomStringConvertible {
+public enum ConvertibleError : Error, CustomStringConvertible {
     
-    case UnknownError
-    case MissingRequiredJsonKeys(keys: [String])
-    case NilRequiredKeys(keys: [String])
-    case UnsettableKey(key: String)
-    case NotDataInitializable(type: Any.Type)
-    case NotDataSerializable(type: Any.Type)
-    case NotJsonInitializable(type: Any.Type)
-    case NotJsonSerializable(type: Any.Type)
-    case CannotCreateType(type: Any.Type, fromJson: JsonValue)
-    case CannotCreateTypeFromData(type: Any.Type)
-    case ObjectNotJsonValue(object: AnyObject)
-    case NotJsonDictionaryKeyInitializable(type: Any.Type)
-    case NotJsonDictionaryKeySerializable(type: Any.Type)
-    case NotObjectType(type: Any.Type)
-    case NotPropertyType(type: Any.Type)
-    case CannotCreateUrlFromString(string: String)
-    case CannotCreateDateFromString(string: String)
-    case CannotCreateImageFromData()
-    case CannotCreateDataFromImage()
-    case CannotCreateDataFromBase64String()
-    case CannotCreateDataFromNilOptional()
+    case unknownError
+    case missingRequiredJsonKeys(keys: [String])
+    case nilRequiredKeys(keys: [String])
+    case unsettableKey(key: String)
+    case notDataInitializable(type: Any.Type)
+    case notDataSerializable(type: Any.Type)
+    case notJsonInitializable(type: Any.Type)
+    case notJsonSerializable(type: Any.Type)
+    case cannotCreateType(type: Any.Type, fromJson: JsonValue)
+    case cannotCreateTypeFromData(type: Any.Type)
+    case objectNotJsonValue(object: Any)
+    case notJsonDictionaryKeyInitializable(type: Any.Type)
+    case notJsonDictionaryKeySerializable(type: Any.Type)
+    case notObjectType(type: Any.Type)
+    case notPropertyType(type: Any.Type)
+    case cannotCreateUrlFromString(string: String)
+    case cannotCreateDateFromString(string: String)
+    case cannotCreateImageFromData()
+    case cannotCreateDataFromImage()
+    case cannotCreateDataFromBase64String()
+    case cannotCreateDataFromNilOptional()
     
     public var description: String {
         return "Convertible Error: \(errorDescription)"
@@ -38,27 +38,27 @@ public enum ConvertibleError : ErrorType, CustomStringConvertible {
     
     var errorDescription: String {
         switch self {
-        case .UnknownError: return "An unknown error occurred"
-        case .MissingRequiredJsonKeys(keys: let keys): return "Missing required json keys: \(keys)"
-        case .NilRequiredKeys(keys: let keys): return "Failed to set required keys: \(keys)"
-        case .UnsettableKey(key: let key): return "Cannot set key: " + key
-        case .NotDataInitializable(type: let type): return "\(type) does not implement DataInitializable"
-        case .NotDataSerializable(type: let type): return "\(type) does not implement DataSerializable"
-        case .NotJsonInitializable(type: let type): return "\(type) does not implement JsonInitializable"
-        case .NotJsonSerializable(type: let type): return "\(type) does not implement JsonSerializable"
-        case .NotJsonDictionaryKeyInitializable(type: let type): return "\(type) does not implement JsonDictionaryKeyInitializable"
-        case .NotJsonDictionaryKeySerializable(type: let type): return "\(type) does not implement JsonDictionaryKeySerializable"
-        case .NotObjectType(type: let type): return "\(type) does not conform to AnyObject"
-        case .NotPropertyType(type: let type): return "\(type) does not conform to Allegro.Property"
-        case .CannotCreateType(type: let type, fromJson: let json): return "Cannot create \(type) from \(json)"
-        case .CannotCreateTypeFromData(type: let type): return "Cannot create \(type) from binary data"
-        case .ObjectNotJsonValue(object: let object): return "\(object.dynamicType) is not a JSON value"
-        case .CannotCreateUrlFromString(string: let string): return "Could not create URL from \(string)"
-        case .CannotCreateDateFromString(string: let string): return "Could not create date from \(string)"
-        case .CannotCreateImageFromData(): return "Could not create image from data"
-        case .CannotCreateDataFromImage(): return "Could not create data from image"
-        case .CannotCreateDataFromBase64String(): return "Could not create data from Base64 string"
-        case .CannotCreateDataFromNilOptional(): return "Cannot create data from nil optional"
+        case .unknownError: return "An unknown error occurred"
+        case .missingRequiredJsonKeys(keys: let keys): return "Missing required json keys: \(keys)"
+        case .nilRequiredKeys(keys: let keys): return "Failed to set required keys: \(keys)"
+        case .unsettableKey(key: let key): return "Cannot set key: " + key
+        case .notDataInitializable(type: let type): return "\(type) does not implement DataInitializable"
+        case .notDataSerializable(type: let type): return "\(type) does not implement DataSerializable"
+        case .notJsonInitializable(type: let type): return "\(type) does not implement JsonInitializable"
+        case .notJsonSerializable(type: let type): return "\(type) does not implement JsonSerializable"
+        case .notJsonDictionaryKeyInitializable(type: let type): return "\(type) does not implement JsonDictionaryKeyInitializable"
+        case .notJsonDictionaryKeySerializable(type: let type): return "\(type) does not implement JsonDictionaryKeySerializable"
+        case .notObjectType(type: let type): return "\(type) does not conform to AnyObject"
+        case .notPropertyType(type: let type): return "\(type) does not conform to Allegro.Property"
+        case .cannotCreateType(type: let type, fromJson: let json): return "Cannot create \(type) from \(json)"
+        case .cannotCreateTypeFromData(type: let type): return "Cannot create \(type) from binary data"
+        case .objectNotJsonValue(object: let object): return "\(type(of: object)) is not a JSON value"
+        case .cannotCreateUrlFromString(string: let string): return "Could not create URL from \(string)"
+        case .cannotCreateDateFromString(string: let string): return "Could not create date from \(string)"
+        case .cannotCreateImageFromData(): return "Could not create image from data"
+        case .cannotCreateDataFromImage(): return "Could not create data from image"
+        case .cannotCreateDataFromBase64String(): return "Could not create data from Base64 string"
+        case .cannotCreateDataFromNilOptional(): return "Cannot create data from nil optional"
         }
     }
 

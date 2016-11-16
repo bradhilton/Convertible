@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     subscript (i: Int) -> Character {
-        return self[startIndex.advancedBy(i)]
+        return self[characters.index(startIndex, offsetBy: i)]
     }
     
     subscript (i: Int) -> String {
@@ -19,7 +19,7 @@ extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        return substringWithRange(startIndex.advancedBy(r.startIndex)..<startIndex.advancedBy(r.endIndex))
+        return substring(with: characters.index(startIndex, offsetBy: r.lowerBound)..<characters.index(startIndex, offsetBy: r.upperBound))
     }
     
     var length: Int {

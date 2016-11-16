@@ -13,7 +13,7 @@ class Int_Convertible: XCTestCase {
     
     func testJsonConvertible() {
         do {
-            let int = NSNumber(integer: 101)
+            let int = NSNumber(value: 101 as Int)
             let result = try Int.initializeWithJson(try JsonValue(object: int))
             let object = try result.serializeToJson().object as! NSNumber
             XCTAssert(int == object)

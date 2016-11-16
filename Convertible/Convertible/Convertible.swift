@@ -7,17 +7,17 @@
 //
 
 import Foundation
-import Allegro
-
-extension Field {
-    var reducedName: String {
-        return name.componentsSeparatedByString(".")[0]
-    }
-}
+import Reflection
 
 extension Property {
     var reducedKey: String {
-        return key.componentsSeparatedByString(".")[0]
+        return key.components(separatedBy: ".")[0]
+    }
+}
+
+extension Property.Description {
+    var reducedKey: String {
+        return key.components(separatedBy: ".")[0]
     }
 }
 

@@ -13,7 +13,7 @@ class NSNumber_Convertible: XCTestCase {
     
     func testJsonConvertible() {
         do {
-            let number = NSNumber(double: 12.5)
+            let number = NSNumber(value: 12.5 as Double)
             let result = try NSNumber.initializeWithJson(try JsonValue(object: number))
             let object = try result.serializeToJson().object as! NSNumber
             XCTAssert(number == object)

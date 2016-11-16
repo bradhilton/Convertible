@@ -24,7 +24,7 @@ class NSSet_Convertible: XCTestCase {
     func testJsonConvertible() {
         do {
             let set: NSSet = ["Hello", "World"]
-            let array: NSArray = set.allObjects
+            let array: NSArray = set.allObjects as NSArray
             let result = try NSSet.initializeWithJson(JsonValue(object: array))
             let object = NSSet(array: try result.serializeToJson().object as! [AnyObject])
             XCTAssert(set == object)

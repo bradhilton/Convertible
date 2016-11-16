@@ -13,69 +13,69 @@ public struct ConvertibleOptions {
     
     /// Use this option to customize how data is decoded from Base64
     public struct Base64DecodingOptions: _ConvertibleOption {
-        public let options: NSDataBase64DecodingOptions
-        public static var Default = Base64DecodingOptions(options: NSDataBase64DecodingOptions())
-        public init(options: NSDataBase64DecodingOptions) {
+        public let options: NSData.Base64DecodingOptions
+        public static var Default = Base64DecodingOptions(options: NSData.Base64DecodingOptions())
+        public init(options: NSData.Base64DecodingOptions) {
             self.options = options
         }
     }
     
     /// Use this option to customize how data is encoded to Base64
     public struct Base64EncodingOptions: _ConvertibleOption {
-        public let options: NSDataBase64EncodingOptions
-        public static var Default = Base64EncodingOptions(options: NSDataBase64EncodingOptions())
-        public init(options: NSDataBase64EncodingOptions) {
+        public let options: NSData.Base64EncodingOptions
+        public static var Default = Base64EncodingOptions(options: NSData.Base64EncodingOptions())
+        public init(options: NSData.Base64EncodingOptions) {
             self.options = options
         }
     }
     
     /// Use this option to specify the expected data type for objects and collections
     public enum DataType: _ConvertibleOption {
-        case JSON
-        case XML /// currently unsupported
-        case Foundation /// currently unsupported
-        public static var Default = DataType.JSON
+        case json
+        case xml /// currently unsupported
+        case foundation /// currently unsupported
+        public static var Default = DataType.json
     }
     
     /// Use this option to include a custom NSDateFormatter
     /// Default date formatter assumes a ISO 8601 date string
     public struct DateFormatter: _ConvertibleOption {
-        public let formatter: NSDateFormatter
+        public let formatter: Foundation.DateFormatter
         public static var Default: DateFormatter = {
-            let formatter = NSDateFormatter()
+            let formatter = Foundation.DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
             return DateFormatter(formatter: formatter)
         }()
-        public init(formatter: NSDateFormatter) {
+        public init(formatter: Foundation.DateFormatter) {
             self.formatter = formatter
         }
     }
     
     /// Use this option to specify how an image should be encoded
     public enum ImageEncoding: _ConvertibleOption {
-        case JPEG(quality: CGFloat)
-        case PNG
-        public static var Default = ImageEncoding.PNG
+        case jpeg(quality: CGFloat)
+        case png
+        public static var Default = ImageEncoding.png
     }
     
     /// Use this option to include a custom NSNumberFormatter
     public struct NumberFormatter: _ConvertibleOption {
-        public let formatter: NSNumberFormatter
+        public let formatter: Foundation.NumberFormatter
         public static var Default: NumberFormatter = {
-            let formatter = NSNumberFormatter()
-            formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+            let formatter = Foundation.NumberFormatter()
+            formatter.numberStyle = Foundation.NumberFormatter.Style.decimal
             return NumberFormatter(formatter: formatter)
         }()
-        public init(formatter: NSNumberFormatter) {
+        public init(formatter: Foundation.NumberFormatter) {
             self.formatter = formatter
         }
     }
     
     /// Use to specify custom NSStringEncoding; default is NSUTF8StringEncoding
     public struct StringEncoding: _ConvertibleOption {
-        public let encoding: NSStringEncoding
-        public static var Default = StringEncoding(encoding: NSUTF8StringEncoding)
-        public init(encoding: NSStringEncoding) {
+        public let encoding: String.Encoding
+        public static var Default = StringEncoding(encoding: String.Encoding.utf8)
+        public init(encoding: String.Encoding) {
             self.encoding = encoding
         }
     }

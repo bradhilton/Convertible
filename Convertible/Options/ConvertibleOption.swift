@@ -14,7 +14,7 @@ protocol _ConvertibleOption : ConvertibleOption {
 
 extension _ConvertibleOption {
     
-    static func Option(options: [ConvertibleOption]?) -> Self {
+    static func Option(_ options: [ConvertibleOption]?) -> Self {
         if let options = options {
             for option in options {
                 if let option = option as? Self {

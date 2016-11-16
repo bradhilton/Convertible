@@ -17,7 +17,7 @@ class DataTypeConvertible: XCTestCase {
             let data = try result.serializeToData()
             XCTAssert(Data.arrayData == data)
         } catch {
-            XCTFail(String(error))
+            XCTFail(String(describing: error))
         }
     }
     

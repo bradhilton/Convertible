@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C142F6340527EB3C74E7F4C28FB8B350'
-               BlueprintName = 'Allegro'
+               BlueprintIdentifier = '73DE26FAB10D0728D71783593D0C9B0C'
+               BlueprintName = 'Reflection'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Allegro.framework'>
+               BuildableName = 'Reflection.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -10,23 +10,23 @@ import Foundation
 
 extension NSString : DataConvertible {
     
-    public class func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
+    public class func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> Self {
         return try stringWithData(data, encoding: ConvertibleOptions.StringEncoding.Option(options).encoding)
     }
     
-    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
-        if let data = dataUsingEncoding(ConvertibleOptions.StringEncoding.Option(options).encoding) {
+    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
+        if let data = data(using: ConvertibleOptions.StringEncoding.Option(options).encoding.rawValue) {
             return data
         } else {
-            throw ConvertibleError.UnknownError
+            throw ConvertibleError.unknownError
         }
     }
     
-    class func stringWithData<T>(data: NSData, encoding: NSStringEncoding) throws -> T {
-        if let string = NSString(data: data, encoding: encoding) as? T {
+    class func stringWithData<T>(_ data: Data, encoding: String.Encoding) throws -> T {
+        if let string = NSString(data: data, encoding: encoding.rawValue) as? T {
             return string
         } else {
-            throw ConvertibleError.UnknownError
+            throw ConvertibleError.unknownError
         }
     }
     
@@ -34,35 +34,35 @@ extension NSString : DataConvertible {
 
 extension NSString : JsonConvertible {
     
-    public class func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {
+    public class func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Self {
         return try stringWithJson(json)
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
         return try JsonValue(object: self)
     }
     
-    class func stringWithJson<T>(json: JsonValue) throws -> T {
+    class func stringWithJson<T>(_ json: JsonValue) throws -> T {
         switch json {
-        case .String(let string): if let string = string as? T { return string }
-        case .Number(let number): if let string = number.stringValue as? T { return string }
-        default: throw ConvertibleError.CannotCreateType(type: self, fromJson: json)
+        case .string(let string): if let string = string as? T { return string }
+        case .number(let number): if let string = number.stringValue as? T { return string }
+        default: throw ConvertibleError.cannotCreateType(type: self, fromJson: json)
         }
-        throw ConvertibleError.UnknownError
+        throw ConvertibleError.unknownError
     }
     
 }
 
 extension NSString : JsonDictionaryKeyConvertible {
     
-    public class func initializeWithJsonDictionaryKey(key: JsonDictionaryKey, options: [ConvertibleOption]) throws -> Self {
-        func cast<T>(key: JsonDictionaryKey) -> T {
+    public class func initializeWithJsonDictionaryKey(_ key: JsonDictionaryKey, options: [ConvertibleOption]) throws -> Self {
+        func cast<T>(_ key: JsonDictionaryKey) -> T {
             return key as! T
         }
         return cast(key)
     }
     
-    public func serializeToJsonDictionaryKeyWithOptions(options: [ConvertibleOption]) throws -> JsonDictionaryKey {
+    public func serializeToJsonDictionaryKeyWithOptions(_ options: [ConvertibleOption]) throws -> JsonDictionaryKey {
         return self
     }
     

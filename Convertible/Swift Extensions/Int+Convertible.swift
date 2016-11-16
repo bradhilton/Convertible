@@ -10,16 +10,16 @@ import Foundation
 
 extension Int : JsonConvertible {
     
-    public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Int {
+    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Int {
         switch json {
-        case .String(let string): return string.integerValue
-        case .Number(let number): return number.integerValue
-        default: throw ConvertibleError.CannotCreateType(type: self, fromJson: json)
+        case .string(let string): return string.integerValue
+        case .number(let number): return number.intValue
+        default: throw ConvertibleError.cannotCreateType(type: self, fromJson: json)
         }
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
-        return JsonValue.Number(NSNumber(integer: self))
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
+        return JsonValue.number(NSNumber(value: self as Int))
     }
     
 }

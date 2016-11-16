@@ -8,22 +8,22 @@
 
 import Foundation
 
-extension NSURL : JsonConvertible {
+extension URL : JsonConvertible {
     
-    public class func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {
+    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> URL {
         return try urlFromJson(json, options: options)
     }
     
-    class func urlFromJson<T>(json: JsonValue, options: [ConvertibleOption]) throws -> T {
+    static func urlFromJson<T>(_ json: JsonValue, options: [ConvertibleOption]) throws -> T {
         let string = try String.initializeWithJson(json, options: options)
-        guard let url = NSURL(string: string), let result = url as? T else {
-            throw ConvertibleError.CannotCreateUrlFromString(string: string)
+        guard let url = URL(string: string), let result = url as? T else {
+            throw ConvertibleError.cannotCreateUrlFromString(string: string)
         }
         return result
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
-        return JsonValue.String(self.absoluteString)
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
+        return JsonValue.string(self.absoluteString as NSString)
     }
     
 }

@@ -12,30 +12,30 @@ public typealias JsonDictionaryKey = NSString
 
 public enum JsonValue {
     
-    case String(NSString)
-    case Number(NSNumber)
-    case Array([JsonValue])
-    case Dictionary([JsonDictionaryKey : JsonValue])
-    case Null(NSNull)
+    case string(NSString)
+    case number(NSNumber)
+    case array([JsonValue])
+    case dictionary([JsonDictionaryKey : JsonValue])
+    case null(NSNull)
     
-    public init(object: AnyObject) throws {
+    public init(object: Any) throws {
         switch object {
-        case let object as JsonDictionaryKey: self = JsonValue.String(object)
-        case let object as NSNumber: self = JsonValue.Number(object)
-        case let object as NSArray: self = JsonValue.Array(try convertNSArray(object))
-        case let object as NSDictionary: self = JsonValue.Dictionary(try convertNSDictionary(object))
-        case let object as NSNull: self = JsonValue.Null(object)
-        default: throw ConvertibleError.ObjectNotJsonValue(object: object)
+        case let object as JsonDictionaryKey: self = JsonValue.string(object)
+        case let object as NSNumber: self = JsonValue.number(object)
+        case let object as NSArray: self = JsonValue.array(try convertNSArray(object))
+        case let object as NSDictionary: self = JsonValue.dictionary(try convertNSDictionary(object))
+        case let object as NSNull: self = JsonValue.null(object)
+        default: throw ConvertibleError.objectNotJsonValue(object: object)
         }
     }
     
     public var object: AnyObject {
         switch self {
-        case .String(let string): return string
-        case .Number(let number): return number
-        case .Array(let array): return convertValueArray(array)
-        case .Dictionary(let dictionary): return convertValueDictionary(dictionary)
-        case .Null(let null): return null
+        case .string(let string): return string
+        case .number(let number): return number
+        case .array(let array): return convertValueArray(array)
+        case .dictionary(let dictionary): return convertValueDictionary(dictionary)
+        case .null(let null): return null
         }
     }
     
@@ -43,57 +43,57 @@ public enum JsonValue {
 
 extension JsonValue : DataConvertible {
     
-    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> JsonValue {
-        return try JsonValue(object: try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments))
+    public static func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> JsonValue {
+        return try JsonValue(object: try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments))
     }
     
-    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
-        return try NSJSONSerialization.dataWithJSONObject(self.object, options: NSJSONWritingOptions())
+    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
+        return try JSONSerialization.data(withJSONObject: self.object, options: JSONSerialization.WritingOptions())
     }
     
 }
 
 extension JsonValue : JsonConvertible {
     
-    public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> JsonValue {
+    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> JsonValue {
         return json
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
         return self
     }
     
 }
 
-private func convertNSArray(array: NSArray) throws -> [JsonValue] {
+private func convertNSArray(_ array: NSArray) throws -> [JsonValue] {
     var result = [JsonValue]()
     for object in array {
-        result.append(try JsonValue(object: object))
+        result.append(try JsonValue(object: object as AnyObject))
     }
     return result
 }
 
-private func convertValueArray(array: [JsonValue]) -> NSArray {
+private func convertValueArray(_ array: [JsonValue]) -> NSArray {
     let result = NSMutableArray()
     for value in array {
-        result.addObject(value.object)
+        result.add(value.object)
     }
     return result
 }
 
-private func convertNSDictionary(dictionary: NSDictionary) throws -> [JsonDictionaryKey : JsonValue] {
+private func convertNSDictionary(_ dictionary: NSDictionary) throws -> [JsonDictionaryKey : JsonValue] {
     var result = [JsonDictionaryKey : JsonValue]()
     for (key, value) in dictionary {
         if let key = key as? JsonDictionaryKeySerializable {
             try result[key.serializeToJsonDictionaryKeyWithOptions([])] = JsonValue(object: value)
         } else {
-            throw ConvertibleError.NotJsonDictionaryKeySerializable(type: key.dynamicType)
+            throw ConvertibleError.notJsonDictionaryKeySerializable(type: type(of: key))
         }
     }
     return result
 }
 
-private func convertValueDictionary(dictionary: [JsonDictionaryKey : JsonValue]) -> NSDictionary {
+private func convertValueDictionary(_ dictionary: [JsonDictionaryKey : JsonValue]) -> NSDictionary {
     let result = NSMutableDictionary()
     for (key, value) in dictionary {
         result.setObject(value.object, forKey: key)

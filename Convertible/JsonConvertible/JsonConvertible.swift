@@ -7,25 +7,24 @@
 //
 
 import Foundation
-import Allegro
 
 public protocol JsonConvertible : JsonInitializable, JsonSerializable {}
 
 public protocol JsonInitializable {
     
-    static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self
+    static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Self
     
 }
 
 public protocol JsonSerializable {
     
-    func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue
+    func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue
     
 }
 
 extension JsonInitializable {
     
-    public static func initializeWithJson(json: JsonValue) throws -> Self {
+    public static func initializeWithJson(_ json: JsonValue) throws -> Self {
         return try initializeWithJson(json, options: [])
     }
     

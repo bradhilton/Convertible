@@ -8,13 +8,13 @@
 
 public protocol JsonDictionaryKeyInitializable {
     
-    static func initializeWithJsonDictionaryKey(key: JsonDictionaryKey, options: [ConvertibleOption]) throws -> Self
+    static func initializeWithJsonDictionaryKey(_ key: JsonDictionaryKey, options: [ConvertibleOption]) throws -> Self
     
 }
 
 public protocol JsonDictionaryKeySerializable {
     
-    func serializeToJsonDictionaryKeyWithOptions(options: [ConvertibleOption]) throws -> JsonDictionaryKey
+    func serializeToJsonDictionaryKeyWithOptions(_ options: [ConvertibleOption]) throws -> JsonDictionaryKey
     
 }
 

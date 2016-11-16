@@ -13,7 +13,7 @@ class Bool_Convertible: XCTestCase {
     
     func testJsonConvertible() {
         do {
-            let bool = NSNumber(bool: true)
+            let bool = NSNumber(value: true as Bool)
             let result = try Bool.initializeWithJson(try JsonValue(object: bool))
             let object = try result.serializeToJson().object as! NSNumber
             XCTAssert(bool == object)

@@ -12,15 +12,15 @@ extension Array : DataModelConvertible {}
 
 extension Array : JsonConvertible {
     
-    public static func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Array {
+    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Array {
         switch json {
-        case .Array(let array): return try resultFromArray(array, options: options)
-        default: throw ConvertibleError.CannotCreateType(type: self, fromJson: json)
+        case .array(let array): return try resultFromArray(array, options: options)
+        default: throw ConvertibleError.cannotCreateType(type: self, fromJson: json)
         }
     }
     
-    static func resultFromArray(array: [JsonValue], options: [ConvertibleOption]) throws -> Array {
-        let error = ConvertibleError.NotJsonInitializable(type: Element.self)
+    static func resultFromArray(_ array: [JsonValue], options: [ConvertibleOption]) throws -> Array {
+        let error = ConvertibleError.notJsonInitializable(type: Element.self)
         guard let generic = Element.self as? JsonInitializable.Type else { throw error }
         var result = Array<Element>()
         for json in array {
@@ -30,15 +30,15 @@ extension Array : JsonConvertible {
         return result
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
         var array = [JsonValue]()
         for element in self {
             guard let element = element as? JsonSerializable else {
-                throw ConvertibleError.NotJsonSerializable(type: Element.self)
+                throw ConvertibleError.notJsonSerializable(type: Element.self)
             }
             array.append(try element.serializeToJsonWithOptions(options))
         }
-        return JsonValue.Array(array)
+        return JsonValue.array(array)
     }
     
 }

@@ -15,7 +15,7 @@ public protocol KeyMapping {
     
     static var ignoredKeys: Set<PropertyKey> { get }
     static var keyMapping: [PropertyKey : MappedKey] { get }
-    static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey?
+    static func mappedKeyForPropertyKey(_ propertyKey: PropertyKey) -> MappedKey?
     
 }
 
@@ -31,7 +31,7 @@ extension KeyMapping {
         return [:]
     }
     
-    public static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey? {
+    public static func mappedKeyForPropertyKey(_ propertyKey: PropertyKey) -> MappedKey? {
         guard !ignoredKeys.contains(propertyKey) else { return nil }
         if let mappedKey = keyMapping[propertyKey] {
             return mappedKey
@@ -44,7 +44,7 @@ extension KeyMapping {
 
 extension UnderscoreToCamelCase {
     
-    public static func mappedKeyForPropertyKey(propertyKey: PropertyKey) -> MappedKey? {
+    public static func mappedKeyForPropertyKey(_ propertyKey: PropertyKey) -> MappedKey? {
         guard !ignoredKeys.contains(propertyKey) else { return nil }
         if let mappedKey = keyMapping[propertyKey] {
             return mappedKey
@@ -53,14 +53,14 @@ extension UnderscoreToCamelCase {
         }
     }
     
-    static func underscoreFromCamelCase(camelCase: PropertyKey) -> MappedKey {
-        let options = NSStringEnumerationOptions.ByComposedCharacterSequences
-        let range = camelCase.startIndex..<camelCase.endIndex
+    static func underscoreFromCamelCase(_ camelCase: PropertyKey) -> MappedKey {
+        let options = NSString.EnumerationOptions.byComposedCharacterSequences
+        let range = camelCase.range(of: camelCase)!
         var underscore = ""
-        camelCase.enumerateSubstringsInRange(range, options: options) { (substring, substringRange, enclosingRange, shouldContinue) -> () in
+        camelCase.enumerateSubstrings(in: range, options: options) { (substring, substringRange, enclosingRange, shouldContinue) -> () in
             if let substring = substring {
-                if substring.lowercaseString != substring {
-                    underscore += "_" + substring.lowercaseString
+                if substring.lowercased() != substring {
+                    underscore += "_" + substring.lowercased()
                 } else {
                     underscore += substring
                 }

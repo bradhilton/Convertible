@@ -1,12 +1,12 @@
 PODS:
-  - Allegro (1.1.0)
+  - Reflection (0.14.2)
 
 DEPENDENCIES:
-  - Allegro (~> 1.1.0)
+  - Reflection (~> 0.14.2)
 
 SPEC CHECKSUMS:
-  Allegro: 567a663bcff8b85a5992d3b189c3faf7509ede00
+  Reflection: 057e621ce099cfb569bbd1ecaa84165e9c58e091
 
-PODFILE CHECKSUM: 156bd9324808e874f555d8a6a8ea2a27e2c9557a
+PODFILE CHECKSUM: c10bdb1e287596dc3cfd9a26bf1b791ab002c005
 
-COCOAPODS: 1.0.0.beta.3
+COCOAPODS: 1.1.1

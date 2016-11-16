@@ -12,19 +12,19 @@ public protocol DataConvertible : DataInitializable, DataSerializable {}
 
 public protocol DataInitializable {
     
-    static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self
+    static func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> Self
 
 }
 
 public protocol DataSerializable {
     
-    func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData
+    func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data
 
 }
 
 extension DataInitializable {
     
-    public static func initializeWithData(data: NSData) throws -> Self {
+    public static func initializeWithData(_ data: Data) throws -> Self {
         return try initializeWithData(data, options: [])
     }
     
@@ -32,7 +32,7 @@ extension DataInitializable {
 
 extension DataSerializable {
     
-    public func serializeToData() throws -> NSData {
+    public func serializeToData() throws -> Data {
         return try serializeToDataWithOptions([])
     }
 

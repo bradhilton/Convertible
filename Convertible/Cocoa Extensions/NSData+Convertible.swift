@@ -8,33 +8,33 @@
 
 import Foundation
 
-extension NSData : DataConvertible {
+extension Data : DataConvertible {
     
-    public static func initializeWithData(data: NSData, options: [ConvertibleOption]) throws -> Self {
-        return self.init(data: data)
+    public static func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> Data {
+        return data
     }
     
-    public func serializeToDataWithOptions(options: [ConvertibleOption]) throws -> NSData {
+    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
         return self
     }
     
 }
 
-extension NSData : JsonConvertible {
+extension Data : JsonConvertible {
     
-    public class func initializeWithJson(json: JsonValue, options: [ConvertibleOption]) throws -> Self {
+    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Data {
         return try dataFromJson(json, options: options)
     }
     
-    class func dataFromJson<T : NSData>(json: JsonValue, options: [ConvertibleOption]) throws -> T {
+    static func dataFromJson<T>(_ json: JsonValue, options: [ConvertibleOption]) throws -> T {
         guard let data = try json.serializeToDataWithOptions(options) as? T else {
-            throw ConvertibleError.CannotCreateType(type: T.self, fromJson: json)
+            throw ConvertibleError.cannotCreateType(type: T.self, fromJson: json)
         }
         return data
     }
     
-    public func serializeToJsonWithOptions(options: [ConvertibleOption]) throws -> JsonValue {
-        return JsonValue.String(try NSString.initializeWithData(self, options: options))
+    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
+        return JsonValue.string(try NSString.initializeWithData(self, options: options))
     }
     
 }

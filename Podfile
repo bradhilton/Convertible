@@ -2,5 +2,6 @@ use_frameworks!
 
 target 'Convertible-iOS' do
     podspec
-    target 'ConvertibleTests-iOS'
+    target 'ConvertibleTests-iOS' do
+    end
 end
