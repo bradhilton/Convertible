@@ -18,64 +18,35 @@
 		A21BAF101B5FF37B00601090 /* JsonModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF0F1B5FF37B00601090 /* JsonModelConvertible.swift */; };
 		A21BAF111B5FF37B00601090 /* JsonModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAF0F1B5FF37B00601090 /* JsonModelConvertible.swift */; };
 		A22CBE351D6618B700E075F9 /* JsonArrayConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22CBE341D6618B700E075F9 /* JsonArrayConvertible.swift */; };
-		A22CBE361D6618B700E075F9 /* JsonArrayConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22CBE341D6618B700E075F9 /* JsonArrayConvertible.swift */; };
 		A23259DD1B3C5173006833EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259DC1B3C5173006833EB /* Models.swift */; };
 		A23259DE1B3C5173006833EB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23259DC1B3C5173006833EB /* Models.swift */; };
 		A25AF3DB1B3B1BDC009ABDE9 /* Convertible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */; };
-		A25AF3F21B3B1D2D009ABDE9 /* Convertible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */; };
 		A25AF4021B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */; };
-		A25AF4031B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */; };
 		A25AF4041B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FB1B3B1E4B009ABDE9 /* NSDate+Covertible.swift */; };
-		A25AF4051B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FB1B3B1E4B009ABDE9 /* NSDate+Covertible.swift */; };
 		A25AF4061B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FC1B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift */; };
-		A25AF4071B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FC1B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift */; };
 		A25AF4081B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FD1B3B1E4B009ABDE9 /* NSNull+Convertible.swift */; };
-		A25AF4091B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FD1B3B1E4B009ABDE9 /* NSNull+Convertible.swift */; };
 		A25AF40A1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FE1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift */; };
-		A25AF40B1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FE1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift */; };
 		A25AF40C1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FF1B3B1E4B009ABDE9 /* NSSet+Convertible.swift */; };
-		A25AF40D1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF3FF1B3B1E4B009ABDE9 /* NSSet+Convertible.swift */; };
 		A25AF40E1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4001B3B1E4B009ABDE9 /* NSString+Convertible.swift */; };
-		A25AF40F1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4001B3B1E4B009ABDE9 /* NSString+Convertible.swift */; };
 		A25AF4101B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */; };
-		A25AF4111B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */; };
 		A25AF4151B3B1E93009ABDE9 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */; };
-		A25AF4161B3B1E93009ABDE9 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4131B3B1E93009ABDE9 /* DataConvertible.swift */; };
 		A25AF4171B3B1E93009ABDE9 /* DataModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4141B3B1E93009ABDE9 /* DataModelConvertible.swift */; };
-		A25AF4181B3B1E93009ABDE9 /* DataModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4141B3B1E93009ABDE9 /* DataModelConvertible.swift */; };
 		A25AF41F1B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */; };
-		A25AF4201B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF41E1B3B1F32009ABDE9 /* ConvertibleError.swift */; };
 		A25AF4241B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4221B3B1F67009ABDE9 /* ConvertibleOption.swift */; };
-		A25AF4251B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4221B3B1F67009ABDE9 /* ConvertibleOption.swift */; };
 		A25AF4261B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4231B3B1F67009ABDE9 /* ConvertibleOptions.swift */; };
-		A25AF4271B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4231B3B1F67009ABDE9 /* ConvertibleOptions.swift */; };
 		A25AF42F1B3B2007009ABDE9 /* JsonConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF42D1B3B2007009ABDE9 /* JsonConvertible.swift */; };
-		A25AF4301B3B2007009ABDE9 /* JsonConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF42D1B3B2007009ABDE9 /* JsonConvertible.swift */; };
 		A25AF4311B3B2007009ABDE9 /* JsonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF42E1B3B2007009ABDE9 /* JsonValue.swift */; };
-		A25AF4321B3B2007009ABDE9 /* JsonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF42E1B3B2007009ABDE9 /* JsonValue.swift */; };
 		A25AF43D1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4341B3B205B009ABDE9 /* Array+Convertible.swift */; };
-		A25AF43E1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4341B3B205B009ABDE9 /* Array+Convertible.swift */; };
 		A25AF43F1B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4351B3B205B009ABDE9 /* Bool+Convertible.swift */; };
-		A25AF4401B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4351B3B205B009ABDE9 /* Bool+Convertible.swift */; };
 		A25AF4411B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4361B3B205B009ABDE9 /* Dictionary+Convertible.swift */; };
-		A25AF4421B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4361B3B205B009ABDE9 /* Dictionary+Convertible.swift */; };
 		A25AF4431B3B205B009ABDE9 /* Double+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4371B3B205B009ABDE9 /* Double+Convertible.swift */; };
-		A25AF4441B3B205B009ABDE9 /* Double+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4371B3B205B009ABDE9 /* Double+Convertible.swift */; };
 		A25AF4451B3B205B009ABDE9 /* Float+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4381B3B205B009ABDE9 /* Float+Convertible.swift */; };
-		A25AF4461B3B205B009ABDE9 /* Float+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4381B3B205B009ABDE9 /* Float+Convertible.swift */; };
 		A25AF4471B3B205B009ABDE9 /* Int+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4391B3B205B009ABDE9 /* Int+Convertible.swift */; };
-		A25AF4481B3B205B009ABDE9 /* Int+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4391B3B205B009ABDE9 /* Int+Convertible.swift */; };
 		A25AF4491B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43A1B3B205B009ABDE9 /* Optional+Convertible.swift */; };
-		A25AF44A1B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43A1B3B205B009ABDE9 /* Optional+Convertible.swift */; };
 		A25AF44B1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43B1B3B205B009ABDE9 /* Set+Convertible.swift */; };
-		A25AF44C1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43B1B3B205B009ABDE9 /* Set+Convertible.swift */; };
 		A25AF44D1B3B205B009ABDE9 /* String+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */; };
-		A25AF44E1B3B205B009ABDE9 /* String+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */; };
 		A25AF4541B3B20A5009ABDE9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */; };
-		A25AF4551B3B20A5009ABDE9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */; };
 		A25AF46D1B3B23BA009ABDE9 /* Convertible.h in Headers */ = {isa = PBXBuildFile; fileRef = A25AF46C1B3B23BA009ABDE9 /* Convertible.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A25AF4811B3B23D1009ABDE9 /* Convertible.h in Headers */ = {isa = PBXBuildFile; fileRef = A25AF46C1B3B23BA009ABDE9 /* Convertible.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A25AF48B1B3B2550009ABDE9 /* UIImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF48A1B3B2550009ABDE9 /* UIImage+Convertible.swift */; };
 		A25AF4D91B3B5786009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4A71B3B5786009ABDE9 /* Array+Convertible.swift */; };
 		A25AF4F81B3B5BDF009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4A71B3B5786009ABDE9 /* Array+Convertible.swift */; };
 		A25AF4FA1B3B5D4A009ABDE9 /* Bool+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4F91B3B5D4A009ABDE9 /* Bool+Convertible.swift */; };
@@ -120,23 +91,16 @@
 		A25AF5361B3B6C3E009ABDE9 /* JPEG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */; };
 		A25AF5381B3B6C8E009ABDE9 /* PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5371B3B6C8E009ABDE9 /* PNG.png */; };
 		A25AF5391B3B6C8E009ABDE9 /* PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5371B3B6C8E009ABDE9 /* PNG.png */; };
-		A25AF53B1B3B70E5009ABDE9 /* NSImage+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */; };
 		A2877E931B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2B785E21B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
-		A2B785E31B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
 		A2CAF6DF1D4972D10076DCC6 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CAF6DE1D4972D10076DCC6 /* Initializable.swift */; };
 		A2CAF6E11D4972DC0076DCC6 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CAF6E01D4972DC0076DCC6 /* Serializable.swift */; };
 		A2CAF6E31D49738A0076DCC6 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CAF6E21D49738A0076DCC6 /* Updatable.swift */; };
-		A2CAF6E41D49738A0076DCC6 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CAF6E21D49738A0076DCC6 /* Updatable.swift */; };
 		A2CAF6E61D4973D00076DCC6 /* JsonUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CAF6E51D4973D00076DCC6 /* JsonUpdatable.swift */; };
-		A2CAF6E71D4973D00076DCC6 /* JsonUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CAF6E51D4973D00076DCC6 /* JsonUpdatable.swift */; };
 		A2ED1BE21BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
-		A2ED1BE31BEEB0A9006D7D3D /* RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED1BE11BEEB0A9006D7D3D /* RawValue.swift */; };
 		A2F01A331D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F01A321D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift */; };
-		A2F01A341D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F01A321D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift */; };
 		A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
-		A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,13 +110,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = A25AF3841B3B1A3F009ABDE9;
 			remoteInfo = "Convertible-iOS";
-		};
-		A25AF3F31B3B1D2D009ABDE9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A25AF3091B3B17A0009ABDE9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A25AF3A01B3B1AAA009ABDE9;
-			remoteInfo = "Convertible-OSX";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -172,7 +129,6 @@
 		A22CBE341D6618B700E075F9 /* JsonArrayConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonArrayConvertible.swift; sourceTree = "<group>"; };
 		A23259DC1B3C5173006833EB /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Convertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Convertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25AF3D61B3B1BDB009ABDE9 /* ConvertibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25AF3ED1B3B1D2D009ABDE9 /* ConvertibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25AF3FA1B3B1E4B009ABDE9 /* NSArray+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+Convertible.swift"; sourceTree = "<group>"; };
@@ -202,7 +158,6 @@
 		A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 		A25AF46C1B3B23BA009ABDE9 /* Convertible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Convertible.h; sourceTree = "<group>"; };
-		A25AF48A1B3B2550009ABDE9 /* UIImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF4A71B3B5786009ABDE9 /* Array+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF4EF1B3B57E4009ABDE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25AF4F91B3B5D4A009ABDE9 /* Bool+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Convertible.swift"; sourceTree = "<group>"; };
@@ -226,7 +181,6 @@
 		A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JPEG.jpg; sourceTree = "<group>"; };
 		A25AF5371B3B6C8E009ABDE9 /* PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PNG.png; sourceTree = "<group>"; };
-		A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Convertible.swift"; sourceTree = "<group>"; };
 		A27808081B44B0EB0004D0BF /* Convertible.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Convertible.podspec; sourceTree = "<group>"; };
 		A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
 		A2B785E11B684C5300090309 /* NSData+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Convertible.swift"; sourceTree = "<group>"; };
@@ -251,13 +205,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A25AF39D1B3B1AAA009ABDE9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A25AF3D31B3B1BDB009ABDE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,7 +218,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25AF3F21B3B1D2D009ABDE9 /* Convertible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */,
-				A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */,
 				A25AF3D61B3B1BDB009ABDE9 /* ConvertibleTests.xctest */,
 				A25AF3ED1B3B1D2D009ABDE9 /* ConvertibleTests.xctest */,
 			);
@@ -350,14 +295,12 @@
 				A2B785E11B684C5300090309 /* NSData+Convertible.swift */,
 				A25AF3FB1B3B1E4B009ABDE9 /* NSDate+Covertible.swift */,
 				A25AF3FC1B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift */,
-				A25AF53A1B3B70E5009ABDE9 /* NSImage+Convertible.swift */,
 				A25AF3FD1B3B1E4B009ABDE9 /* NSNull+Convertible.swift */,
 				A25AF3FE1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift */,
 				A2F9DE401B444721006D3A0B /* NSObject+Convertible.swift */,
 				A25AF3FF1B3B1E4B009ABDE9 /* NSSet+Convertible.swift */,
 				A25AF4001B3B1E4B009ABDE9 /* NSString+Convertible.swift */,
 				A25AF4011B3B1E4B009ABDE9 /* NSURL+Convertible.swift */,
-				A25AF48A1B3B2550009ABDE9 /* UIImage+Convertible.swift */,
 			);
 			path = "Cocoa Extensions";
 			sourceTree = "<group>";
@@ -546,14 +489,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A25AF39E1B3B1AAA009ABDE9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A25AF4811B3B23D1009ABDE9 /* Convertible.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -575,24 +510,6 @@
 			name = "Convertible-iOS";
 			productName = Convertible;
 			productReference = A25AF3851B3B1A3F009ABDE9 /* Convertible.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A25AF3A01B3B1AAA009ABDE9 /* Convertible-OSX */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A25AF3B21B3B1AAA009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-OSX" */;
-			buildPhases = (
-				A25AF39C1B3B1AAA009ABDE9 /* Sources */,
-				A25AF39D1B3B1AAA009ABDE9 /* Frameworks */,
-				A25AF39E1B3B1AAA009ABDE9 /* Headers */,
-				A25AF39F1B3B1AAA009ABDE9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Convertible-OSX";
-			productName = "Convertible-OSX";
-			productReference = A25AF3A11B3B1AAA009ABDE9 /* Convertible.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A25AF3D51B3B1BDB009ABDE9 /* ConvertibleTests-iOS */ = {
@@ -627,7 +544,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A25AF3F41B3B1D2D009ABDE9 /* PBXTargetDependency */,
 			);
 			name = "ConvertibleTests-OSX";
 			productName = "ConvertibleTests-OSX";
@@ -647,9 +563,6 @@
 					A25AF3841B3B1A3F009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
 						LastSwiftMigration = 0810;
-					};
-					A25AF3A01B3B1AAA009ABDE9 = {
-						CreatedOnToolsVersion = 7.0;
 					};
 					A25AF3D51B3B1BDB009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
@@ -673,7 +586,6 @@
 			projectRoot = "";
 			targets = (
 				A25AF3841B3B1A3F009ABDE9 /* Convertible-iOS */,
-				A25AF3A01B3B1AAA009ABDE9 /* Convertible-OSX */,
 				A25AF3D51B3B1BDB009ABDE9 /* ConvertibleTests-iOS */,
 				A25AF3EC1B3B1D2D009ABDE9 /* ConvertibleTests-OSX */,
 			);
@@ -682,13 +594,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		A25AF3831B3B1A3F009ABDE9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A25AF39F1B3B1AAA009ABDE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -834,53 +739,12 @@
 				A25AF4081B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */,
 				A25AF44D1B3B205B009ABDE9 /* String+Convertible.swift in Sources */,
 				A25AF42F1B3B2007009ABDE9 /* JsonConvertible.swift in Sources */,
-				A25AF48B1B3B2550009ABDE9 /* UIImage+Convertible.swift in Sources */,
 				A25AF43F1B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */,
 				A25AF4411B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
 				A2F9DE411B444721006D3A0B /* NSObject+Convertible.swift in Sources */,
 				A25AF4101B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
 				A25AF40E1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
 				A22CBE351D6618B700E075F9 /* JsonArrayConvertible.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A25AF39C1B3B1AAA009ABDE9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A25AF4461B3B205B009ABDE9 /* Float+Convertible.swift in Sources */,
-				A25AF44A1B3B205B009ABDE9 /* Optional+Convertible.swift in Sources */,
-				A25AF4031B3B1E4B009ABDE9 /* NSArray+Convertible.swift in Sources */,
-				A25AF44C1B3B205B009ABDE9 /* Set+Convertible.swift in Sources */,
-				A25AF4181B3B1E93009ABDE9 /* DataModelConvertible.swift in Sources */,
-				A25AF40D1B3B1E4B009ABDE9 /* NSSet+Convertible.swift in Sources */,
-				A25AF4321B3B2007009ABDE9 /* JsonValue.swift in Sources */,
-				A25AF4271B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */,
-				A25AF4441B3B205B009ABDE9 /* Double+Convertible.swift in Sources */,
-				A22CBE361D6618B700E075F9 /* JsonArrayConvertible.swift in Sources */,
-				A25AF4161B3B1E93009ABDE9 /* DataConvertible.swift in Sources */,
-				A25AF4051B3B1E4B009ABDE9 /* NSDate+Covertible.swift in Sources */,
-				A2B785E31B684C5300090309 /* NSData+Convertible.swift in Sources */,
-				A2CAF6E41D49738A0076DCC6 /* Updatable.swift in Sources */,
-				A25AF4481B3B205B009ABDE9 /* Int+Convertible.swift in Sources */,
-				A25AF4071B3B1E4B009ABDE9 /* NSDictionary+Convertible.swift in Sources */,
-				A25AF4551B3B20A5009ABDE9 /* String+Utilities.swift in Sources */,
-				A25AF4201B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */,
-				A25AF43E1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */,
-				A25AF40B1B3B1E4B009ABDE9 /* NSNumber+Convertible.swift in Sources */,
-				A25AF4251B3B1F67009ABDE9 /* ConvertibleOption.swift in Sources */,
-				A25AF4091B3B1E4B009ABDE9 /* NSNull+Convertible.swift in Sources */,
-				A2F01A341D4A6EF800BD039A /* JsonDictionaryKeyConvertible.swift in Sources */,
-				A25AF44E1B3B205B009ABDE9 /* String+Convertible.swift in Sources */,
-				A25AF4301B3B2007009ABDE9 /* JsonConvertible.swift in Sources */,
-				A25AF4401B3B205B009ABDE9 /* Bool+Convertible.swift in Sources */,
-				A25AF4421B3B205B009ABDE9 /* Dictionary+Convertible.swift in Sources */,
-				A25AF4111B3B1E4B009ABDE9 /* NSURL+Convertible.swift in Sources */,
-				A2ED1BE31BEEB0A9006D7D3D /* RawValue.swift in Sources */,
-				A2CAF6E71D4973D00076DCC6 /* JsonUpdatable.swift in Sources */,
-				A2F9DE421B444721006D3A0B /* NSObject+Convertible.swift in Sources */,
-				A25AF40F1B3B1E4B009ABDE9 /* NSString+Convertible.swift in Sources */,
-				A25AF53B1B3B70E5009ABDE9 /* NSImage+Convertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,11 +813,6 @@
 			isa = PBXTargetDependency;
 			target = A25AF3841B3B1A3F009ABDE9 /* Convertible-iOS */;
 			targetProxy = A25AF3DC1B3B1BDC009ABDE9 /* PBXContainerItemProxy */;
-		};
-		A25AF3F41B3B1D2D009ABDE9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A25AF3A01B3B1AAA009ABDE9 /* Convertible-OSX */;
-			targetProxy = A25AF3F31B3B1D2D009ABDE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1096,50 +955,6 @@
 			};
 			name = Release;
 		};
-		A25AF3B31B3B1AAA009ABDE9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Convertible/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.Convertible-OSX";
-				PRODUCT_MODULE_NAME = Convertible;
-				PRODUCT_NAME = Convertible;
-				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A25AF3B41B3B1AAA009ABDE9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Convertible/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.skyvive.Convertible-OSX";
-				PRODUCT_MODULE_NAME = Convertible;
-				PRODUCT_NAME = Convertible;
-				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		A25AF3DF1B3B1BDC009ABDE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1AF6E5BD8A244152C17D4FBE /* Pods-Convertible-iOS-ConvertibleTests-iOS.debug.xcconfig */;
@@ -1221,15 +1036,6 @@
 			buildConfigurations = (
 				A25AF3971B3B1A3F009ABDE9 /* Debug */,
 				A25AF3981B3B1A3F009ABDE9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A25AF3B21B3B1AAA009ABDE9 /* Build configuration list for PBXNativeTarget "Convertible-OSX" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A25AF3B31B3B1AAA009ABDE9 /* Debug */,
-				A25AF3B41B3B1AAA009ABDE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

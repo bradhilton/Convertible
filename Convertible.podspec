@@ -15,8 +15,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.9"
 
   s.source_files  = "Convertible", "Convertible/**/*.{swift,h,m}"
-  s.ios.exclude_files = "Convertible/**/NSImage+Convertible.swift"
-  s.osx.exclude_files = "Convertible/**/UIImage+Convertible.swift"
   s.requires_arc = true
   s.dependency 'Reflection', '~> 0.14.2'
 end
