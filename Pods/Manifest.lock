@@ -1,12 +1,12 @@
 PODS:
-  - Reflection (0.14.2)
+  - Reflection (0.15.0)
 
 DEPENDENCIES:
-  - Reflection (~> 0.14.2)
+  - Reflection (~> 0.15.0)
 
 SPEC CHECKSUMS:
-  Reflection: 057e621ce099cfb569bbd1ecaa84165e9c58e091
+  Reflection: 25cb331157e0d2691271f6492216030acc58ff1e
 
 PODFILE CHECKSUM: c10bdb1e287596dc3cfd9a26bf1b791ab002c005
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0

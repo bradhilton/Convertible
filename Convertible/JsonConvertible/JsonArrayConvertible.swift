@@ -7,8 +7,7 @@
 //
 
 public protocol JsonArrayConvertible : JsonConvertible, Sequence {
-    associatedtype Element
-    init<S : Sequence>(_ sequence: S) where S.Iterator.Element == Element
+    init<S : Sequence>(_ sequence: S) where S.Iterator.Element == Self.Iterator.Element
 }
 
 extension JsonArrayConvertible {

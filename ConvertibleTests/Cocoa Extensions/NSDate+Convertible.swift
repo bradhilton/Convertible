@@ -13,7 +13,7 @@ class NSDate_Convertible: XCTestCase {
     
     func testJsonConvertible() {
         do {
-            let dateString = "2008-03-01T06:00:00-07:00"
+            let dateString = "2008-03-01T13:00:00Z"
             let json = JsonValue.string(dateString as NSString)
             let date = try Date.initializeWithJson(json)
             let newJson = try date.serializeToJson()

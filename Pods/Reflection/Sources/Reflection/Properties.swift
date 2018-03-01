@@ -1,11 +1,14 @@
-private struct HashedType : Hashable {
+struct HashedType : Hashable {
     let hashValue: Int
     init(_ type: Any.Type) {
         hashValue = unsafeBitCast(type, to: Int.self)
     }
+    init<T>(_ pointer: UnsafePointer<T>) {
+        hashValue = pointer.hashValue
+    }
 }
 
-private func == (lhs: HashedType, rhs: HashedType) -> Bool {
+func == (lhs: HashedType, rhs: HashedType) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
 
@@ -21,24 +24,24 @@ public struct Property {
         public let key: String
         public let type: Any.Type
         let offset: Int
+        func write(_ value: Any, to storage: UnsafeMutableRawPointer) throws {
+            return try extensions(of: type).write(value, to: storage.advanced(by: offset))
+        }
     }
 }
 
 /// Retrieve properties for `instance`
 public func properties(_ instance: Any) throws -> [Property] {
     let props = try properties(type(of: instance))
-    var copy = instance
-    let storage = storageForInstance(&copy)
+    var copy = extensions(of: instance)
+    let storage = copy.storage()
     return props.map { nextProperty(description: $0, storage: storage) }
 }
 
 private func nextProperty(description: Property.Description, storage: UnsafeRawPointer) -> Property {
     return Property(
         key: description.key,
-        value: AnyExistentialContainer(
-            type: description.type,
-            pointer: storage.advanced(by: description.offset)
-        ).any
+        value: extensions(of: description.type).value(from: storage.advanced(by: description.offset))
     )
 }
 
@@ -50,13 +53,13 @@ public func properties(_ type: Any.Type) throws -> [Property.Description] {
     } else if let nominalType = Metadata.Struct(type: type) {
         return try fetchAndSaveProperties(nominalType: nominalType, hashedType: hashedType)
     } else if let nominalType = Metadata.Class(type: type) {
-        return try fetchAndSaveProperties(nominalType: nominalType, hashedType: hashedType)
+        return try nominalType.properties()
     } else {
         throw ReflectionError.notStruct(type: type)
     }
 }
 
-private func fetchAndSaveProperties<T : NominalType>(nominalType: T, hashedType: HashedType) throws -> [Property.Description] {
+func fetchAndSaveProperties<T : NominalType>(nominalType: T, hashedType: HashedType) throws -> [Property.Description] {
     let properties = try propertiesForNominalType(nominalType)
     cachedProperties[hashedType] = properties
     return properties
