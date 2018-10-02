@@ -1,18 +1,20 @@
 protocol NominalType : MetadataType {
-    var nominalTypeDescriptorOffsetLocation: Int { get }
+    var nominalTypeDescriptor: NominalTypeDescriptor { get }
 }
 
 extension NominalType {
-    var nominalTypeDescriptor: NominalTypeDescriptor {
-        let pointer = UnsafePointer<Int>(self.pointer)
-        let base = pointer.advanced(by: nominalTypeDescriptorOffsetLocation)
-        return NominalTypeDescriptor(pointer: relativePointer(base: base, offset: base.pointee))
-    }
-
-    var fieldTypes: [Any.Type]? {
-        guard let function = nominalTypeDescriptor.fieldTypesAccessor else { return nil }
-        return (0..<nominalTypeDescriptor.numberOfFields).map {
-            return unsafeBitCast(function(UnsafePointer<Int>(pointer)).advanced(by: $0).pointee, to: Any.Type.self)
+    
+    func fieldNamesAndTypes(for type: Any.Type) -> [(String, Any.Type)]? {
+        return (0..<nominalTypeDescriptor.numberOfFields).map { index in
+            var context: (String, Any.Type) = ("", Any.self)
+            getFieldAt(type, index, { name, type, context in
+                let context = context.assumingMemoryBound(to: (String, Any.Type).self)
+                context.pointee = (
+                    String(cString: name),
+                    unsafeBitCast(type, to: Any.Type.self)
+                )
+            }, &context)
+            return context
         }
     }
 
@@ -20,7 +22,20 @@ extension NominalType {
         let vectorOffset = nominalTypeDescriptor.fieldOffsetVector
         guard vectorOffset != 0 else { return nil }
         return (0..<nominalTypeDescriptor.numberOfFields).map {
-            return UnsafePointer<Int>(pointer)[vectorOffset + $0]
+            return Int(UnsafePointer<Int32>(pointer)[vectorOffset + $0 + 2])
         }
     }
+    
 }
+
+@_silgen_name("swift_getFieldAt")
+private func getFieldAt(
+    _ type: Any.Type,
+    _ index: Int,
+    _ callback: @convention(c) (
+        _ mangledName: UnsafePointer<CChar>,
+        _ type: UnsafeRawPointer,
+        _ context: UnsafeMutableRawPointer
+    ) -> Void,
+    _ context: UnsafeMutableRawPointer
+)

@@ -91,6 +91,7 @@
 		A25AF5361B3B6C3E009ABDE9 /* JPEG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */; };
 		A25AF5381B3B6C8E009ABDE9 /* PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5371B3B6C8E009ABDE9 /* PNG.png */; };
 		A25AF5391B3B6C8E009ABDE9 /* PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5371B3B6C8E009ABDE9 /* PNG.png */; };
+		A26483D12163C31D00AF0266 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = A26483D02163C31600AF0266 /* .swift-version */; };
 		A2877E931B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2877E941B3B78CB006E70B9 /* DataTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */; };
 		A2B785E21B684C5300090309 /* NSData+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B785E11B684C5300090309 /* NSData+Convertible.swift */; };
@@ -181,6 +182,7 @@
 		A25AF52F1B3B6B1B009ABDE9 /* NSURL+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF5341B3B6C3E009ABDE9 /* JPEG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JPEG.jpg; sourceTree = "<group>"; };
 		A25AF5371B3B6C8E009ABDE9 /* PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PNG.png; sourceTree = "<group>"; };
+		A26483D02163C31600AF0266 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		A27808081B44B0EB0004D0BF /* Convertible.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Convertible.podspec; sourceTree = "<group>"; };
 		A2877E921B3B78CB006E70B9 /* DataTypeConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeConvertible.swift; sourceTree = "<group>"; };
 		A2B785E11B684C5300090309 /* NSData+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Convertible.swift"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		A25AF3081B3B17A0009ABDE9 = {
 			isa = PBXGroup;
 			children = (
+				A26483D02163C31600AF0266 /* .swift-version */,
 				A25AF3B81B3B1B04009ABDE9 /* Convertible */,
 				A25AF3E11B3B1C1D009ABDE9 /* ConvertibleTests */,
 				91904A479FC248F7321E7003 /* Frameworks */,
@@ -501,7 +504,6 @@
 				A25AF3811B3B1A3F009ABDE9 /* Frameworks */,
 				A25AF3821B3B1A3F009ABDE9 /* Headers */,
 				A25AF3831B3B1A3F009ABDE9 /* Resources */,
-				5F074E1768C059D6007FB324 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -520,8 +522,7 @@
 				A25AF3D21B3B1BDB009ABDE9 /* Sources */,
 				A25AF3D31B3B1BDB009ABDE9 /* Frameworks */,
 				A25AF3D41B3B1BDB009ABDE9 /* Resources */,
-				A7DC1A281A4991EF94C07311 /* [CP] Embed Pods Frameworks */,
-				5CAE344FD9614BFDECCFD9EC /* [CP] Copy Pods Resources */,
+				4C64B3688F92614F36946347 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -557,7 +558,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Skyvive;
 				TargetAttributes = {
 					A25AF3841B3B1A3F009ABDE9 = {
@@ -566,7 +567,7 @@
 					};
 					A25AF3D51B3B1BDB009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1000;
 					};
 					A25AF3EC1B3B1D2D009ABDE9 = {
 						CreatedOnToolsVersion = 7.0;
@@ -597,6 +598,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26483D12163C31D00AF0266 /* .swift-version in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,37 +665,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5CAE344FD9614BFDECCFD9EC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Convertible-iOS-ConvertibleTests-iOS/Pods-Convertible-iOS-ConvertibleTests-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5F074E1768C059D6007FB324 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Convertible-iOS/Pods-Convertible-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A7DC1A281A4991EF94C07311 /* [CP] Embed Pods Frameworks */ = {
+		4C64B3688F92614F36946347 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -838,12 +810,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -894,12 +868,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -950,7 +926,7 @@
 				PRODUCT_NAME = Convertible;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -972,7 +948,7 @@
 				PRODUCT_NAME = Convertible;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -988,7 +964,8 @@
 				PRODUCT_MODULE_NAME = ConvertibleTests;
 				PRODUCT_NAME = ConvertibleTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1003,7 +980,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyvive.ConvertibleTests;
 				PRODUCT_MODULE_NAME = ConvertibleTests;
 				PRODUCT_NAME = ConvertibleTests;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
