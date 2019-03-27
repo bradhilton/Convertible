@@ -6,30 +6,17 @@
 //  Copyright © 2016 Skyvive. All rights reserved.
 //
 
-import Reflection
-
-public protocol Serializable : DataSerializable, JsonSerializable, KeyMapping {}
+public protocol Serializable : DataSerializable, Codable {}
 
 extension Serializable {
     
     public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
-        return try serializeToJsonWithOptions(options).serializeToDataWithOptions(options)
-    }
-    
-    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
-        var dictionary = [JsonDictionaryKey : JsonValue]()
-        for property in try properties(self) {
-            guard let mappedKey = type(of: self).mappedKeyForPropertyKey(property.reducedKey) else { continue }
-            guard let serializable = property.value as? JsonSerializable else {
-                throw ConvertibleError.notJsonSerializable(type: type(of: property.value))
-            }
-            let json = try serializable.serializeToJsonWithOptions(options)
-            switch json {
-            case .null(_): break
-            default: dictionary[mappedKey as NSString] = json
-            }
+        let encoder = JSONEncoder()
+        if self is UnderscoreToCamelCase {
+            encoder.keyEncodingStrategy = .convertToSnakeCase
         }
-        return JsonValue.dictionary(dictionary)
+        encoder.dateEncodingStrategy = .formatted(ConvertibleOptions.DateFormatter.Option(options).formatter)
+        return try encoder.encode(self)
     }
     
 }

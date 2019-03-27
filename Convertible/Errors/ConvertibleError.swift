@@ -18,7 +18,6 @@ public enum ConvertibleError : Error, CustomStringConvertible {
     case notDataSerializable(type: Any.Type)
     case notJsonInitializable(type: Any.Type)
     case notJsonSerializable(type: Any.Type)
-    case cannotCreateType(type: Any.Type, fromJson: JsonValue)
     case cannotCreateTypeFromData(type: Any.Type)
     case objectNotJsonValue(object: Any)
     case notJsonDictionaryKeyInitializable(type: Any.Type)
@@ -27,10 +26,10 @@ public enum ConvertibleError : Error, CustomStringConvertible {
     case notPropertyType(type: Any.Type)
     case cannotCreateUrlFromString(string: String)
     case cannotCreateDateFromString(string: String)
-    case cannotCreateImageFromData()
-    case cannotCreateDataFromImage()
-    case cannotCreateDataFromBase64String()
-    case cannotCreateDataFromNilOptional()
+    case cannotCreateImageFromData
+    case cannotCreateDataFromImage
+    case cannotCreateDataFromBase64String
+    case cannotCreateDataFromNilOptional
     
     public var description: String {
         return "Convertible Error: \(errorDescription)"
@@ -50,15 +49,14 @@ public enum ConvertibleError : Error, CustomStringConvertible {
         case .notJsonDictionaryKeySerializable(type: let type): return "\(type) does not implement JsonDictionaryKeySerializable"
         case .notObjectType(type: let type): return "\(type) does not conform to AnyObject"
         case .notPropertyType(type: let type): return "\(type) does not conform to Allegro.Property"
-        case .cannotCreateType(type: let type, fromJson: let json): return "Cannot create \(type) from \(json)"
         case .cannotCreateTypeFromData(type: let type): return "Cannot create \(type) from binary data"
         case .objectNotJsonValue(object: let object): return "\(type(of: object)) is not a JSON value"
         case .cannotCreateUrlFromString(string: let string): return "Could not create URL from \(string)"
         case .cannotCreateDateFromString(string: let string): return "Could not create date from \(string)"
-        case .cannotCreateImageFromData(): return "Could not create image from data"
-        case .cannotCreateDataFromImage(): return "Could not create data from image"
-        case .cannotCreateDataFromBase64String(): return "Could not create data from Base64 string"
-        case .cannotCreateDataFromNilOptional(): return "Cannot create data from nil optional"
+        case .cannotCreateImageFromData: return "Could not create image from data"
+        case .cannotCreateDataFromImage: return "Could not create data from image"
+        case .cannotCreateDataFromBase64String: return "Could not create data from Base64 string"
+        case .cannotCreateDataFromNilOptional: return "Cannot create data from nil optional"
         }
     }
 

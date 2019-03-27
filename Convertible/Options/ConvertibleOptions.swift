@@ -29,14 +29,6 @@ public struct ConvertibleOptions {
         }
     }
     
-    /// Use this option to specify the expected data type for objects and collections
-    public enum DataType: _ConvertibleOption {
-        case json
-        case xml /// currently unsupported
-        case foundation /// currently unsupported
-        public static var Default = DataType.json
-    }
-    
     /// Use this option to include a custom NSDateFormatter
     /// Default date formatter assumes a ISO 8601 date string
     public struct DateFormatter: _ConvertibleOption {

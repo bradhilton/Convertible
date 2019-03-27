@@ -19,23 +19,3 @@ extension NSNull : DataConvertible {
     }
     
 }
-
-extension NSNull : JsonConvertible {
-    
-    public class func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Self {
-        return try nullWithJson(json)
-    }
-    
-    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
-        return try JsonValue(object: self)
-    }
-    
-    class func nullWithJson<T>(_ json: JsonValue) throws -> T {
-        switch json {
-        case .null(let null): if let null = null as? T { return null }
-        default: throw ConvertibleError.cannotCreateType(type: self, fromJson: json)
-        }
-        throw ConvertibleError.unknownError
-    }
-    
-}

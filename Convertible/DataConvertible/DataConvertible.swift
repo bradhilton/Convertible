@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol DataConvertible : DataInitializable, DataSerializable {}
+public typealias DataConvertible = DataInitializable & DataSerializable
 
 public protocol DataInitializable {
     

@@ -19,27 +19,3 @@ extension String : DataConvertible {
     }
     
 }
-
-extension String : JsonConvertible {
-    
-    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> String {
-        return try NSString.initializeWithJson(json, options: options) as String
-    }
-    
-    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
-        return try (self as NSString).serializeToJsonWithOptions(options)
-    }
-    
-}
-
-extension String : JsonDictionaryKeyConvertible {
-    
-    public static func initializeWithJsonDictionaryKey(_ key: JsonDictionaryKey, options: [ConvertibleOption]) throws -> String {
-        return key as String
-    }
-    
-    public func serializeToJsonDictionaryKeyWithOptions(_ options: [ConvertibleOption]) throws -> JsonDictionaryKey {
-        return self as JsonDictionaryKey
-    }
-    
-}

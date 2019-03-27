@@ -19,22 +19,3 @@ extension Data : DataConvertible {
     }
     
 }
-
-extension Data : JsonConvertible {
-    
-    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Data {
-        return try dataFromJson(json, options: options)
-    }
-    
-    static func dataFromJson<T>(_ json: JsonValue, options: [ConvertibleOption]) throws -> T {
-        guard let data = try json.serializeToDataWithOptions(options) as? T else {
-            throw ConvertibleError.cannotCreateType(type: T.self, fromJson: json)
-        }
-        return data
-    }
-    
-    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
-        return JsonValue.string(try NSString.initializeWithData(self, options: options))
-    }
-    
-}

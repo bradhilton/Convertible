@@ -8,37 +8,29 @@
 
 import Foundation
 
-extension Array : DataModelConvertible {}
+extension Array : DataInitializable where Element : Decodable {
+    
+    public static func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> Array<Element> {
+        let decoder = JSONDecoder()
+        if Element.self is UnderscoreToCamelCase.Type {
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+        }
+        decoder.dateDecodingStrategy = .formatted(ConvertibleOptions.DateFormatter.Option(options).formatter)
+        return try decoder.decode(self, from: data)
+    }
+    
+    
+}
 
-extension Array : JsonConvertible {
+extension Array : DataSerializable where Element : Encodable {
     
-    public static func initializeWithJson(_ json: JsonValue, options: [ConvertibleOption]) throws -> Array {
-        switch json {
-        case .array(let array): return try resultFromArray(array, options: options)
-        default: throw ConvertibleError.cannotCreateType(type: self, fromJson: json)
+    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
+        let encoder = JSONEncoder()
+        if Element.self is UnderscoreToCamelCase.Type {
+            encoder.keyEncodingStrategy = .convertToSnakeCase
         }
-    }
-    
-    static func resultFromArray(_ array: [JsonValue], options: [ConvertibleOption]) throws -> Array {
-        let error = ConvertibleError.notJsonInitializable(type: Element.self)
-        guard let generic = Element.self as? JsonInitializable.Type else { throw error }
-        var result = Array<Element>()
-        for json in array {
-            guard let element = try generic.initializeWithJson(json, options: options) as? Element else { throw error }
-            result.append(element)
-        }
-        return result
-    }
-    
-    public func serializeToJsonWithOptions(_ options: [ConvertibleOption]) throws -> JsonValue {
-        var array = [JsonValue]()
-        for element in self {
-            guard let element = element as? JsonSerializable else {
-                throw ConvertibleError.notJsonSerializable(type: Element.self)
-            }
-            array.append(try element.serializeToJsonWithOptions(options))
-        }
-        return JsonValue.array(array)
+        encoder.dateEncodingStrategy = .formatted(ConvertibleOptions.DateFormatter.Option(options).formatter)
+        return try encoder.encode(self)
     }
     
 }

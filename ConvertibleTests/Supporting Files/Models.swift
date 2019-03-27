@@ -8,13 +8,11 @@
 
 import Convertible
 
-typealias Number = NSNumber
-
-struct PersonValue : Convertible, UnderscoreToCamelCase {
-    lazy var id: Number = 0
+struct PersonValue : Convertible, UnderscoreToCamelCase, Codable {
+    lazy var id: Int = 0
     var firstName: String?
     var lastName: String?
-    var `public`: Number?
+    var `public`: Bool?
 }
 
 final class Person : Convertible, UnderscoreToCamelCase {
