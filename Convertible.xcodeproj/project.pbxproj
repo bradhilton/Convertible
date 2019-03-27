@@ -26,7 +26,6 @@
 		A25AF4261B3B1F67009ABDE9 /* ConvertibleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4231B3B1F67009ABDE9 /* ConvertibleOptions.swift */; };
 		A25AF43D1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4341B3B205B009ABDE9 /* Array+Convertible.swift */; };
 		A25AF44D1B3B205B009ABDE9 /* String+Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */; };
-		A25AF4541B3B20A5009ABDE9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */; };
 		A25AF46D1B3B23BA009ABDE9 /* Convertible.h in Headers */ = {isa = PBXBuildFile; fileRef = A25AF46C1B3B23BA009ABDE9 /* Convertible.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A25AF5151B3B63DD009ABDE9 /* Array.json in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5141B3B63DD009ABDE9 /* Array.json */; };
 		A25AF5161B3B63DD009ABDE9 /* Array.json in Resources */ = {isa = PBXBuildFile; fileRef = A25AF5141B3B63DD009ABDE9 /* Array.json */; };
@@ -81,7 +80,6 @@
 		A25AF4291B3B1FAB009ABDE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25AF4341B3B205B009ABDE9 /* Array+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Convertible.swift"; sourceTree = "<group>"; };
 		A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Convertible.swift"; sourceTree = "<group>"; };
-		A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 		A25AF46C1B3B23BA009ABDE9 /* Convertible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Convertible.h; sourceTree = "<group>"; };
 		A25AF4EF1B3B57E4009ABDE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25AF5141B3B63DD009ABDE9 /* Array.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Array.json; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				A2ED1BE01BEEB08F006D7D3D /* Raw Value */,
 				A25AF4281B3B1FAB009ABDE9 /* Supporting Files */,
 				A25AF4331B3B205B009ABDE9 /* Swift Extensions */,
-				A25AF44F1B3B20A5009ABDE9 /* Utilities */,
 				A25AF46C1B3B23BA009ABDE9 /* Convertible.h */,
 			);
 			path = Convertible;
@@ -238,14 +235,6 @@
 				A25AF43C1B3B205B009ABDE9 /* String+Convertible.swift */,
 			);
 			path = "Swift Extensions";
-			sourceTree = "<group>";
-		};
-		A25AF44F1B3B20A5009ABDE9 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				A25AF4511B3B20A5009ABDE9 /* String+Utilities.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		A25AF4561B3B20D0009ABDE9 /* Convertible */ = {
@@ -508,7 +497,6 @@
 				A25AF4151B3B1E93009ABDE9 /* DataConvertible.swift in Sources */,
 				A2B785E21B684C5300090309 /* NSData+Convertible.swift in Sources */,
 				A2CAF6DF1D4972D10076DCC6 /* Initializable.swift in Sources */,
-				A25AF4541B3B20A5009ABDE9 /* String+Utilities.swift in Sources */,
 				A2058B77224C3CD600858821 /* UnderscoreToCamelCase.swift in Sources */,
 				A25AF41F1B3B1F32009ABDE9 /* ConvertibleError.swift in Sources */,
 				A25AF43D1B3B205B009ABDE9 /* Array+Convertible.swift in Sources */,
