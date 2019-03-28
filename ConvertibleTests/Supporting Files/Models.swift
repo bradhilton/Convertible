@@ -8,14 +8,14 @@
 
 import Convertible
 
-struct PersonValue : Convertible, UnderscoreToCamelCase, Codable {
+struct PersonValue : DataConvertible, Codable {
     lazy var id: Int = 0
     var firstName: String?
     var lastName: String?
     var `public`: Bool?
 }
 
-final class Person : Convertible, UnderscoreToCamelCase {
+final class Person : DataConvertible, Codable {
     var id: Int
     var firstName: String
     var lastName: String
@@ -24,7 +24,7 @@ final class Person : Convertible, UnderscoreToCamelCase {
     init() { fatalError() }
 }
 
-final class RequiredKeysPerson : Convertible, UnderscoreToCamelCase {
+final class RequiredKeysPerson : DataConvertible, Codable {
     var firstName: String? = "Brad"
     var lastName: String? = "Hilton"
     var isPublic: Bool? = false

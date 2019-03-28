@@ -8,29 +8,6 @@
 
 import Foundation
 
-extension Array : DataInitializable where Element : Decodable {
-    
-    public static func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> Array<Element> {
-        let decoder = JSONDecoder()
-        if Element.self is UnderscoreToCamelCase.Type {
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-        }
-        decoder.dateDecodingStrategy = .formatted(ConvertibleOptions.DateFormatter.Option(options).formatter)
-        return try decoder.decode(self, from: data)
-    }
-    
-    
-}
+extension Array : DataInitializable where Element : Decodable {}
 
-extension Array : DataSerializable where Element : Encodable {
-    
-    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
-        let encoder = JSONEncoder()
-        if Element.self is UnderscoreToCamelCase.Type {
-            encoder.keyEncodingStrategy = .convertToSnakeCase
-        }
-        encoder.dateEncodingStrategy = .formatted(ConvertibleOptions.DateFormatter.Option(options).formatter)
-        return try encoder.encode(self)
-    }
-    
-}
+extension Array : DataSerializable where Element : Encodable {}

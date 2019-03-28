@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Convertible"
-  s.version      = "5.0.1"
+  s.version      = "5.0.2"
   s.summary      = "Swift Framework For Conversions Between JSON, Data And More"
   s.description  = <<-DESC
                     Converting your basic types and models to-and-from JSON, binary data, etc. is a common task in application development.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/bradhilton/Convertible"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Brad Hilton" => "brad@skyvive.com" }
-  s.source       = { :git => "https://github.com/bradhilton/Convertible.git", :tag => "5.0.1" }
+  s.source       = { :git => "https://github.com/bradhilton/Convertible.git", :tag => "5.0.2" }
   s.swift_version = '5.0'
 
   s.ios.deployment_target = "8.0"

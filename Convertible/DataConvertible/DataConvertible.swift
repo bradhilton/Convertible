@@ -37,3 +37,25 @@ extension DataSerializable {
     }
 
 }
+
+extension DataInitializable where Self : Decodable {
+    
+    public static func initializeWithData(_ data: Data, options: [ConvertibleOption]) throws -> Self {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = ConvertibleOptions.JSONKeyDecodingStrategy.Option(options).strategy
+        decoder.dateDecodingStrategy = .formatted(ConvertibleOptions.DateFormatter.Option(options).formatter)
+        return try decoder.decode(self, from: data)
+    }
+    
+}
+
+extension DataSerializable where Self : Encodable {
+    
+    public func serializeToDataWithOptions(_ options: [ConvertibleOption]) throws -> Data {
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = ConvertibleOptions.JSONKeyEncodingStrategy.Option(options).strategy
+        encoder.dateEncodingStrategy = .formatted(ConvertibleOptions.DateFormatter.Option(options).formatter)
+        return try encoder.encode(self)
+    }
+    
+}

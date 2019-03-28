@@ -11,6 +11,24 @@ import CoreGraphics
 
 public struct ConvertibleOptions {
     
+    /// Use this option to customize how json keys are decoded
+    public struct JSONKeyDecodingStrategy: _ConvertibleOption {
+        public let strategy: JSONDecoder.KeyDecodingStrategy
+        public static var Default = JSONKeyDecodingStrategy(strategy: .useDefaultKeys)
+        public init(strategy: JSONDecoder.KeyDecodingStrategy) {
+            self.strategy = strategy
+        }
+    }
+    
+    /// Use this option to customize how data is decoded from Base64
+    public struct JSONKeyEncodingStrategy: _ConvertibleOption {
+        public let strategy: JSONEncoder.KeyEncodingStrategy
+        public static var Default = JSONKeyEncodingStrategy(strategy: .useDefaultKeys)
+        public init(strategy: JSONEncoder.KeyEncodingStrategy) {
+            self.strategy = strategy
+        }
+    }
+    
     /// Use this option to customize how data is decoded from Base64
     public struct Base64DecodingOptions: _ConvertibleOption {
         public let options: NSData.Base64DecodingOptions
